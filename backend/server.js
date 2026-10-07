@@ -1914,7 +1914,7 @@ app.get(
                 aluno_id,
                 perfil_principal,
                 codigo,
-                pontuacoes,
+                pontuacoes
             FROM resultados
             WHERE aluno_id = ?
             ORDER BY id DESC
