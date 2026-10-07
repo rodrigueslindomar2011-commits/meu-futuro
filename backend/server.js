@@ -2204,7 +2204,7 @@ app.get(
                 id,
                 nome,
                 email,
-                criado_em AS created_at
+               created_at
             FROM alunos
             WHERE id = ?
             `,
@@ -2309,7 +2309,7 @@ app.get(
                 id,
                 nome,
                 email,
-                criado_em AS created_at
+               created_at
             FROM alunos
             WHERE id = ?
             `,
