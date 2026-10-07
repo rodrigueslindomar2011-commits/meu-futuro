@@ -1,0 +1,1577 @@
+/* =========================================================
+   MEU FUTURO
+   METAS.CSS
+   Estilo da página de metas
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f8f6;
+    color: #17251e;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.metas-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 30px 25px 50px;
+}
+
+
+/* =========================================================
+   TOPO
+========================================================= */
+
+.topo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #173f2a;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow: 0 8px 20px rgba(23, 63, 42, 0.18);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.logo-text strong {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.logo-text span {
+    color: #789087;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.btn-voltar {
+    border: 1px solid #dbe7e0;
+    background: #ffffff;
+    color: #31523f;
+
+    padding: 11px 18px;
+    border-radius: 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-voltar:hover {
+    background: #edf6f0;
+    border-color: #bcd5c5;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #173f2a 0%,
+        #205a3b 55%,
+        #2d7650 100%
+    );
+
+    border-radius: 28px;
+    padding: 48px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+    overflow: hidden;
+
+    box-shadow: 0 18px 45px rgba(23, 63, 42, 0.18);
+
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    right: 100px;
+    top: -130px;
+}
+
+.hero-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 14px;
+
+    color: #c8f1d6;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 680px;
+
+    color: #d9eee1;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-icon {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+
+    position: relative;
+    z-index: 2;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   RESUMO
+========================================================= */
+
+.resumo-metas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr)
+        1.5fr;
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+.resumo-card {
+    background: #ffffff;
+
+    border: 1px solid #e1ebe5;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 8px 25px rgba(30, 70, 48, 0.05);
+
+    transition: 0.25s ease;
+}
+
+.resumo-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(30, 70, 48, 0.09);
+}
+
+.resumo-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: #edf7f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+.resumo-card small {
+    display: block;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #819189;
+
+    margin-bottom: 5px;
+}
+
+.resumo-card strong {
+    display: block;
+
+    font-size: 27px;
+
+    color: #173f2a;
+}
+
+.progresso-card {
+    display: block;
+}
+
+.progresso-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.progresso-topo strong {
+    font-size: 20px;
+}
+
+.progresso-barra {
+    width: 100%;
+    height: 9px;
+
+    background: #e6eee9;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progresso-preenchimento {
+    width: 0%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #3e9b65,
+        #74c58f
+    );
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   META PRINCIPAL
+========================================================= */
+
+.meta-principal {
+    margin-top: 55px;
+}
+
+.meta-principal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.mini-label {
+    display: inline-block;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    color: #4a9a68;
+
+    margin-bottom: 8px;
+}
+
+.meta-principal-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.meta-principal-header p {
+    color: #718078;
+
+    font-size: 14px;
+}
+
+.meta-principal-icon {
+    width: 62px;
+    height: 62px;
+
+    border-radius: 18px;
+
+    background: #fff7dd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   META DESTAQUE
+========================================================= */
+
+.meta-destaque {
+    background: #ffffff;
+
+    border: 1px solid #dce9e1;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow: 0 12px 35px rgba(30, 70, 48, 0.07);
+}
+
+.meta-destaque-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.categoria {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.categoria.educacao {
+    background: #eaf3ff;
+    color: #376da5;
+}
+
+.categoria.carreira {
+    background: #f2eaff;
+    color: #7450a8;
+}
+
+.categoria.financeiro {
+    background: #e9f8ed;
+    color: #398052;
+}
+
+.categoria.moradia {
+    background: #fff2e5;
+    color: #a76b35;
+}
+
+.categoria.pessoal {
+    background: #ffeaf0;
+    color: #b44e70;
+}
+
+.categoria.viagem {
+    background: #e8f7fa;
+    color: #347c89;
+}
+
+.categoria.sonho {
+    background: #fff0da;
+    color: #a56a2b;
+}
+
+.categoria.outros {
+    background: #eeeeee;
+    color: #666666;
+}
+
+.meta-destaque h3 {
+    font-size: 25px;
+    color: #173f2a;
+}
+
+.status-meta {
+    background: #eaf7ee;
+    color: #37804f;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.meta-destaque > p {
+    color: #718078;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    max-width: 850px;
+
+    margin: 15px 0 25px;
+}
+
+
+/* =========================================================
+   VALORES DA META
+========================================================= */
+
+.meta-valores {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.meta-valores > div {
+    background: #f7faf8;
+
+    border: 1px solid #e8efeb;
+
+    border-radius: 15px;
+
+    padding: 17px;
+}
+
+.meta-valores span {
+    display: block;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    color: #839087;
+
+    margin-bottom: 7px;
+}
+
+.meta-valores strong {
+    font-size: 20px;
+
+    color: #234a34;
+}
+
+
+/* =========================================================
+   PROGRESSO DA META
+========================================================= */
+
+.meta-progresso {
+    margin-bottom: 22px;
+}
+
+.meta-progresso-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 9px;
+}
+
+.meta-progresso-info span {
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #78877f;
+}
+
+.meta-progresso-info strong {
+    font-size: 14px;
+
+    color: #398054;
+}
+
+.meta-barra {
+    height: 11px;
+
+    background: #e7eee9;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.meta-barra-preenchimento {
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #368658,
+        #72bd89
+    );
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+.meta-detalhes {
+    display: flex;
+    gap: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #edf1ee;
+
+    color: #75827b;
+
+    font-size: 12px;
+}
+
+.meta-detalhes strong {
+    color: #314c3c;
+}
+
+
+/* =========================================================
+   MINHAS METAS
+========================================================= */
+
+.minhas-metas {
+    margin-top: 60px;
+}
+
+.secao-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.secao-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 7px;
+}
+
+.secao-header p {
+    color: #718078;
+
+    font-size: 14px;
+}
+
+.btn-adicionar {
+    border: none;
+
+    background: #173f2a;
+    color: #ffffff;
+
+    padding: 13px 20px;
+
+    border-radius: 13px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    box-shadow: 0 8px 18px rgba(23, 63, 42, 0.16);
+
+    transition: 0.25s ease;
+}
+
+.btn-adicionar:hover {
+    background: #245e3e;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LISTA DE METAS
+========================================================= */
+
+.lista-metas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARD DE META
+========================================================= */
+
+.meta-card {
+    background: #ffffff;
+
+    border: 1px solid #e0ebe4;
+
+    border-radius: 20px;
+
+    padding: 23px;
+
+    display: flex;
+
+    gap: 18px;
+
+    box-shadow: 0 8px 25px rgba(30, 70, 48, 0.05);
+
+    transition: 0.25s ease;
+}
+
+.meta-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded2;
+
+    box-shadow: 0 15px 35px rgba(30, 70, 48, 0.09);
+}
+
+.meta-card-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 15px;
+
+    background: #edf7f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    flex-shrink: 0;
+}
+
+.meta-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.meta-card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.meta-card-topo .categoria {
+    margin-bottom: 8px;
+}
+
+.menu-meta {
+    border: none;
+    background: transparent;
+
+    color: #8b9991;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+.menu-meta:hover {
+    background: #f0f5f2;
+    color: #31523f;
+}
+
+.meta-card h3 {
+    font-size: 18px;
+
+    color: #1d3829;
+
+    margin-bottom: 8px;
+}
+
+.meta-card p {
+    color: #75827b;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.meta-card-info {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    color: #78877f;
+
+    font-size: 10px;
+
+    margin-bottom: 16px;
+}
+
+.card-progresso-topo {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 10px;
+
+    color: #75827b;
+}
+
+.card-progresso-topo strong {
+    color: #3c8356;
+}
+
+.card-barra {
+    height: 7px;
+
+    background: #e8efea;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.card-barra-preenchimento {
+    height: 100%;
+
+    background: #56a36f;
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   MOTIVAÇÃO
+========================================================= */
+
+.motivacao {
+    margin-top: 55px;
+
+    background: linear-gradient(
+        135deg,
+        #edf8f1,
+        #f7fbf8
+    );
+
+    border: 1px solid #d9e9df;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.motivacao-icon {
+    width: 62px;
+    height: 62px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.motivacao-content span,
+.visao-content span {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    color: #4c9465;
+}
+
+.motivacao-content h2 {
+    font-size: 21px;
+
+    margin: 6px 0 8px;
+
+    color: #234a34;
+}
+
+.motivacao-content p {
+    color: #718078;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRÓXIMOS PASSOS
+========================================================= */
+
+.proximos-passos {
+    margin-top: 60px;
+}
+
+.atalhos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.atalho-card {
+    border: 1px solid #dfebe4;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.atalho-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bdd7c7;
+
+    box-shadow: 0 12px 28px rgba(30, 70, 48, 0.08);
+}
+
+.atalho-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 13px;
+
+    background: #edf7f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.atalho-card div:nth-child(2) {
+    flex: 1;
+}
+
+.atalho-card strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #294735;
+
+    margin-bottom: 4px;
+}
+
+.atalho-card span {
+    display: block;
+
+    color: #819087;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+.atalho-card b {
+    color: #4a9363;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   AÇÕES
+========================================================= */
+
+.acoes {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #dde8e1;
+}
+
+.btn-secondary,
+.btn-primary {
+    border-radius: 12px;
+
+    padding: 13px 20px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.btn-secondary {
+    background: #ffffff;
+
+    border: 1px solid #dce8e1;
+
+    color: #456051;
+}
+
+.btn-secondary:hover {
+    background: #edf5f0;
+}
+
+.btn-primary {
+    background: #173f2a;
+
+    border: 1px solid #173f2a;
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 18px rgba(23, 63, 42, 0.15);
+}
+
+.btn-primary:hover {
+    background: #245e3e;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e1e9e4;
+}
+
+.rodape p {
+    color: #849189;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+}
+
+.modal.ativo,
+.modal.aberto {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(13, 28, 20, 0.58);
+
+    backdrop-filter: blur(5px);
+}
+
+.modal-box {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 32px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+
+    z-index: 2;
+
+    animation: abrirModal 0.25s ease;
+}
+
+@keyframes abrirModal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+.modal-fechar {
+    position: absolute;
+
+    top: 17px;
+    right: 17px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: #f1f5f2;
+
+    color: #53645b;
+
+    border-radius: 10px;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.modal-fechar:hover {
+    background: #e2ebe5;
+}
+
+.modal-header {
+    margin-bottom: 25px;
+}
+
+.modal-header span {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    color: #4c9465;
+}
+
+.modal-header h2 {
+    font-size: 26px;
+
+    margin: 7px 0;
+}
+
+.modal-header p {
+    color: #75827b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #405349;
+
+    margin-bottom: 7px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    border: 1px solid #dce7e0;
+
+    background: #f9fbfa;
+
+    border-radius: 11px;
+
+    padding: 12px 13px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    color: #263a2e;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #65a87b;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(86, 163, 111, 0.1);
+}
+
+.campo textarea {
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+.campos-duplos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   AÇÕES DO MODAL
+========================================================= */
+
+.modal-acoes {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.btn-cancelar,
+.btn-salvar {
+    border-radius: 11px;
+
+    padding: 12px 18px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-cancelar {
+    border: 1px solid #dce7e0;
+
+    background: #ffffff;
+
+    color: #586960;
+}
+
+.btn-cancelar:hover {
+    background: #f1f5f2;
+}
+
+.btn-salvar {
+    border: 1px solid #173f2a;
+
+    background: #173f2a;
+
+    color: #ffffff;
+}
+
+.btn-salvar:hover {
+    background: #245e3e;
+}
+
+
+/* =========================================================
+   MENSAGEM DO SISTEMA
+========================================================= */
+
+.mensagem-sistema {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform: translate(-50%, 30px);
+
+    background: #173f2a;
+
+    color: #ffffff;
+
+    padding: 13px 20px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 10000;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mensagem-sistema.mostrar {
+    opacity: 1;
+
+    transform: translate(-50%, 0);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .resumo-metas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progresso-card {
+        grid-column: span 2;
+    }
+
+    .atalhos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .metas-container {
+        padding: 20px 16px 40px;
+    }
+
+    .hero {
+        padding: 35px 28px;
+    }
+
+    .hero-icon {
+        width: 75px;
+        height: 75px;
+
+        font-size: 35px;
+    }
+
+    .lista-metas {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .btn-adicionar {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .topo {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .btn-voltar {
+        padding: 9px 12px;
+
+        font-size: 11px;
+    }
+
+    .hero {
+        border-radius: 21px;
+
+        padding: 30px 22px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .hero-icon {
+        align-self: flex-end;
+    }
+
+    .resumo-metas {
+        grid-template-columns: 1fr;
+    }
+
+    .progresso-card {
+        grid-column: span 1;
+    }
+
+    .meta-principal-header {
+        align-items: flex-start;
+    }
+
+    .meta-principal-icon {
+        display: none;
+    }
+
+    .meta-destaque {
+        padding: 22px;
+    }
+
+    .meta-destaque-topo {
+        flex-direction: column;
+    }
+
+    .meta-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-detalhes {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .atalhos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .motivacao {
+        align-items: flex-start;
+
+        padding: 23px;
+    }
+
+    .acoes {
+        flex-direction: column-reverse;
+    }
+
+    .btn-secondary,
+    .btn-primary {
+        width: 100%;
+    }
+
+    .campos-duplos {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .modal-box {
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .logo-text strong {
+        font-size: 14px;
+    }
+
+    .logo-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .meta-card {
+        padding: 18px;
+    }
+
+    .meta-card-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+}

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Encontre opções de moradia para estudantes e planeje seus custos no Meu Futuro."
+    >
+
+    <title>Moradias | Meu Futuro</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS DA PÁGINA -->
+    <link rel="stylesheet" href="../css/moradias.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOPO
+    ====================================================== -->
+
+    <header class="topo">
+
+        <div class="logo">
+
+            <div class="logo-icone">
+                🏠
+            </div>
+
+            <div class="logo-texto">
+                <strong>Meu Futuro</strong>
+                <span>Planejamento estudantil</span>
+            </div>
+
+        </div>
+
+        <button
+            class="btn-voltar"
+            type="button"
+            onclick="voltarDashboard()"
+        >
+            ← Voltar
+        </button>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <div class="hero-badge">
+                    🏡 MORADIAS PARA ESTUDANTES
+                </div>
+
+                <h1>
+                    Encontre um lugar para
+                    <span>começar seu futuro.</span>
+                </h1>
+
+                <p>
+                    Explore opções de moradia para diferentes
+                    momentos da vida estudantil: apartamentos,
+                    casas, kitnets, studios e repúblicas.
+                </p>
+
+                <div class="hero-beneficios">
+
+                    <div>
+                        <span>🏠</span>
+                        <strong>Casas</strong>
+                    </div>
+
+                    <div>
+                        <span>🏢</span>
+                        <strong>Apartamentos</strong>
+                    </div>
+
+                    <div>
+                        <span>🛏️</span>
+                        <strong>Kitnets</strong>
+                    </div>
+
+                    <div>
+                        <span>👥</span>
+                        <strong>Repúblicas</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ILUSTRAÇÃO -->
+
+            <div class="hero-ilustracao">
+
+                <div class="hero-circulo"></div>
+
+                <div class="hero-casa">
+                    🏡
+                </div>
+
+                <div class="hero-card card-flutuante-1">
+
+                    <div class="hero-card-icone">
+                        💰
+                    </div>
+
+                    <div>
+                        <strong>Planeje seu orçamento</strong>
+                        <span>Antes de escolher</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-card card-flutuante-2">
+
+                    <div class="hero-card-icone">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong>Localização</strong>
+                        <span>Perto da sua rotina</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CIDADE
+        ================================================== -->
+
+        <section class="cidade-box">
+
+            <div class="cidade-card">
+
+                <div class="cidade-info">
+
+                    <div class="cidade-icone">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <div class="cidade-label">
+                            CIDADE SELECIONADA
+                        </div>
+
+                        <div
+                            class="cidade-nome"
+                            id="cidadeSelecionada"
+                        >
+                            Goiânia, GO
+                        </div>
+
+                        <div class="cidade-subtexto">
+                            Veja opções cadastradas para sua região.
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-cidade"
+                    id="btnAlterarCidade"
+                >
+                    📍 Alterar cidade
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ESTATÍSTICAS
+        ================================================== -->
+
+        <section class="estatisticas">
+
+            <div class="estatistica">
+
+                <div class="estatistica-topo">
+
+                    <div class="estatistica-icone">
+                        🏠
+                    </div>
+
+                    <span class="estatistica-ponto"></span>
+
+                </div>
+
+                <div
+                    class="estatistica-numero"
+                    id="totalMoradias"
+                >
+                    0
+                </div>
+
+                <div class="estatistica-texto">
+                    opções disponíveis
+                </div>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <div class="estatistica-topo">
+
+                    <div class="estatistica-icone">
+                        💰
+                    </div>
+
+                </div>
+
+                <div
+                    class="estatistica-numero"
+                    id="menorPreco"
+                >
+                    R$ 0
+                </div>
+
+                <div class="estatistica-texto">
+                    menor referência mensal
+                </div>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <div class="estatistica-topo">
+
+                    <div class="estatistica-icone">
+                        ❤️
+                    </div>
+
+                </div>
+
+                <div
+                    class="estatistica-numero"
+                    id="totalFavoritos"
+                >
+                    0
+                </div>
+
+                <div class="estatistica-texto">
+                    moradias favoritas
+                </div>
+
+            </div>
+
+
+            <div class="estatistica">
+
+                <div class="estatistica-topo">
+
+                    <div class="estatistica-icone">
+                        📍
+                    </div>
+
+                </div>
+
+                <div
+                    class="estatistica-numero"
+                    id="cidadeResumo"
+                >
+                    GO
+                </div>
+
+                <div class="estatistica-texto">
+                    região atual
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <section class="filtros-area">
+
+            <div class="filtros-cabecalho">
+
+                <div>
+
+                    <span class="secao-label">
+                        ENCONTRE SUA MORADIA
+                    </span>
+
+                    <h2>
+                        Filtre as opções
+                    </h2>
+
+                </div>
+
+                <span class="filtros-dica">
+                    Encontre algo dentro da sua realidade
+                </span>
+
+            </div>
+
+
+            <div class="filtros">
+
+                <!-- BUSCA -->
+
+                <div class="campo campo-busca">
+
+                    <label for="buscaMoradia">
+                        Buscar
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span>🔎</span>
+
+                        <input
+                            type="text"
+                            id="buscaMoradia"
+                            placeholder="Nome, bairro ou região..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="campo">
+
+                    <label for="filtroTipo">
+                        Tipo
+                    </label>
+
+                    <select id="filtroTipo">
+
+                        <option value="">
+                            Todos os tipos
+                        </option>
+
+                        <option value="Apartamento">
+                            Apartamento
+                        </option>
+
+                        <option value="Casa">
+                            Casa
+                        </option>
+
+                        <option value="Kitnet">
+                            Kitnet
+                        </option>
+
+                        <option value="República">
+                            República
+                        </option>
+
+                        <option value="Studio">
+                            Studio
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PREÇO -->
+
+                <div class="campo">
+
+                    <label for="filtroPreco">
+                        Valor mensal
+                    </label>
+
+                    <select id="filtroPreco">
+
+                        <option value="">
+                            Qualquer preço
+                        </option>
+
+                        <option value="1000">
+                            Até R$ 1.000
+                        </option>
+
+                        <option value="1500">
+                            Até R$ 1.500
+                        </option>
+
+                        <option value="2000">
+                            Até R$ 2.000
+                        </option>
+
+                        <option value="2500">
+                            Até R$ 2.500
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- QUARTOS -->
+
+                <div class="campo">
+
+                    <label for="filtroQuartos">
+                        Quartos
+                    </label>
+
+                    <select id="filtroQuartos">
+
+                        <option value="">
+                            Qualquer quantidade
+                        </option>
+
+                        <option value="1">
+                            1+ quarto
+                        </option>
+
+                        <option value="2">
+                            2+ quartos
+                        </option>
+
+                        <option value="3">
+                            3+ quartos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MOBÍLIA -->
+
+                <div class="campo">
+
+                    <label for="filtroMobilia">
+                        Mobília
+                    </label>
+
+                    <select id="filtroMobilia">
+
+                        <option value="">
+                            Qualquer opção
+                        </option>
+
+                        <option value="sim">
+                            Mobiliado
+                        </option>
+
+                        <option value="nao">
+                            Sem mobília
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LIMPAR -->
+
+                <button
+                    class="btn-limpar"
+                    id="btnLimpar"
+                    type="button"
+                >
+                    ↻ Limpar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LISTA
+        ================================================== -->
+
+        <section class="lista-area">
+
+            <div class="lista-topo">
+
+                <div>
+
+                    <span class="secao-label">
+                        OPÇÕES ENCONTRADAS
+                    </span>
+
+                    <h2>
+                        Moradias disponíveis
+                    </h2>
+
+                </div>
+
+                <div
+                    class="contador"
+                    id="contadorMoradias"
+                >
+                    0 opções
+                </div>
+
+            </div>
+
+
+            <div
+                class="grid-moradias"
+                id="listaMoradias"
+            ></div>
+
+
+            <!-- SEM RESULTADOS -->
+
+            <div
+                class="sem-resultados"
+                id="semResultados"
+            >
+
+                <div class="sem-resultados-icone">
+                    🏠
+                </div>
+
+                <h3>
+                    Nenhuma moradia encontrada
+                </h3>
+
+                <p>
+                    Tente mudar os filtros ou pesquisar outra região.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('btnLimpar').click()"
+                >
+                    Limpar filtros
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CHAMADA PARA CUSTOS
+        ================================================== -->
+
+        <section class="chamada-custos">
+
+            <div class="chamada-custos-icone">
+                💰
+            </div>
+
+            <div class="chamada-custos-texto">
+
+                <span class="secao-label">
+                    PLANEJE ANTES DE DECIDIR
+                </span>
+
+                <h2>
+                    Encontrou uma moradia que combina com você?
+                </h2>
+
+                <p>
+                    Depois de escolher sua moradia, descubra quanto
+                    você poderá gastar por mês considerando aluguel,
+                    alimentação, transporte, internet, energia e
+                    outras despesas.
+                </p>
+
+            </div>
+
+            <a
+                href="custos.html"
+                class="btn-ir-custos"
+            >
+                💰 Ver cálculo de custos
+                <span>→</span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL CIDADE
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="modalCidade"
+        aria-hidden="true"
+    >
+
+        <div class="modal-caixa">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <span class="secao-label">
+                        LOCALIZAÇÃO
+                    </span>
+
+                    <h2>
+                        Escolha sua cidade
+                    </h2>
+
+                </div>
+
+                <button
+                    class="btn-fechar"
+                    type="button"
+                    onclick="fecharModalCidade()"
+                    aria-label="Fechar"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+            <p class="modal-descricao">
+                Escolha uma cidade para visualizar as opções
+                cadastradas para aquela região.
+            </p>
+
+            <div
+                class="cidade-opcoes"
+                id="listaCidades"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL MORADIA
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="modalMoradia"
+        aria-hidden="true"
+    >
+
+        <div class="modal-caixa modal-moradia">
+
+            <div class="modal-cabecalho">
+
+                <div>
+
+                    <span class="secao-label">
+                        INFORMAÇÕES
+                    </span>
+
+                    <h2>
+                        Detalhes da moradia
+                    </h2>
+
+                </div>
+
+                <button
+                    class="btn-fechar"
+                    type="button"
+                    onclick="fecharModalMoradia()"
+                    aria-label="Fechar"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+            <div
+                class="detalhes-modal"
+                id="detalhesMoradia"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/moradias.js"></script>
+
+</body>
+
+</html>

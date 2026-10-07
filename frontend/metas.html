@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Metas | Meu Futuro</title>
+
+    <!-- CSS DA PÁGINA -->
+    <link rel="stylesheet" href="css/metas.css">
+</head>
+
+<body>
+
+    <main class="metas-container">
+
+        <!-- =====================================================
+             CABEÇALHO
+        ====================================================== -->
+
+        <header class="topo">
+
+            <div class="logo-area">
+
+                <div class="logo-icon">
+                    MF
+                </div>
+
+                <div class="logo-text">
+                    <strong>MEU FUTURO</strong>
+                    <span>Projeto de Vida</span>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="btn-voltar"
+                onclick="voltarDashboard()"
+            >
+                ← Dashboard
+            </button>
+
+        </header>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    ✦ MEUS OBJETIVOS
+                </span>
+
+                <h1>
+                    Transforme seus sonhos em metas. 🎯
+                </h1>
+
+                <p>
+                    Defina objetivos, acompanhe seu progresso e
+                    veja cada pequena conquista aproximar você
+                    do futuro que deseja.
+                </p>
+
+            </div>
+
+            <div class="hero-icon">
+                🎯
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESUMO DAS METAS
+        ====================================================== -->
+
+        <section class="resumo-metas">
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🎯
+                </div>
+
+                <div>
+                    <small>
+                        TOTAL DE METAS
+                    </small>
+
+                    <strong id="totalMetas">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    🔄
+                </div>
+
+                <div>
+                    <small>
+                        EM ANDAMENTO
+                    </small>
+
+                    <strong id="metasAndamento">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card">
+
+                <div class="resumo-icon">
+                    ✅
+                </div>
+
+                <div>
+                    <small>
+                        CONCLUÍDAS
+                    </small>
+
+                    <strong id="metasConcluidas">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card progresso-card">
+
+                <div class="progresso-topo">
+
+                    <small>
+                        PROGRESSO GERAL
+                    </small>
+
+                    <strong id="progressoGeral">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progresso-barra">
+
+                    <div
+                        id="barraProgressoGeral"
+                        class="progresso-preenchimento"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             META PRINCIPAL
+        ====================================================== -->
+
+        <section class="meta-principal">
+
+            <div class="meta-principal-header">
+
+                <div>
+
+                    <span class="mini-label">
+                        ⭐ META PRINCIPAL
+                    </span>
+
+                    <h2>
+                        Seu maior objetivo
+                    </h2>
+
+                    <p>
+                        Escolha uma meta importante para acompanhar
+                        de perto sua evolução.
+                    </p>
+
+                </div>
+
+                <div class="meta-principal-icon">
+                    🏆
+                </div>
+
+            </div>
+
+
+            <div class="meta-destaque">
+
+                <div class="meta-destaque-topo">
+
+                    <div class="meta-destaque-titulo">
+
+                        <span class="categoria educacao">
+                            🎓 Educação
+                        </span>
+
+                        <h3 id="metaPrincipalTitulo">
+                            Entrar na faculdade
+                        </h3>
+
+                    </div>
+
+                    <span
+                        class="status-meta"
+                        id="metaPrincipalStatus"
+                    >
+                        Em andamento
+                    </span>
+
+                </div>
+
+
+                <p id="metaPrincipalDescricao">
+                    Conquistar minha vaga em uma faculdade
+                    e começar minha formação profissional.
+                </p>
+
+
+                <div class="meta-valores">
+
+                    <div>
+                        <span>
+                            OBJETIVO
+                        </span>
+
+                        <strong id="valorMetaPrincipal">
+                            R$ 5.000
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            JÁ CONQUISTADO
+                        </span>
+
+                        <strong id="valorAtualPrincipal">
+                            R$ 4.000
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            FALTA
+                        </span>
+
+                        <strong id="valorFaltaPrincipal">
+                            R$ 1.000
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="meta-progresso">
+
+                    <div class="meta-progresso-info">
+
+                        <span>
+                            PROGRESSO
+                        </span>
+
+                        <strong id="percentualMetaPrincipal">
+                            80%
+                        </strong>
+
+                    </div>
+
+                    <div class="meta-barra">
+
+                        <div
+                            id="barraMetaPrincipal"
+                            class="meta-barra-preenchimento"
+                            style="width: 80%;"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="meta-detalhes">
+
+                    <span>
+                        📅 Prazo:
+                        <strong id="prazoMetaPrincipal">
+                            2027
+                        </strong>
+                    </span>
+
+                    <span>
+                        🔥 Prioridade:
+                        <strong id="prioridadeMetaPrincipal">
+                            Alta
+                        </strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CABEÇALHO DAS MINHAS METAS
+        ====================================================== -->
+
+        <section class="minhas-metas">
+
+            <div class="secao-header">
+
+                <div>
+
+                    <span class="mini-label">
+                        🎯 MINHAS METAS
+                    </span>
+
+                    <h2>
+                        Acompanhe seus objetivos
+                    </h2>
+
+                    <p>
+                        Cada meta concluída é mais um passo
+                        em direção ao seu futuro.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn-adicionar"
+                    onclick="abrirModal()"
+                >
+                    + Criar nova meta
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 LISTA DE METAS
+            ================================================== -->
+
+            <div
+                id="listaMetas"
+                class="lista-metas"
+            >
+
+
+                <!-- =================================================
+                     META 1
+                ================================================== -->
+
+                <article
+                    class="meta-card"
+                    data-id="1"
+                >
+
+                    <div class="meta-card-icon">
+                        🎓
+                    </div>
+
+                    <div class="meta-card-content">
+
+                        <div class="meta-card-topo">
+
+                            <span class="categoria educacao">
+                                🎓 Educação
+                            </span>
+
+                            <button
+                                type="button"
+                                class="menu-meta"
+                                onclick="removerMeta(1)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Entrar na faculdade
+                        </h3>
+
+                        <p>
+                            Conseguir uma vaga no curso que
+                            escolhi para minha carreira.
+                        </p>
+
+
+                        <div class="meta-card-info">
+
+                            <span>
+                                📅 2027
+                            </span>
+
+                            <span>
+                                🎯 Alta prioridade
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-progresso">
+
+                            <div class="card-progresso-topo">
+
+                                <span>
+                                    Progresso
+                                </span>
+
+                                <strong>
+                                    80%
+                                </strong>
+
+                            </div>
+
+                            <div class="card-barra">
+
+                                <div
+                                    class="card-barra-preenchimento"
+                                    style="width: 80%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     META 2
+                ================================================== -->
+
+                <article
+                    class="meta-card"
+                    data-id="2"
+                >
+
+                    <div class="meta-card-icon">
+                        💰
+                    </div>
+
+                    <div class="meta-card-content">
+
+                        <div class="meta-card-topo">
+
+                            <span class="categoria financeiro">
+                                💰 Finanças
+                            </span>
+
+                            <button
+                                type="button"
+                                class="menu-meta"
+                                onclick="removerMeta(2)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Guardar dinheiro
+                        </h3>
+
+                        <p>
+                            Criar uma reserva financeira para
+                            ajudar nos meus estudos.
+                        </p>
+
+
+                        <div class="meta-card-info">
+
+                            <span>
+                                📅 Dezembro de 2026
+                            </span>
+
+                            <span>
+                                🎯 Média prioridade
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-progresso">
+
+                            <div class="card-progresso-topo">
+
+                                <span>
+                                    Progresso
+                                </span>
+
+                                <strong>
+                                    50%
+                                </strong>
+
+                            </div>
+
+                            <div class="card-barra">
+
+                                <div
+                                    class="card-barra-preenchimento"
+                                    style="width: 50%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     META 3
+                ================================================== -->
+
+                <article
+                    class="meta-card"
+                    data-id="3"
+                >
+
+                    <div class="meta-card-icon">
+                        📚
+                    </div>
+
+                    <div class="meta-card-content">
+
+                        <div class="meta-card-topo">
+
+                            <span class="categoria carreira">
+                                💼 Carreira
+                            </span>
+
+                            <button
+                                type="button"
+                                class="menu-meta"
+                                onclick="removerMeta(3)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Fazer um curso profissionalizante
+                        </h3>
+
+                        <p>
+                            Aprender novas habilidades para
+                            melhorar minhas oportunidades.
+                        </p>
+
+
+                        <div class="meta-card-info">
+
+                            <span>
+                                📅 2027
+                            </span>
+
+                            <span>
+                                🎯 Média prioridade
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-progresso">
+
+                            <div class="card-progresso-topo">
+
+                                <span>
+                                    Progresso
+                                </span>
+
+                                <strong>
+                                    35%
+                                </strong>
+
+                            </div>
+
+                            <div class="card-barra">
+
+                                <div
+                                    class="card-barra-preenchimento"
+                                    style="width: 35%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     META 4
+                ================================================== -->
+
+                <article
+                    class="meta-card"
+                    data-id="4"
+                >
+
+                    <div class="meta-card-icon">
+                        💼
+                    </div>
+
+                    <div class="meta-card-content">
+
+                        <div class="meta-card-topo">
+
+                            <span class="categoria carreira">
+                                💼 Carreira
+                            </span>
+
+                            <button
+                                type="button"
+                                class="menu-meta"
+                                onclick="removerMeta(4)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Conseguir meu primeiro estágio
+                        </h3>
+
+                        <p>
+                            Adquirir experiência profissional
+                            enquanto continuo estudando.
+                        </p>
+
+
+                        <div class="meta-card-info">
+
+                            <span>
+                                📅 2028
+                            </span>
+
+                            <span>
+                                🎯 Alta prioridade
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-progresso">
+
+                            <div class="card-progresso-topo">
+
+                                <span>
+                                    Progresso
+                                </span>
+
+                                <strong>
+                                    20%
+                                </strong>
+
+                            </div>
+
+                            <div class="card-barra">
+
+                                <div
+                                    class="card-barra-preenchimento"
+                                    style="width: 20%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MOTIVAÇÃO
+        ====================================================== -->
+
+        <section class="motivacao">
+
+            <div class="motivacao-icon">
+                🚀
+            </div>
+
+            <div class="motivacao-content">
+
+                <span>
+                    CONTINUE AVANÇANDO
+                </span>
+
+                <h2>
+                    Grandes conquistas começam com pequenos passos.
+                </h2>
+
+                <p>
+                    Não importa se o objetivo parece distante.
+                    O importante é continuar avançando um pouco
+                    todos os dias.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PRÓXIMOS PASSOS
+        ====================================================== -->
+
+        <section class="proximos-passos">
+
+            <div class="secao-header">
+
+                <div>
+
+                    <span class="mini-label">
+                        ✦ EXPLORE
+                    </span>
+
+                    <h2>
+                        Continue planejando seu futuro
+                    </h2>
+
+                    <p>
+                        Use outras ferramentas do Meu Futuro
+                        para transformar seus objetivos em realidade.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="atalhos-grid">
+
+
+                <!-- MORADIAS -->
+
+                <button
+                    type="button"
+                    class="atalho-card"
+                    onclick="irParaMoradias()"
+                >
+
+                    <div class="atalho-icon">
+                        🏠
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Moradias
+                        </strong>
+
+                        <span>
+                            Descubra opções para morar.
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+                <!-- FACULDADES -->
+
+                <button
+                    type="button"
+                    class="atalho-card"
+                    onclick="irParaFaculdades()"
+                >
+
+                    <div class="atalho-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Faculdades
+                        </strong>
+
+                        <span>
+                            Encontre cursos e instituições.
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+                <!-- CUSTOS -->
+
+                <button
+                    type="button"
+                    class="atalho-card"
+                    onclick="irParaCustos()"
+                >
+
+                    <div class="atalho-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Custos
+                        </strong>
+
+                        <span>
+                            Planeje seus gastos.
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+
+                <!-- PLANEJAMENTO -->
+
+                <button
+                    type="button"
+                    class="atalho-card"
+                    onclick="irParaPlanejamento()"
+                >
+
+                    <div class="atalho-icon">
+                        🛣️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Planejamento
+                        </strong>
+
+                        <span>
+                            Visualize sua linha do futuro.
+                        </span>
+
+                    </div>
+
+                    <b>
+                        →
+                    </b>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AÇÕES
+        ====================================================== -->
+
+        <section class="acoes">
+
+            <button
+                type="button"
+                class="btn-secondary"
+                onclick="voltarDashboard()"
+            >
+                ← Voltar ao Dashboard
+            </button>
+
+            <button
+                type="button"
+                class="btn-primary"
+                onclick="abrirModal()"
+            >
+                + Criar nova meta
+            </button>
+
+        </section>
+
+
+        <!-- =====================================================
+             RODAPÉ
+        ====================================================== -->
+
+        <footer class="rodape">
+
+            <p>
+                O Meu Futuro ajuda você a transformar sonhos
+                em planos. Suas escolhas pertencem a você. 💚
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         MODAL — CRIAR META
+    ========================================================== -->
+
+    <div
+        id="modalMeta"
+        class="modal"
+    >
+
+        <div
+            class="modal-overlay"
+            onclick="fecharModal()"
+        ></div>
+
+
+        <div class="modal-box">
+
+            <button
+                type="button"
+                class="modal-fechar"
+                onclick="fecharModal()"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-header">
+
+                <span>
+                    ✦ NOVA META
+                </span>
+
+                <h2>
+                    Crie um novo objetivo
+                </h2>
+
+                <p>
+                    Defina uma meta e comece a acompanhar
+                    sua evolução.
+                </p>
+
+            </div>
+
+
+            <form id="formMeta">
+
+                <!-- NOME -->
+
+                <div class="campo">
+
+                    <label for="nomeMeta">
+                        Nome da meta
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeMeta"
+                        placeholder="Ex: Comprar meu notebook"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CATEGORIA -->
+
+                <div class="campo">
+
+                    <label for="categoriaMeta">
+                        Categoria
+                    </label>
+
+                    <select
+                        id="categoriaMeta"
+                        required
+                    >
+
+                        <option value="educacao">
+                            🎓 Educação
+                        </option>
+
+                        <option value="carreira">
+                            💼 Carreira
+                        </option>
+
+                        <option value="financeiro">
+                            💰 Finanças
+                        </option>
+
+                        <option value="moradia">
+                            🏠 Moradia
+                        </option>
+
+                        <option value="pessoal">
+                            ❤️ Vida pessoal
+                        </option>
+
+                        <option value="viagem">
+                            ✈️ Viagem
+                        </option>
+
+                        <option value="sonho">
+                            🚀 Sonho
+                        </option>
+
+                        <option value="outros">
+                            ⭐ Outros
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- VALORES -->
+
+                <div class="campos-duplos">
+
+                    <div class="campo">
+
+                        <label for="valorMeta">
+                            Valor da meta
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valorMeta"
+                            min="0"
+                            step="0.01"
+                            placeholder="5000"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="valorAtual">
+                            Valor já conquistado
+                        </label>
+
+                        <input
+                            type="number"
+                            id="valorAtual"
+                            min="0"
+                            step="0.01"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRAZO E PRIORIDADE -->
+
+                <div class="campos-duplos">
+
+                    <div class="campo">
+
+                        <label for="prazoMeta">
+                            Prazo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="prazoMeta"
+                            placeholder="Ex: Dezembro de 2027"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="prioridadeMeta">
+                            Prioridade
+                        </label>
+
+                        <select id="prioridadeMeta">
+
+                            <option value="alta">
+                                🔥 Alta
+                            </option>
+
+                            <option value="media">
+                                🟡 Média
+                            </option>
+
+                            <option value="baixa">
+                                🟢 Baixa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="campo">
+
+                    <label for="descricaoMeta">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricaoMeta"
+                        rows="4"
+                        placeholder="Conte um pouco sobre essa meta..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- AÇÕES DO MODAL -->
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        onclick="fecharModal()"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+                        Criar meta 🚀
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MENSAGEM DO SISTEMA
+    ========================================================== -->
+
+    <div
+        id="mensagemSistema"
+        class="mensagem-sistema"
+    ></div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="js/metas.js"></script>
+
+</body>
+</html>   

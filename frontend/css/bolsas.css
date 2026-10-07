@@ -1,0 +1,990 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #eee7ff 0%, transparent 35%),
+        radial-gradient(circle at 90% 20%, #f0edff 0%, transparent 35%),
+        #f7f8fc;
+    color: #202033;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.bolsas-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 35px 20px;
+}
+
+.bolsas-card {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 42px;
+    box-shadow: 0 25px 70px rgba(55, 35, 100, 0.12);
+    overflow: hidden;
+    position: relative;
+}
+
+.bolsas-card::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #f1eaff;
+    top: -100px;
+    right: -60px;
+    z-index: 0;
+}
+
+.bolsas-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 70px;
+}
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #7624e8, #9c42ff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 800;
+    box-shadow: 0 12px 25px rgba(118, 36, 232, 0.25);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.logo-text strong {
+    font-size: 17px;
+    color: #202033;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #8b8b9f;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.pagina-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.step-label,
+.mini-label {
+    display: inline-block;
+    color: #7624e8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.pagina-header h1 {
+    max-width: 850px;
+    font-size: 38px;
+    line-height: 1.15;
+    color: #202033;
+    margin-bottom: 10px;
+}
+
+.pagina-header p {
+    color: #6f6f82;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.header-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 22px;
+    background: #f1eaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   RESUMO
+========================================================= */
+
+.resumo-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+.resumo-card {
+    padding: 18px;
+    border: 1px solid #eeeaf5;
+    border-radius: 18px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    transition: 0.25s ease;
+}
+
+.resumo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(60, 35, 100, 0.08);
+}
+
+.resumo-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: #f2eaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.resumo-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.resumo-card span {
+    font-size: 12px;
+    color: #77778a;
+}
+
+.resumo-card strong {
+    font-size: 21px;
+    color: #202033;
+}
+
+
+/* =========================================================
+   JORNADA
+========================================================= */
+
+.jornada-section {
+    margin-bottom: 75px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+    color: #202033;
+    margin-bottom: 7px;
+}
+
+.section-heading p {
+    color: #77778a;
+    font-size: 14px;
+}
+
+.jornada {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.jornada-line {
+    position: absolute;
+    top: 28px;
+    left: 8%;
+    right: 8%;
+    height: 3px;
+    background: #e9dfff;
+    z-index: 0;
+}
+
+.jornada-item {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.jornada-number {
+    font-size: 12px;
+    color: #77778a;
+    margin-bottom: 5px;
+}
+
+.jornada-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #eee8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.jornada-item.ativo .jornada-icon,
+.jornada-item.atual .jornada-icon {
+    border-color: #8b32ed;
+    box-shadow: 0 0 0 5px #f4edff;
+}
+
+.jornada-item strong {
+    font-size: 13px;
+    color: #29293a;
+}
+
+.jornada-item span {
+    font-size: 11px;
+    color: #858597;
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+.busca-section {
+    margin-bottom: 55px;
+}
+
+.busca-box {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.campo-busca {
+    flex: 1;
+    height: 50px;
+    border: 1px solid #ddd9e9;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    background: white;
+}
+
+.campo-busca span {
+    font-size: 18px;
+}
+
+.campo-busca input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #202033;
+    background: transparent;
+}
+
+.campo-busca input::placeholder {
+    color: #a0a0b0;
+}
+
+.btn-buscar {
+    height: 50px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #7624e8, #8f35ed);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(118, 36, 232, 0.22);
+    transition: 0.25s ease;
+}
+
+.btn-buscar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(118, 36, 232, 0.3);
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.filtro {
+    border: 1px solid #e4e0ed;
+    background: white;
+    color: #747487;
+    padding: 9px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.2s ease;
+}
+
+.filtro:hover {
+    border-color: #a463ed;
+    color: #7624e8;
+}
+
+.filtro.ativo {
+    background: #7624e8;
+    color: white;
+    border-color: #7624e8;
+}
+
+
+/* =========================================================
+   RECOMENDAÇÃO
+========================================================= */
+
+.recomendacao-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f5efff, #faf8ff);
+    border: 1px solid #e7dcfa;
+    margin-bottom: 60px;
+}
+
+.recomendacao-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.recomendacao-content {
+    flex: 1;
+}
+
+.recomendacao-content > span {
+    color: #7624e8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.recomendacao-content h2 {
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.recomendacao-content p {
+    font-size: 13px;
+    color: #77778a;
+    line-height: 1.5;
+}
+
+.compatibilidade-geral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.compatibilidade-geral strong {
+    font-size: 30px;
+    color: #7624e8;
+}
+
+.compatibilidade-geral span {
+    font-size: 11px;
+    color: #858597;
+}
+
+
+/* =========================================================
+   SEÇÃO DE BOLSAS
+========================================================= */
+
+.secao {
+    margin-bottom: 70px;
+}
+
+.bolsas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* =========================================================
+   CARD DA BOLSA
+========================================================= */
+
+.bolsa-card {
+    background: white;
+    border: 1px solid #e8e3ef;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bolsa-card:hover {
+    transform: translateY(-5px);
+    border-color: #c9a8f3;
+    box-shadow: 0 18px 40px rgba(73, 42, 112, 0.12);
+}
+
+.bolsa-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.bolsa-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+    background: #f3edff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.status {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.status.aberta {
+    color: #13834a;
+    background: #e9f9f0;
+}
+
+.status.breve {
+    color: #bd6a00;
+    background: #fff4df;
+}
+
+.bolsa-card h3 {
+    font-size: 19px;
+    line-height: 1.3;
+    color: #202033;
+    margin-bottom: 5px;
+}
+
+.instituicao {
+    color: #7624e8;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bolsa-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 13px 0;
+    border-top: 1px solid #f0edf4;
+    border-bottom: 1px solid #f0edf4;
+    margin-bottom: 15px;
+}
+
+.bolsa-info span {
+    color: #68687b;
+    font-size: 12px;
+}
+
+.bolsa-desconto {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.bolsa-desconto strong {
+    color: #7624e8;
+    font-size: 25px;
+}
+
+.bolsa-desconto span {
+    color: #77778a;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   COMPATIBILIDADE
+========================================================= */
+
+.compatibilidade-barra {
+    margin-bottom: 17px;
+}
+
+.barra-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.barra-header span {
+    color: #77778a;
+    font-size: 12px;
+}
+
+.barra-header strong {
+    color: #7624e8;
+    font-size: 12px;
+}
+
+.barra {
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background: #eeeaf4;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #7624e8, #a24cff);
+}
+
+
+/* =========================================================
+   RODAPÉ DO CARD
+========================================================= */
+
+.bolsa-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    border-top: 1px solid #f0edf4;
+}
+
+.bolsa-footer span {
+    color: #77778a;
+    font-size: 11px;
+}
+
+.bolsa-footer button {
+    border: none;
+    background: transparent;
+    color: #7624e8;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.bolsa-footer button:hover {
+    color: #5011a8;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   PRAZOS
+========================================================= */
+
+.prazos-section {
+    margin-bottom: 55px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    border: 1px solid #ebe7f1;
+    border-radius: 15px;
+    background: white;
+}
+
+.timeline-date {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    background: #f2eaff;
+    color: #7624e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.timeline-date small {
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.timeline-content strong {
+    font-size: 14px;
+}
+
+.timeline-content span {
+    font-size: 12px;
+    color: #858597;
+}
+
+.urgente,
+.normal {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+.urgente {
+    background: #fff0f0;
+    color: #df3838;
+}
+
+.normal {
+    background: #eaf9f0;
+    color: #16854b;
+}
+
+
+/* =========================================================
+   SALVAS
+========================================================= */
+
+.salvas-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px;
+    border-radius: 20px;
+    background: #faf9ff;
+    border: 1px solid #ebe4f8;
+    margin-bottom: 30px;
+}
+
+.salvas-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    background: #f0e8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.salvas-card > div:nth-child(2) {
+    flex: 1;
+}
+
+.salvas-card span,
+.proximo-passo span {
+    color: #7624e8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.salvas-card h2,
+.proximo-passo h2 {
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.salvas-card p,
+.proximo-passo p {
+    color: #77778a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.salvas-card button {
+    border: 1px solid #7624e8;
+    background: white;
+    color: #7624e8;
+    border-radius: 12px;
+    padding: 11px 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.salvas-card button:hover {
+    background: #7624e8;
+    color: white;
+}
+
+
+/* =========================================================
+   PRÓXIMO PASSO
+========================================================= */
+
+.proximo-passo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #7624e8, #923bf0);
+    color: white;
+    margin-bottom: 30px;
+}
+
+.proximo-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.proximo-passo span {
+    color: #e5d3ff;
+}
+
+.proximo-passo h2 {
+    color: white;
+}
+
+.proximo-passo p {
+    color: #eee2ff;
+}
+
+
+/* =========================================================
+   BOTÕES FINAIS
+========================================================= */
+
+.acoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.btn-secondary,
+.btn-primary {
+    min-height: 48px;
+    padding: 0 22px;
+    border-radius: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-secondary {
+    background: white;
+    color: #5e5e72;
+    border: 1px solid #ded9e8;
+}
+
+.btn-secondary:hover {
+    border-color: #7624e8;
+    color: #7624e8;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #7624e8, #9339f0);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 25px rgba(118, 36, 232, 0.22);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+    text-align: center;
+    color: #9998a8;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .bolsas-card {
+        padding: 30px;
+    }
+
+    .pagina-header h1 {
+        font-size: 32px;
+    }
+
+    .resumo-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jornada {
+        grid-template-columns: repeat(5, 150px);
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .jornada-line {
+        display: none;
+    }
+
+    .bolsas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .bolsas-container {
+        padding: 10px;
+    }
+
+    .bolsas-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .logo {
+        margin-bottom: 45px;
+    }
+
+    .pagina-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagina-header h1 {
+        font-size: 27px;
+    }
+
+    .header-icon {
+        display: none;
+    }
+
+    .resumo-section {
+        grid-template-columns: 1fr;
+    }
+
+    .busca-box {
+        flex-direction: column;
+    }
+
+    .btn-buscar {
+        width: 100%;
+    }
+
+    .recomendacao-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .compatibilidade-geral {
+        align-items: flex-start;
+    }
+
+    .salvas-card,
+    .proximo-passo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    .bolsa-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

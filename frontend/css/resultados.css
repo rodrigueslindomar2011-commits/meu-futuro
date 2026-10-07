@@ -1,0 +1,1582 @@
+/* ============================================================
+   MEU FUTURO
+   RESULTADOS.CSS
+   VERSÃO ANIMADA
+============================================================ */
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   BODY
+============================================================ */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            #dff7ec,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            #e5f7ed,
+            transparent 30%
+        ),
+        #f5f8f7;
+
+    color: #17251f;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ============================================================
+   FUNDO ANIMADO
+============================================================ */
+
+.background-effect {
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(39, 168, 102, 0.08);
+
+    filter: blur(10px);
+
+    top: -150px;
+    right: -100px;
+
+    animation: floatBackground 8s ease-in-out infinite;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+@keyframes floatBackground {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-40px, 50px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.resultados-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ============================================================
+   CARD PRINCIPAL
+============================================================ */
+
+.resultados-card {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 25px 70px rgba(20, 50, 35, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    animation: pageEnter 0.8s ease;
+}
+
+
+@keyframes pageEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ============================================================
+   REVEAL
+============================================================ */
+
+.reveal {
+
+    animation: revealElement 0.8s ease both;
+
+}
+
+
+@keyframes revealElement {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 40px;
+}
+
+
+.logo-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    background: #173f2a;
+
+    color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(23, 63, 42, 0.2);
+
+    transition: 0.3s;
+}
+
+
+.logo:hover .logo-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.08);
+
+}
+
+
+.logo strong {
+
+    display: block;
+
+    font-size: 19px;
+}
+
+
+.logo span {
+
+    font-size: 13px;
+
+    color: #718078;
+}
+
+
+/* ============================================================
+   CABEÇALHO
+============================================================ */
+
+.resultado-header {
+
+    margin-bottom: 35px;
+}
+
+
+.step-label,
+.mini-label {
+
+    color: #27a866;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.resultado-header h1 {
+
+    font-size: 36px;
+
+    margin: 10px 0 12px;
+
+    line-height: 1.15;
+}
+
+
+.titulo-destaque {
+
+    display: inline-block;
+
+    animation: rocket 2s ease-in-out infinite;
+}
+
+
+@keyframes rocket {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px) rotate(3deg);
+    }
+
+}
+
+
+.resultado-header p {
+
+    color: #718078;
+
+    line-height: 1.7;
+
+    max-width: 720px;
+}
+
+
+/* ============================================================
+   EVOLUÇÃO
+============================================================ */
+
+.evolucao-card {
+
+    background: #ffffff;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(20, 50, 35, 0.04);
+
+    transition: 0.35s;
+}
+
+
+.evolucao-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(20, 50, 35, 0.09);
+
+}
+
+
+/* ============================================================
+   HEADER EVOLUÇÃO
+============================================================ */
+
+.evolucao-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.evolucao-header h2 {
+
+    font-size: 23px;
+
+    margin-top: 7px;
+
+    line-height: 1.3;
+}
+
+
+.evolucao-header p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 8px;
+
+    max-width: 650px;
+}
+
+
+/* ============================================================
+   PERCENTUAL
+============================================================ */
+
+.evolucao-percentual {
+
+    min-width: 130px;
+
+    padding: 16px;
+
+    background: #f0faf4;
+
+    border: 1px solid #cdebd8;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+
+.evolucao-percentual:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 10px 25px rgba(39, 168, 102, 0.12);
+
+}
+
+
+.evolucao-percentual strong {
+
+    display: block;
+
+    color: #16834b;
+
+    font-size: 28px;
+
+    line-height: 1;
+}
+
+
+.evolucao-percentual span {
+
+    display: block;
+
+    color: #718078;
+
+    font-size: 11px;
+
+    margin-top: 7px;
+}
+
+
+/* ============================================================
+   GRÁFICO
+============================================================ */
+
+.grafico-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 280px;
+
+    margin-top: 10px;
+}
+
+
+#graficoEvolucao {
+
+    width: 100% !important;
+
+    height: 100% !important;
+}
+
+
+/* ============================================================
+   ESTATÍSTICAS
+============================================================ */
+
+.evolucao-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.evolucao-stat {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    background: #f8faf9;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 14px;
+
+    min-width: 0;
+
+    transition: 0.3s;
+}
+
+
+.evolucao-stat:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #27a866;
+
+    box-shadow:
+        0 10px 25px rgba(39, 168, 102, 0.08);
+
+}
+
+
+.evolucao-stat > span {
+
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+
+.evolucao-stat:hover > span {
+
+    transform:
+        rotate(-5deg)
+        scale(1.1);
+
+}
+
+
+.evolucao-stat small {
+
+    display: block;
+
+    color: #718078;
+
+    font-size: 10px;
+}
+
+
+.evolucao-stat strong {
+
+    display: block;
+
+    color: #17251f;
+
+    font-size: 15px;
+
+    margin-top: 4px;
+
+    word-break: break-word;
+}
+
+
+/* ============================================================
+   PERFIL
+============================================================ */
+
+.perfil-destaque {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: #f0faf4;
+
+    border: 1px solid #cdebd8;
+
+    border-radius: 18px;
+
+    margin-bottom: 40px;
+
+    transition: 0.35s;
+}
+
+
+.perfil-destaque:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(39, 168, 102, 0.08);
+
+}
+
+
+.perfil-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    flex-shrink: 0;
+
+    animation: targetPulse 2.5s infinite;
+}
+
+
+@keyframes targetPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(39, 168, 102, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(39, 168, 102, 0);
+    }
+
+}
+
+
+.perfil-texto span {
+
+    color: #27a866;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.perfil-texto h2 {
+
+    font-size: 24px;
+
+    margin: 5px 0;
+}
+
+
+.perfil-texto p {
+
+    color: #607068;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   SEÇÕES
+============================================================ */
+
+.secao {
+
+    margin-bottom: 40px;
+}
+
+
+.secao-titulo {
+
+    margin-bottom: 20px;
+}
+
+
+.secao-titulo h2,
+.profissao-secao h2 {
+
+    font-size: 23px;
+
+    margin-top: 7px;
+
+    line-height: 1.3;
+}
+
+
+.secao-descricao {
+
+    color: #718078;
+
+    line-height: 1.6;
+
+    margin: 8px 0 22px;
+}
+
+
+/* ============================================================
+   INTERESSES
+============================================================ */
+
+.interesses-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.interesse-card {
+
+    padding: 22px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 16px;
+
+    transition: 0.35s;
+
+    background: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.interesse-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #f0faf4;
+
+    top: -40px;
+    right: -40px;
+
+    transition: 0.4s;
+}
+
+
+.interesse-card:hover::before {
+
+    transform: scale(2);
+}
+
+
+.interesse-card:hover {
+
+    border-color: #27a866;
+
+    background: #f8fcf9;
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 30px rgba(39, 168, 102, 0.08);
+}
+
+
+.interesse-icon {
+
+    display: block;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+
+.interesse-card:hover .interesse-icon {
+
+    transform:
+        translateY(-4px)
+        scale(1.08);
+}
+
+
+.interesse-card strong {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    position: relative;
+}
+
+
+.interesse-card p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    position: relative;
+}
+
+
+/* ============================================================
+   ÁREAS
+============================================================ */
+
+.areas-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.area-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 16px;
+
+    transition: 0.35s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.area-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 3px;
+
+    background: #27a866;
+
+    transform: scaleY(0);
+
+    transition: 0.3s;
+}
+
+
+.area-card:hover::after {
+
+    transform: scaleY(1);
+}
+
+
+.area-card:hover {
+
+    border-color: #27a866;
+
+    background: #fbfdfc;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 25px rgba(39, 168, 102, 0.07);
+}
+
+
+.area-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    background: #f0faf4;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    flex-shrink: 0;
+
+    transition: 0.3s;
+}
+
+
+.area-card:hover .area-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.08);
+}
+
+
+.area-info {
+
+    flex: 1;
+}
+
+
+.area-info h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+
+.area-info p {
+
+    color: #718078;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.compatibilidade {
+
+    text-align: right;
+
+    min-width: 110px;
+}
+
+
+.compatibilidade strong {
+
+    display: block;
+
+    color: #16834b;
+
+    font-size: 22px;
+}
+
+
+.compatibilidade span {
+
+    color: #718078;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   PROFISSÕES
+============================================================ */
+
+.profissoes-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.profissao-card {
+
+    padding: 20px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 15px;
+
+    transition: 0.35s;
+
+    background: #fff;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.profissao-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 3px;
+
+    left: 0;
+
+    bottom: 0;
+
+    background: #27a866;
+
+    transition: 0.35s;
+}
+
+
+.profissao-card:hover::after {
+
+    width: 100%;
+}
+
+
+.profissao-card:hover {
+
+    border-color: #27a866;
+
+    background: #f8fcf9;
+
+    transform:
+        translateY(-7px)
+        scale(1.01);
+
+    box-shadow:
+        0 15px 30px rgba(39, 168, 102, 0.09);
+}
+
+
+.profissao-card > span {
+
+    display: block;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+
+.profissao-card:hover > span {
+
+    transform:
+        translateY(-5px)
+        scale(1.12);
+}
+
+
+.profissao-card strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+}
+
+
+.profissao-card small {
+
+    color: #27a866;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   OBJETIVO
+============================================================ */
+
+.objetivo-card {
+
+    display: flex;
+
+    gap: 18px;
+
+    padding: 24px;
+
+    background: #173f2a;
+
+    color: white;
+
+    border-radius: 18px;
+
+    margin-bottom: 35px;
+
+    transition: 0.35s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.objetivo-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.05);
+
+    right: -80px;
+
+    top: -80px;
+
+    transition: 0.5s;
+}
+
+
+.objetivo-card:hover::before {
+
+    transform: scale(1.5);
+}
+
+
+.objetivo-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(23, 63, 42, 0.18);
+}
+
+
+.objetivo-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.objetivo-card > div:last-child {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.objetivo-card span {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+    opacity: 0.8;
+}
+
+
+.objetivo-card h2 {
+
+    margin: 5px 0 7px;
+
+    font-size: 21px;
+}
+
+
+.objetivo-card p {
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    opacity: 0.85;
+}
+
+
+/* ============================================================
+   BOTÕES
+============================================================ */
+
+.acoes {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 12px;
+
+    padding: 15px 25px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+button::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+
+    transform: translate(-50%, -50%);
+
+    transition: width 0.5s, height 0.5s;
+}
+
+
+button:hover::after {
+
+    width: 300px;
+
+    height: 300px;
+}
+
+
+.btn-primary {
+
+    background: #173f2a;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(23, 63, 42, 0.15);
+}
+
+
+.btn-primary:hover {
+
+    background: #23613f;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(23, 63, 42, 0.2);
+}
+
+
+.btn-secondary {
+
+    background: #edf2ee;
+
+    color: #304439;
+}
+
+
+.btn-secondary:hover {
+
+    background: #e1e9e3;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ============================================================
+   RODAPÉ
+============================================================ */
+
+.rodape {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #8a9690;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 800px) {
+
+    .resultados-card {
+
+        padding: 30px;
+
+    }
+
+
+    .interesses-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profissoes-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .resultado-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .evolucao-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ============================================================
+   CELULAR
+============================================================ */
+
+@media (max-width: 550px) {
+
+    .resultados-container {
+
+        padding: 20px 12px;
+
+    }
+
+
+    .resultados-card {
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .logo {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .resultado-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .resultado-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    /* EVOLUÇÃO */
+
+    .evolucao-card {
+
+        padding: 18px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .evolucao-header {
+
+        flex-direction: column;
+
+    }
+
+
+    .evolucao-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .evolucao-header p {
+
+        font-size: 13px;
+
+    }
+
+
+    .evolucao-percentual {
+
+        width: 100%;
+
+    }
+
+
+    .grafico-wrapper {
+
+        height: 230px;
+
+    }
+
+
+    /* PERFIL */
+
+    .perfil-destaque {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    /* ÁREAS */
+
+    .area-card {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .area-info {
+
+        min-width: 0;
+
+    }
+
+
+    .compatibilidade {
+
+        min-width: auto;
+
+        width: 100%;
+
+        text-align: left;
+
+        padding-left: 70px;
+
+    }
+
+
+    /* PROFISSÕES */
+
+    .profissoes-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* BOTÕES */
+
+    .acoes {
+
+        flex-direction: column;
+
+    }
+
+
+    .acoes button {
+
+        width: 100%;
+
+    }
+
+
+    /* OBJETIVO */
+
+    .objetivo-card {
+
+        align-items: flex-start;
+
+    }
+
+
+    .objetivo-card p {
+
+        font-size: 13px;
+
+    }
+
+}

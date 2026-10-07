@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculdades | Meu Futuro</title>
+
+    <link rel="stylesheet" href="css/faculdades.css">
+</head>
+
+<body>
+
+<main class="faculdades-container">
+
+    <!-- HEADER -->
+    <header class="topo">
+
+        <div class="logo">
+            <div class="logo-icon">MF</div>
+
+            <div>
+                <strong>MEU FUTURO</strong>
+                <span>Projeto de Vida</span>
+            </div>
+        </div>
+
+        <button class="btn-voltar" onclick="voltarResultados()">
+            ← Resultados
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-conteudo">
+
+            <span class="mini-label">
+                🎓 PRÓXIMO PASSO
+            </span>
+
+            <h1>
+                Encontre a faculdade
+                <span>que pode transformar seu futuro.</span>
+            </h1>
+
+            <p>
+                Explore instituições, cursos e caminhos acadêmicos
+                que combinam com os seus interesses.
+            </p>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+
+            <div class="capelo">
+                🎓
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PERFIL -->
+    <section class="perfil-aluno">
+
+        <div class="perfil-avatar">
+            🚀
+        </div>
+
+        <div class="perfil-info">
+
+            <span>SEU CAMINHO ATUAL</span>
+
+            <h2 id="nomeAluno">
+                Seu futuro começa aqui
+            </h2>
+
+            <p>
+                Com base nos seus resultados, encontramos
+                caminhos acadêmicos que podem combinar com você.
+            </p>
+
+        </div>
+
+        <div class="perfil-area">
+
+            <small>ÁREA PRINCIPAL</small>
+
+            <strong id="areaAluno">
+                Tecnologia
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- JORNADA -->
+    <section class="jornada">
+
+        <div class="secao-titulo">
+
+            <span class="mini-label">
+                🧭 SUA JORNADA
+            </span>
+
+            <h2>
+                Do seu interesse até sua carreira
+            </h2>
+
+            <p>
+                Veja como uma escolha pode levar você
+                ao próximo passo.
+            </p>
+
+        </div>
+
+
+        <div class="linha-jornada">
+
+            <div class="jornada-item ativo">
+
+                <div class="jornada-numero">
+                    01
+                </div>
+
+                <div class="jornada-icon">
+                    🧑‍🎓
+                </div>
+
+                <strong>
+                    Você
+                </strong>
+
+                <span>
+                    Seus interesses
+                </span>
+
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <div class="jornada-item">
+
+                <div class="jornada-numero">
+                    02
+                </div>
+
+                <div class="jornada-icon">
+                    💻
+                </div>
+
+                <strong>
+                    Área
+                </strong>
+
+                <span id="jornadaArea">
+                    Tecnologia
+                </span>
+
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <div class="jornada-item">
+
+                <div class="jornada-numero">
+                    03
+                </div>
+
+                <div class="jornada-icon">
+                    🎯
+                </div>
+
+                <strong>
+                    Curso
+                </strong>
+
+                <span>
+                    Graduação
+                </span>
+
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <div class="jornada-item">
+
+                <div class="jornada-numero">
+                    04
+                </div>
+
+                <div class="jornada-icon">
+                    🎓
+                </div>
+
+                <strong>
+                    Faculdade
+                </strong>
+
+                <span>
+                    Sua escolha
+                </span>
+
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <div class="jornada-item futuro">
+
+                <div class="jornada-numero">
+                    05
+                </div>
+
+                <div class="jornada-icon">
+                    🚀
+                </div>
+
+                <strong>
+                    Carreira
+                </strong>
+
+                <span>
+                    Seu futuro
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUSCA -->
+    <section class="busca-section">
+
+        <div class="busca-header">
+
+            <div>
+
+                <span class="mini-label">
+                    🔎 EXPLORAR
+                </span>
+
+                <h2>
+                    Encontre sua faculdade
+                </h2>
+
+            </div>
+
+            <span id="contador">
+                6 instituições encontradas
+            </span>
+
+        </div>
+
+
+        <div class="barra-pesquisa">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Digite faculdade, curso ou cidade..."
+            >
+
+            <button onclick="limparPesquisa()">
+                Limpar
+            </button>
+
+        </div>
+
+
+        <!-- FILTROS -->
+        <div class="filtros">
+
+            <button class="filtro ativo" data-filtro="todas">
+                Todas
+            </button>
+
+            <button class="filtro" data-filtro="publica">
+                🏛️ Públicas
+            </button>
+
+            <button class="filtro" data-filtro="privada">
+                🏢 Privadas
+            </button>
+
+            <button class="filtro" data-filtro="tecnologia">
+                💻 Tecnologia
+            </button>
+
+            <button class="filtro" data-filtro="engenharia">
+                ⚙️ Engenharia
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTAQUE -->
+    <section class="destaque-faculdade">
+
+        <div class="destaque-conteudo">
+
+            <span class="mini-label">
+                ⭐ DESTAQUE PARA VOCÊ
+            </span>
+
+            <h2>
+                Tecnologia e inovação
+            </h2>
+
+            <p>
+                Cursos relacionados à tecnologia podem combinar
+                com os interesses identificados no seu resultado.
+            </p>
+
+            <div class="destaque-tags">
+
+                <span>Programação</span>
+                <span>IA</span>
+                <span>Computação</span>
+                <span>Inovação</span>
+
+            </div>
+
+        </div>
+
+        <div class="destaque-icon">
+            🤖
+        </div>
+
+    </section>
+
+
+    <!-- FACULDADES -->
+    <section class="faculdades-section">
+
+        <div class="secao-titulo">
+
+            <span class="mini-label">
+                🏛️ INSTITUIÇÕES
+            </span>
+
+            <h2>
+                Faculdades para você explorar
+            </h2>
+
+            <p>
+                Conheça algumas instituições e descubra
+                quais caminhos acadêmicos elas oferecem.
+            </p>
+
+        </div>
+
+
+        <div
+            class="faculdades-grid"
+            id="faculdadesGrid"
+        >
+
+            <!-- CARD 1 -->
+            <article
+                class="faculdade-card"
+                data-tipo="publica"
+                data-area="tecnologia"
+                data-nome="Universidade Federal de Goiás UFG Goiânia"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        UFG
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo publica">
+                    🏛️ Pública
+                </span>
+
+                <h3>
+                    Universidade Federal de Goiás
+                </h3>
+
+                <p class="local">
+                    📍 Goiânia, GO
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.8</strong>
+                    <span>excelente</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>CURSOS</small>
+                        <strong>100+</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Presencial</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>Computação</span>
+                    <span>Engenharia</span>
+                    <span>Ciências</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('Universidade Federal de Goiás')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+
+            <!-- CARD 2 -->
+            <article
+                class="faculdade-card"
+                data-tipo="publica"
+                data-area="tecnologia"
+                data-nome="Universidade de Brasília UnB Brasília"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        UnB
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo publica">
+                    🏛️ Pública
+                </span>
+
+                <h3>
+                    Universidade de Brasília
+                </h3>
+
+                <p class="local">
+                    📍 Brasília, DF
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.7</strong>
+                    <span>excelente</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>CURSOS</small>
+                        <strong>100+</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Presencial</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>Tecnologia</span>
+                    <span>Computação</span>
+                    <span>Engenharia</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('Universidade de Brasília')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+
+            <!-- CARD 3 -->
+            <article
+                class="faculdade-card"
+                data-tipo="privada"
+                data-area="tecnologia"
+                data-nome="PUC Goiás Goiânia Tecnologia"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        PUC
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo privada">
+                    🏢 Privada
+                </span>
+
+                <h3>
+                    PUC Goiás
+                </h3>
+
+                <p class="local">
+                    📍 Goiânia, GO
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.6</strong>
+                    <span>muito boa</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>CURSOS</small>
+                        <strong>80+</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Presencial</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>TI</span>
+                    <span>Engenharia</span>
+                    <span>Design</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('PUC Goiás')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+
+            <!-- CARD 4 -->
+            <article
+                class="faculdade-card"
+                data-tipo="publica"
+                data-area="engenharia"
+                data-nome="Universidade Federal de Uberlândia UFU Uberlândia Engenharia"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        UFU
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo publica">
+                    🏛️ Pública
+                </span>
+
+                <h3>
+                    Universidade Federal de Uberlândia
+                </h3>
+
+                <p class="local">
+                    📍 Uberlândia, MG
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.7</strong>
+                    <span>excelente</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>CURSOS</small>
+                        <strong>90+</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Presencial</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>Engenharia</span>
+                    <span>Computação</span>
+                    <span>Ciências</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('Universidade Federal de Uberlândia')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+
+            <!-- CARD 5 -->
+            <article
+                class="faculdade-card"
+                data-tipo="privada"
+                data-area="tecnologia"
+                data-nome="Universidade Presbiteriana Mackenzie São Paulo Tecnologia"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        M
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo privada">
+                    🏢 Privada
+                </span>
+
+                <h3>
+                    Universidade Presbiteriana Mackenzie
+                </h3>
+
+                <p class="local">
+                    📍 São Paulo, SP
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.7</strong>
+                    <span>excelente</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>CURSOS</small>
+                        <strong>100+</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Híbrida</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>Computação</span>
+                    <span>Design</span>
+                    <span>Engenharia</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('Mackenzie')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+
+            <!-- CARD 6 -->
+            <article
+                class="faculdade-card"
+                data-tipo="privada"
+                data-area="tecnologia"
+                data-nome="FIAP São Paulo Tecnologia"
+            >
+
+                <div class="card-topo">
+
+                    <div class="faculdade-logo">
+                        FIAP
+                    </div>
+
+                    <button
+                        class="favorito"
+                        onclick="favoritar(this)"
+                    >
+                        ♡
+                    </button>
+
+                </div>
+
+                <span class="tipo privada">
+                    🏢 Privada
+                </span>
+
+                <h3>
+                    FIAP
+                </h3>
+
+                <p class="local">
+                    📍 São Paulo, SP
+                </p>
+
+                <div class="avaliacao">
+                    ⭐ <strong>4.8</strong>
+                    <span>excelente</span>
+                </div>
+
+                <div class="card-info">
+
+                    <div>
+                        <small>FOCO</small>
+                        <strong>Tech</strong>
+                    </div>
+
+                    <div>
+                        <small>MODALIDADE</small>
+                        <strong>Presencial</strong>
+                    </div>
+
+                </div>
+
+                <div class="card-tags">
+                    <span>IA</span>
+                    <span>Dev</span>
+                    <span>Cyber</span>
+                </div>
+
+                <button
+                    class="btn-detalhes"
+                    onclick="abrirDetalhes('FIAP')"
+                >
+                    Explorar instituição →
+                </button>
+
+            </article>
+
+        </div>
+
+        <div
+            class="sem-resultados"
+            id="semResultados"
+        >
+            <span>🔎</span>
+            <h3>Nenhuma faculdade encontrada</h3>
+            <p>
+                Tente pesquisar outro termo ou alterar os filtros.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- COMPARADOR -->
+    <section class="comparador">
+
+        <div>
+
+            <span class="mini-label">
+                ⚡ DECIDA COM MAIS CLAREZA
+            </span>
+
+            <h2>
+                Compare suas possibilidades
+            </h2>
+
+            <p>
+                Salve suas instituições favoritas e compare
+                diferentes caminhos antes de tomar uma decisão.
+            </p>
+
+        </div>
+
+        <button onclick="mostrarFavoritos()">
+            ❤️ Minhas favoritas
+        </button>
+
+    </section>
+
+
+    <!-- FRASE FINAL -->
+    <section class="final">
+
+        <div class="final-icon">
+            🌱
+        </div>
+
+        <h2>
+            Não existe apenas um caminho para o seu futuro.
+        </h2>
+
+        <p>
+            Explore. Compare. Descubra.
+            A escolha final é sua.
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Meu Futuro · Seu projeto de vida começa com uma escolha.
+    </footer>
+
+</main>
+
+
+<!-- MODAL -->
+<div
+    class="modal-overlay"
+    id="modal"
+    onclick="fecharModal(event)"
+>
+
+    <div
+        class="modal"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="fechar"
+            onclick="fecharModal()"
+        >
+            ×
+        </button>
+
+        <div class="modal-icon">
+            🎓
+        </div>
+
+        <span class="mini-label">
+            INSTITUIÇÃO
+        </span>
+
+        <h2 id="modalTitulo">
+            Faculdade
+        </h2>
+
+        <p id="modalDescricao">
+            Explore informações sobre esta instituição.
+        </p>
+
+        <div class="modal-grid">
+
+            <div>
+                <span>📍</span>
+                <strong>Localização</strong>
+                <small>Brasil</small>
+            </div>
+
+            <div>
+                <span>📚</span>
+                <strong>Cursos</strong>
+                <small>Diversas opções</small>
+            </div>
+
+            <div>
+                <span>🎯</span>
+                <strong>Perfil</strong>
+                <small>Compatível</small>
+            </div>
+
+            <div>
+                <span>🚀</span>
+                <strong>Carreira</strong>
+                <small>Possibilidades</small>
+            </div>
+
+        </div>
+
+        <button
+            class="btn-modal"
+            onclick="fecharModal()"
+        >
+            Continuar explorando
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/faculdades.js"></script>
+
+</body>
+</html>

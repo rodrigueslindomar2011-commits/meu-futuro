@@ -1,0 +1,1705 @@
+/* ============================================================
+   MEU FUTURO
+   PROFISSÕES
+   ESTILO COMPLETO
+============================================================ */
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #1f1b2d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f5ff 0%,
+            #ffffff 45%,
+            #f2edff 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* ============================================================
+   FUNDO DECORATIVO
+============================================================ */
+
+.background-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(90px);
+    opacity: .35;
+    z-index: -1;
+}
+
+.glow-one {
+    top: -220px;
+    left: -180px;
+    background: #c4a5ff;
+}
+
+.glow-two {
+    right: -220px;
+    bottom: -220px;
+    background: #d9c5ff;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.profissoes-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 28px 20px 50px;
+}
+
+
+.profissoes-card {
+    width: 100%;
+    background: rgba(255, 255, 255, .96);
+    border: 1px solid #ece8f5;
+    border-radius: 30px;
+    box-shadow:
+        0 25px 70px rgba(54, 35, 92, .10);
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   TOPO
+============================================================ */
+
+.topo {
+    min-height: 76px;
+    padding: 18px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #f0edf6;
+
+    background: rgba(255, 255, 255, .94);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b3dff,
+            #5b21b6
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(124, 58, 237, .25);
+}
+
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+.logo-texto strong {
+    color: #21182f;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+
+.logo-texto span {
+    color: #928ba0;
+    font-size: 11px;
+}
+
+
+.btn-voltar {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid #e8e2f2;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #625b70;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        .2s ease;
+}
+
+
+.btn-voltar:hover {
+    border-color: #cdb7f5;
+    background: #faf7ff;
+    color: #7c3aed;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero-profissoes {
+    min-height: 390px;
+
+    padding: 54px 56px;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(139, 92, 246, .30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #1d1232,
+            #2e1654 55%,
+            #421f70
+        );
+
+    color: #ffffff;
+}
+
+
+.hero-texto {
+    position: relative;
+    z-index: 3;
+}
+
+
+.mini-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #8b5cf6;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hero-profissoes .mini-label {
+    color: #c4a5ff;
+}
+
+
+.hero-texto h1 {
+    max-width: 590px;
+
+    margin-bottom: 18px;
+
+    font-size: clamp(
+        32px,
+        4vw,
+        48px
+    );
+
+    line-height: 1.05;
+
+    letter-spacing: -1.5px;
+
+    color: #ffffff;
+}
+
+
+.hero-texto > p {
+    max-width: 560px;
+
+    color: #d8cfea;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   ALUNO NO HERO
+============================================================ */
+
+.hero-aluno {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.avatar {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b4dff,
+            #7132d4
+        );
+
+    color: #ffffff;
+
+    font-weight: 800;
+}
+
+
+.hero-aluno-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.hero-aluno-info > div {
+    display: flex;
+    gap: 5px;
+}
+
+
+.hero-aluno-info span {
+    color: #d4cae2;
+}
+
+
+.hero-aluno-info strong {
+    color: #ffffff;
+}
+
+
+.hero-aluno-info small {
+    color: #a99fba;
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   VISUAL DO HERO
+============================================================ */
+
+.hero-visual {
+    min-height: 290px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.orbit {
+    position: absolute;
+
+    border: 1px solid rgba(196, 165, 255, .24);
+
+    border-radius: 50%;
+}
+
+
+.orbit-one {
+    width: 270px;
+    height: 270px;
+}
+
+
+.orbit-two {
+    width: 190px;
+    height: 190px;
+}
+
+
+.hero-center {
+    width: 145px;
+    height: 145px;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8b3dff,
+            #5520a4
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .25);
+}
+
+
+.hero-rocket {
+    font-size: 27px;
+    margin-bottom: 4px;
+}
+
+
+.hero-center strong {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+.hero-center small {
+    margin-top: 3px;
+
+    color: #d9cdf0;
+
+    font-size: 8px;
+}
+
+
+.floating-profissao {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .11);
+
+    border: 1px solid rgba(255, 255, 255, .16);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 21px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .18);
+
+    animation:
+        flutuar 4s ease-in-out infinite;
+}
+
+
+.profissao-a {
+    top: 15px;
+    left: 15%;
+}
+
+
+.profissao-b {
+    top: 28%;
+    right: 8%;
+
+    animation-delay: .8s;
+}
+
+
+.profissao-c {
+    bottom: 8%;
+    left: 20%;
+
+    animation-delay: 1.5s;
+}
+
+
+.profissao-d {
+    right: 17%;
+    bottom: 3%;
+
+    animation-delay: 2.2s;
+}
+
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+
+}
+
+
+/* ============================================================
+   PERFIL
+============================================================ */
+
+.perfil-bar {
+    margin: 28px 32px 0;
+
+    min-height: 90px;
+
+    padding: 18px 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(180px, 1fr)
+        minmax(260px, 1.4fr)
+        auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border: 1px solid #ebe6f4;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fcfaff,
+            #ffffff
+        );
+}
+
+
+.perfil-bar-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #f0e9ff;
+
+    font-size: 22px;
+}
+
+
+.perfil-bar-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.perfil-bar-info span {
+    color: #8b5cf6;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.perfil-bar-info strong {
+    color: #272034;
+
+    font-size: 18px;
+}
+
+
+.perfil-bar-description {
+    padding-left: 20px;
+
+    border-left: 1px solid #e9e4f0;
+}
+
+
+.perfil-bar-description p {
+    color: #8a8297;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+.perfil-score {
+    min-width: 75px;
+
+    padding-left: 20px;
+
+    border-left: 1px solid #e9e4f0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.perfil-score strong {
+    color: #7c3aed;
+
+    font-size: 24px;
+}
+
+
+.perfil-score span {
+    color: #9b94a6;
+
+    font-size: 9px;
+}
+
+
+/* ============================================================
+   CONTEÚDO
+============================================================ */
+
+.explorar,
+.recomendadas,
+.linha-caminhos,
+.mercado,
+.cta-futuro {
+    margin: 52px 32px 0;
+}
+
+
+.secao-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+.secao-heading h2 {
+    color: #211d2c;
+
+    font-size: 27px;
+
+    letter-spacing: -.7px;
+}
+
+
+.resultado-count,
+.heading-info {
+    color: #9a93a5;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   FILTROS
+============================================================ */
+
+.filtros {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 1fr)
+        200px
+        200px;
+
+    gap: 12px;
+}
+
+
+.campo-pesquisa,
+.filtros select {
+    height: 48px;
+
+    border: 1px solid #e8e3ef;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    color: #5c5568;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: .2s ease;
+}
+
+
+.campo-pesquisa {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+}
+
+
+.campo-pesquisa span {
+    font-size: 16px;
+}
+
+
+.campo-pesquisa input {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #292330;
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+
+.campo-pesquisa:focus-within,
+.filtros select:focus {
+    border-color: #a678e8;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, .08);
+}
+
+
+.filtros select {
+    padding: 0 13px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   GRID DE PROFISSÕES
+============================================================ */
+
+.profissoes-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 16px;
+
+    align-items: stretch;
+}
+
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.profissao-card {
+    min-width: 0;
+    min-height: 355px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 21px;
+
+    border: 1px solid #e9e4f1;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(46, 26, 78, .035);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+
+.profissao-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d8c5f7;
+
+    box-shadow:
+        0 18px 40px rgba(75, 35, 130, .10);
+}
+
+
+/* ============================================================
+   TOPO DO CARD
+============================================================ */
+
+.profissao-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+
+.profissao-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #f0e9ff;
+
+    font-size: 21px;
+}
+
+
+.btn-favorito {
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #aaa3b2;
+
+    font-family: inherit;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.btn-favorito:hover {
+    background: #f5f0ff;
+    color: #7c3aed;
+}
+
+
+.btn-favorito.favoritado {
+    color: #7c3aed;
+}
+
+
+/* ============================================================
+   INFORMAÇÕES DO CARD
+============================================================ */
+
+.profissao-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profissao-area {
+    margin-bottom: 7px;
+
+    color: #7c3aed;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.profissao-nome {
+    margin-bottom: 9px;
+
+    color: #211c2b;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+}
+
+
+.profissao-descricao {
+    color: #837b8d;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   COMPATIBILIDADE
+============================================================ */
+
+.profissao-compatibilidade {
+    margin-top: 18px;
+}
+
+
+.compatibilidade-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    color: #625b6d;
+
+    font-size: 12px;
+}
+
+
+.compatibilidade-info strong {
+    color: #7c3aed;
+
+    font-size: 13px;
+}
+
+
+.compatibilidade-barra {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #eeeaf5;
+}
+
+
+.compatibilidade-barra span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #a855f7
+        );
+
+    transition:
+        width .5s ease;
+}
+
+
+/* ============================================================
+   BOTÃO
+============================================================ */
+
+.btn-ver-profissao {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 18px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b32f1,
+            #7028d7
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.btn-ver-profissao:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(124, 58, 237, .22);
+}
+
+
+/* ============================================================
+   SEM RESULTADOS
+============================================================ */
+
+.sem-resultados {
+    padding: 55px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #ded6ea;
+
+    border-radius: 20px;
+
+    background: #fcfaff;
+}
+
+
+.sem-resultados-icon {
+    margin-bottom: 12px;
+
+    font-size: 32px;
+}
+
+
+.sem-resultados h3 {
+    margin-bottom: 7px;
+
+    color: #30283b;
+
+    font-size: 18px;
+}
+
+
+.sem-resultados p {
+    color: #8e8799;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   MAPA DE CAMINHOS
+============================================================ */
+
+.linha-intro {
+    max-width: 720px;
+
+    margin-top: -8px;
+    margin-bottom: 32px;
+
+    color: #857e8e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.timeline {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+
+    padding-top: 12px;
+}
+
+
+.linha {
+    position: absolute;
+
+    top: 34px;
+    left: 8%;
+    right: 8%;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d9c5f8,
+            #eee8f7
+        );
+}
+
+
+.timeline-item {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.timeline-ponto {
+    width: 46px;
+    height: 46px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 5px solid #ffffff;
+
+    background: #f0e9ff;
+
+    box-shadow:
+        0 4px 15px rgba(64, 38, 95, .10);
+}
+
+
+.timeline-item.ativo
+.timeline-ponto {
+    background: #7c3aed;
+
+    box-shadow:
+        0 8px 25px rgba(124, 58, 237, .25);
+}
+
+
+.timeline-content span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9b5cf0;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.timeline-content strong {
+    color: #2a2433;
+
+    font-size: 14px;
+}
+
+
+.timeline-content p {
+    margin-top: 7px;
+
+    color: #8a8292;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   MERCADO
+============================================================ */
+
+.mercado {
+    padding: 28px;
+
+    border: 1px solid #eee9f5;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fcfaff,
+            #ffffff
+        );
+}
+
+
+.mercado-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    align-items: flex-start;
+}
+
+
+.mercado-heading h2 {
+    margin-bottom: 8px;
+
+    color: #25202f;
+
+    font-size: 25px;
+}
+
+
+.mercado-heading p {
+    max-width: 600px;
+
+    color: #847c8e;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.mercado-badge {
+    padding: 10px 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border-radius: 11px;
+
+    background: #f1eaff;
+
+    color: #7140a9;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.mercado-grid {
+    margin-top: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+
+.mercado-item {
+    padding: 18px;
+
+    display: flex;
+
+    gap: 12px;
+
+    border: 1px solid #eeeaf3;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+}
+
+
+.mercado-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #f3edff;
+}
+
+
+.mercado-item strong {
+    color: #332c3d;
+
+    font-size: 13px;
+}
+
+
+.mercado-item p {
+    margin-top: 5px;
+
+    color: #8a8292;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.fonte-dados {
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    display: flex;
+
+    gap: 9px;
+
+    border-top: 1px solid #eeeaf3;
+
+    color: #918999;
+}
+
+
+.fonte-dados p {
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   CTA
+============================================================ */
+
+.cta-futuro {
+    min-height: 150px;
+
+    padding: 26px 28px;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #28123f,
+            #48206c
+        );
+
+    color: #ffffff;
+}
+
+
+.cta-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, .10);
+
+    font-size: 25px;
+}
+
+
+.cta-texto > span {
+    color: #c8aaf2;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.cta-texto h2 {
+    margin: 6px 0;
+
+    font-size: 21px;
+}
+
+
+.cta-texto p {
+    color: #cfc2dd;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+.cta-futuro button {
+    height: 43px;
+
+    padding: 0 18px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #6122a0;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+
+.cta-futuro button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .20);
+}
+
+
+/* ============================================================
+   RODAPÉ
+============================================================ */
+
+.rodape {
+    margin-top: 30px;
+
+    padding: 24px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #eeeaf4;
+
+    color: #9a92a4;
+}
+
+
+.rodape strong {
+    color: #6f35a8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.rodape p {
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   RESPONSIVO
+============================================================ */
+
+@media (max-width: 1050px) {
+
+    .profissoes-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .hero-profissoes {
+        grid-template-columns: 1fr .8fr;
+    }
+
+    .perfil-bar {
+        grid-template-columns:
+            auto
+            1fr
+            auto;
+    }
+
+    .perfil-bar-description {
+        display: none;
+    }
+
+    .mercado-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .profissoes-container {
+        padding: 0;
+    }
+
+    .profissoes-card {
+        border-radius: 0;
+    }
+
+    .hero-profissoes {
+        grid-template-columns: 1fr;
+
+        padding: 42px 30px;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .profissoes-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .filtros {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campo-pesquisa {
+        grid-column: 1 / -1;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .linha {
+        top: 0;
+        bottom: 0;
+        left: 22px;
+        width: 2px;
+        height: auto;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 46px 1fr;
+
+        text-align: left;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+    .timeline-ponto {
+        margin: 0;
+    }
+
+    .mercado-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-futuro {
+        grid-template-columns: auto 1fr;
+    }
+
+    .cta-futuro button {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .topo {
+        padding: 15px 18px;
+    }
+
+    .btn-voltar {
+        padding: 0 12px;
+    }
+
+    .hero-profissoes {
+        padding: 36px 22px;
+    }
+
+    .hero-texto h1 {
+        font-size: 32px;
+    }
+
+    .perfil-bar {
+        margin-left: 18px;
+        margin-right: 18px;
+
+        grid-template-columns:
+            auto 1fr;
+    }
+
+    .perfil-score {
+        grid-column: 1 / -1;
+
+        padding: 14px 0 0;
+
+        border-left: 0;
+        border-top: 1px solid #e9e4f0;
+    }
+
+    .explorar,
+    .recomendadas,
+    .linha-caminhos,
+    .mercado,
+    .cta-futuro {
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .secao-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-pesquisa {
+        grid-column: auto;
+    }
+
+    .profissoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mercado {
+        padding: 20px;
+    }
+
+    .mercado-heading {
+        flex-direction: column;
+    }
+
+    .cta-futuro {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .cta-icon {
+        margin: 0 auto;
+    }
+
+    .cta-futuro button {
+        grid-column: auto;
+    }
+
+    .rodape {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}

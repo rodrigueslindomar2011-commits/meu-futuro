@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custos | Meu Futuro</title>
+
+    <!-- CSS DA PÁGINA -->
+    <link rel="stylesheet" href="css/custos.css">
+</head>
+
+<body>
+
+    <main class="custos-container">
+
+        <section class="custos-card">
+
+            <!-- =====================================================
+                 LOGO
+            ====================================================== -->
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    MF
+                </div>
+
+                <div class="logo-text">
+                    <strong>MEU FUTURO</strong>
+                    <span>Projeto de Vida</span>
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 CABEÇALHO
+            ====================================================== -->
+
+            <header class="pagina-header">
+
+                <div class="header-content">
+
+                    <span class="step-label">
+                        PLANEJE SEU FUTURO
+                    </span>
+
+                    <h1>
+                        Quanto custa realizar o seu sonho? 
+                    </h1>
+
+                    <p>
+                        Simule seus gastos e descubra quanto você
+                        precisaria investir por mês para estudar,
+                        morar e construir seu futuro.
+                    </p>
+
+                </div>
+
+                <div class="header-icon">
+                    💰
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 RESUMO PRINCIPAL
+            ====================================================== -->
+
+            <section class="resumo-principal">
+
+                <div class="resumo-texto">
+
+                    <span>
+                        CUSTO ESTIMADO
+                    </span>
+
+                    <h2 id="custoTotal">
+                        R$ 2.800,00
+                    </h2>
+
+                    <p>
+                        por mês
+                    </p>
+
+                </div>
+
+
+                <div class="resumo-anual">
+
+                    <span>
+                        ESTIMATIVA ANUAL
+                    </span>
+
+                    <strong id="custoAnual">
+                        R$ 33.600,00
+                    </strong>
+
+                    <small>
+                        considerando 12 meses
+                    </small>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 INTRODUÇÃO
+            ====================================================== -->
+
+            <section class="section-heading">
+
+                <span class="mini-label">
+                    SEU PLANEJAMENTO
+                </span>
+
+                <h2>
+                    Monte sua estimativa de custos
+                </h2>
+
+                <p>
+                    Informe quanto você imagina gastar em cada categoria.
+                    O Meu Futuro calcula automaticamente o custo total.
+                </p>
+
+            </section>
+
+
+            <!-- =====================================================
+                 GRID DE CUSTOS
+            ====================================================== -->
+
+            <section class="custos-grid">
+
+
+                <!-- FACULDADE -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        🎓
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="faculdade">
+                            Faculdade
+                        </label>
+
+                        <span>
+                            Mensalidade ou investimento no curso
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="faculdade"
+                            value="850"
+                            min="0"
+                            step="50"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- MORADIA -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        🏠
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="moradia">
+                            Moradia
+                        </label>
+
+                        <span>
+                            Aluguel, república ou residência
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="moradia"
+                            value="900"
+                            min="0"
+                            step="50"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- ALIMENTAÇÃO -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        🍽️
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="alimentacao">
+                            Alimentação
+                        </label>
+
+                        <span>
+                            Mercado, refeições e alimentação
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="alimentacao"
+                            value="650"
+                            min="0"
+                            step="50"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- TRANSPORTE -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        🚌
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="transporte">
+                            Transporte
+                        </label>
+
+                        <span>
+                            Ônibus, combustível ou aplicativos
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="transporte"
+                            value="180"
+                            min="0"
+                            step="10"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- CONTAS -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        💡
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="contas">
+                            Contas
+                        </label>
+
+                        <span>
+                            Energia, água, internet e telefone
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="contas"
+                            value="220"
+                            min="0"
+                            step="10"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+
+                <!-- OUTROS -->
+
+                <article class="custo-item">
+
+                    <div class="custo-icon">
+                        📱
+                    </div>
+
+                    <div class="custo-info">
+
+                        <label for="outros">
+                            Outros gastos
+                        </label>
+
+                        <span>
+                            Lazer, materiais e despesas extras
+                        </span>
+
+                    </div>
+
+                    <div class="campo-valor">
+
+                        <span>
+                            R$
+                        </span>
+
+                        <input
+                            type="number"
+                            id="outros"
+                            value="0"
+                            min="0"
+                            step="10"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =====================================================
+                 BOTÃO CALCULAR
+            ====================================================== -->
+
+            <div class="calcular-area">
+
+                <button
+                    type="button"
+                    class="btn-calcular"
+                    onclick="calcularCustos()"
+                >
+                    🧮 Calcular meu custo
+                </button>
+
+            </div>
+
+
+            <!-- =====================================================
+                 RESULTADO
+            ====================================================== -->
+
+            <section class="resultado-section">
+
+                <div class="section-heading">
+
+                    <span class="mini-label">
+                        SEU RESULTADO
+                    </span>
+
+                    <h2>
+                        Veja para onde seu dinheiro iria
+                    </h2>
+
+                    <p>
+                        Esta é uma estimativa baseada nos valores
+                        informados por você.
+                    </p>
+
+                </div>
+
+
+                <div class="resultado-grid">
+
+
+                    <!-- TOTAL MENSAL -->
+
+                    <div class="resultado-card destaque">
+
+                        <div class="resultado-icon">
+                            💰
+                        </div>
+
+                        <span>
+                            CUSTO MENSAL
+                        </span>
+
+                        <strong id="resultadoMensal">
+                            R$ 2.800,00
+                        </strong>
+
+                        <small>
+                            valor estimado por mês
+                        </small>
+
+                    </div>
+
+
+                    <!-- TOTAL ANUAL -->
+
+                    <div class="resultado-card">
+
+                        <div class="resultado-icon">
+                            📅
+                        </div>
+
+                        <span>
+                            CUSTO ANUAL
+                        </span>
+
+                        <strong id="resultadoAnual">
+                            R$ 33.600,00
+                        </strong>
+
+                        <small>
+                            estimativa para 12 meses
+                        </small>
+
+                    </div>
+
+
+                    <!-- FACULDADE -->
+
+                    <div class="resultado-card">
+
+                        <div class="resultado-icon">
+                            🎓
+                        </div>
+
+                        <span>
+                            FACULDADE
+                        </span>
+
+                        <strong id="resultadoFaculdade">
+                            R$ 850,00
+                        </strong>
+
+                        <small>
+                            por mês
+                        </small>
+
+                    </div>
+
+
+                    <!-- MORADIA -->
+
+                    <div class="resultado-card">
+
+                        <div class="resultado-icon">
+                            🏠
+                        </div>
+
+                        <span>
+                            MORADIA
+                        </span>
+
+                        <strong id="resultadoMoradia">
+                            R$ 900,00
+                        </strong>
+
+                        <small>
+                            por mês
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 ORÇAMENTO
+            ====================================================== -->
+
+            <section class="orcamento-section">
+
+                <div class="section-heading">
+
+                    <span class="mini-label">
+                        SEU ORÇAMENTO
+                    </span>
+
+                    <h2>
+                        Quanto você consegue gastar por mês?
+                    </h2>
+
+                    <p>
+                        Informe seu orçamento e veja se ele seria
+                        suficiente para cobrir seus custos.
+                    </p>
+
+                </div>
+
+
+                <div class="orcamento-box">
+
+                    <div class="orcamento-top">
+
+                        <div>
+
+                            <span>
+                                MEU ORÇAMENTO MENSAL
+                            </span>
+
+                            <strong id="valorOrcamento">
+                                R$ 2.500,00
+                            </strong>
+
+                        </div>
+
+                        <div class="orcamento-icon">
+                            🎯
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="range"
+                        id="orcamento"
+                        min="500"
+                        max="10000"
+                        value="2500"
+                        step="50"
+                        oninput="atualizarOrcamento()"
+                    >
+
+
+                    <div class="range-valores">
+
+                        <span>
+                            R$ 500
+                        </span>
+
+                        <span>
+                            R$ 10.000
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="situacao-orcamento"
+                        id="situacaoOrcamento"
+                    >
+
+                        <strong>
+                            Vamos analisar seu orçamento.
+                        </strong>
+
+                        <span>
+                            Ajuste o valor acima para visualizar.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SIMULAÇÃO COM BOLSA
+            ====================================================== -->
+
+            <section class="bolsa-simulacao">
+
+                <div class="simulacao-icon">
+                    🎓
+                </div>
+
+                <div class="simulacao-content">
+
+                    <span>
+                        E SE VOCÊ CONSEGUISSE UMA BOLSA?
+                    </span>
+
+                    <h2>
+                        Uma bolsa pode diminuir bastante
+                        o custo do seu projeto.
+                    </h2>
+
+                    <p>
+                        Simule quanto você economizaria com um
+                        desconto na mensalidade da faculdade.
+                    </p>
+
+                </div>
+
+
+                <div class="simulacao-controle">
+
+                    <label for="descontoBolsa">
+                        Desconto
+                    </label>
+
+                    <select
+                        id="descontoBolsa"
+                        onchange="calcularBolsa()"
+                    >
+
+                        <option value="0">
+                            Sem bolsa
+                        </option>
+
+                        <option value="30">
+                            30%
+                        </option>
+
+                        <option value="50">
+                            50%
+                        </option>
+
+                        <option value="70">
+                            70%
+                        </option>
+
+                        <option value="100">
+                            100%
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 RESULTADO DA BOLSA
+            ====================================================== -->
+
+            <section class="economia-section">
+
+                <div class="economia-card">
+
+
+                    <div>
+
+                        <span>
+                            CUSTO ATUAL
+                        </span>
+
+                        <strong id="custoAtualBolsa">
+                            R$ 2.800,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="economia-arrow">
+                        →
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            COM A BOLSA
+                        </span>
+
+                        <strong id="custoComBolsa">
+                            R$ 2.800,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="economia-final">
+
+                        <span>
+                            ECONOMIA
+                        </span>
+
+                        <strong id="economiaBolsa">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 DISTRIBUIÇÃO DOS GASTOS
+            ====================================================== -->
+
+            <section class="distribuicao-section">
+
+                <div class="section-heading">
+
+                    <span class="mini-label">
+                        VISÃO GERAL
+                    </span>
+
+                    <h2>
+                        Como seu dinheiro seria distribuído
+                    </h2>
+
+                    <p>
+                        Entenda quais categorias representam
+                        a maior parte dos seus gastos.
+                    </p>
+
+                </div>
+
+
+                <div class="distribuicao">
+
+
+                    <div class="barra-distribuicao">
+
+                        <div
+                            class="parte faculdade"
+                            id="barraFaculdade"
+                        ></div>
+
+                        <div
+                            class="parte moradia"
+                            id="barraMoradia"
+                        ></div>
+
+                        <div
+                            class="parte alimentacao"
+                            id="barraAlimentacao"
+                        ></div>
+
+                        <div
+                            class="parte transporte"
+                            id="barraTransporte"
+                        ></div>
+
+                        <div
+                            class="parte contas"
+                            id="barraContas"
+                        ></div>
+
+                        <div
+                            class="parte outros"
+                            id="barraOutros"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="legenda">
+
+
+                        <span>
+
+                            <i class="ponto faculdade"></i>
+
+                            Faculdade
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="ponto moradia"></i>
+
+                            Moradia
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="ponto alimentacao"></i>
+
+                            Alimentação
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="ponto transporte"></i>
+
+                            Transporte
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="ponto contas"></i>
+
+                            Contas
+
+                        </span>
+
+
+                        <span>
+
+                            <i class="ponto outros"></i>
+
+                            Outros
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 DICA
+            ====================================================== -->
+
+            <section class="dica-card">
+
+                <div class="dica-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <span>
+                        DICA DO MEU FUTURO
+                    </span>
+
+                    <h2>
+                        Planejar antes de escolher pode fazer
+                        uma grande diferença.
+                    </h2>
+
+                    <p>
+                        Compare mensalidades, bolsas, moradia,
+                        transporte e outros custos antes de tomar
+                        uma decisão sobre onde estudar.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 PRÓXIMO PASSO
+            ====================================================== -->
+
+            <section class="proximo-passo">
+
+                <div class="proximo-icon">
+                    🚀
+                </div>
+
+                <div>
+
+                    <span>
+                        SEU PRÓXIMO PASSO
+                    </span>
+
+                    <h2>
+                        Agora compare suas possibilidades.
+                    </h2>
+
+                    <p>
+                        Use essas estimativas para entender quais
+                        opções podem fazer sentido para o seu futuro.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 BOTÕES
+            ====================================================== -->
+
+            <div class="acoes">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    onclick="voltarDashboard()"
+                >
+                    ← Voltar ao início
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-primary"
+                    onclick="irParaMoradias()"
+                >
+                    Explorar moradias →
+                </button>
+
+            </div>
+
+
+            <!-- =====================================================
+                 RODAPÉ
+            ====================================================== -->
+
+            <footer class="rodape">
+
+                <p>
+                    O Meu Futuro ajuda você a transformar sonhos
+                    em planos. Suas escolhas pertencem a você. 💚
+                </p>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <!-- =============================================================
+         JAVASCRIPT
+    ============================================================= -->
+
+    <script src="js/custos.js"></script>
+
+</body>
+
+</html>

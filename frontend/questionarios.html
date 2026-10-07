@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Descubra seu perfil | Meu Futuro</title>
+
+    <!-- CSS DA PÁGINA -->
+    <link
+        rel="stylesheet"
+        href="/css/questionarios.css"
+    >
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- =========================================
+             CABEÇALHO
+        ========================================== -->
+
+        <header class="topbar">
+
+            <a
+                href="dashboard.html"
+                class="logo"
+            >
+                <span class="logo-star">✦</span>
+                <span>MEU FUTURO</span>
+            </a>
+
+            <div class="step-info">
+
+                <span id="questionCounter">
+                    Pergunta 1 de 10
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================================
+             ÁREA PRINCIPAL
+        ========================================== -->
+
+        <section class="quiz-container">
+
+
+            <!-- =====================================
+                 PROGRESSO
+            ====================================== -->
+
+            <div class="progress-area">
+
+                <div class="progress-text">
+
+                    <span>
+                        Descobrindo seu perfil
+                    </span>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 INTRODUÇÃO
+            ====================================== -->
+
+            <section
+                id="introScreen"
+                class="screen intro-screen active"
+            >
+
+                <div class="intro-icon">
+                    ✦
+                </div>
+
+                <span class="eyebrow">
+                    SUA JORNADA COMEÇA AQUI
+                </span>
+
+                <h1>
+
+                    Vamos descobrir
+
+                    <span>
+                        o que combina com você?
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Não existem respostas certas ou erradas.
+                    Queremos entender seus interesses,
+                    sua maneira de pensar e aquilo que
+                    realmente desperta sua curiosidade.
+
+                </p>
+
+
+                <!-- CARDS INTRODUÇÃO -->
+
+                <div class="intro-cards">
+
+                    <div class="mini-card">
+
+                        <span>🧠</span>
+
+                        <strong>
+                            Seja você
+                        </strong>
+
+                        <small>
+                            Responda com sinceridade.
+                        </small>
+
+                    </div>
+
+
+                    <div class="mini-card">
+
+                        <span>✨</span>
+
+                        <strong>
+                            Explore
+                        </strong>
+
+                        <small>
+                            Descubra novas possibilidades.
+                        </small>
+
+                    </div>
+
+
+                    <div class="mini-card">
+
+                        <span>🚀</span>
+
+                        <strong>
+                            Construa
+                        </strong>
+
+                        <small>
+                            Comece a pensar no seu futuro.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÃO INICIAR -->
+
+                <button
+                    id="startButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    Começar descoberta
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+            <!-- =====================================
+                 CARREGAMENTO
+            ====================================== -->
+
+            <section
+                id="loadingScreen"
+                class="screen loading-screen"
+            >
+
+                <div class="loading-orbit">
+
+                    <div class="loading-dot"></div>
+
+                </div>
+
+                <span class="eyebrow">
+                    ANALISANDO
+                </span>
+
+                <h2>
+
+                    Estamos descobrindo
+
+                    <span>
+                        seu perfil...
+                    </span>
+
+                </h2>
+
+                <p id="loadingText">
+                    Analisando suas respostas...
+                </p>
+
+            </section>
+
+
+            <!-- =====================================
+                 PERGUNTA
+            ====================================== -->
+
+            <section
+                id="questionScreen"
+                class="screen question-screen"
+            >
+
+                <div class="question-heading">
+
+                    <span
+                        class="question-number"
+                        id="questionNumber"
+                    >
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <span class="eyebrow">
+                            UMA PERGUNTA PARA VOCÊ
+                        </span>
+
+                        <h2 id="questionText">
+                            Carregando pergunta...
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALTERNATIVAS -->
+
+                <div
+                    id="answersContainer"
+                    class="answers-container"
+                >
+
+                    <!--
+                        As respostas serão inseridas
+                        pelo JavaScript.
+                    -->
+
+                </div>
+
+
+                <!-- NAVEGAÇÃO -->
+
+                <div class="navigation">
+
+                    <button
+                        id="backButton"
+                        class="secondary-button"
+                        type="button"
+                        disabled
+                    >
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        id="nextButton"
+                        class="primary-button disabled"
+                        type="button"
+                        disabled
+                    >
+
+                        Próxima
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 RESULTADO
+            ====================================== -->
+
+            <section
+                id="resultScreen"
+                class="screen result-screen"
+            >
+
+                <!-- BADGE -->
+
+                <div class="result-badge">
+
+                    ✦ SEU PERFIL ESTÁ PRONTO
+
+                </div>
+
+
+                <!-- ÍCONE -->
+
+                <div
+                    class="result-icon"
+                    id="resultIcon"
+                >
+                    🔬
+                </div>
+
+
+                <!-- PERFIL -->
+
+                <span class="eyebrow">
+                    SEU PERFIL PRINCIPAL
+                </span>
+
+
+                <h1 id="resultTitle">
+                    Investigativo
+                </h1>
+
+
+                <!-- CÓDIGO -->
+
+                <div class="result-code">
+
+                    Código
+
+                    <strong id="resultCode">
+                        IRA
+                    </strong>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <p id="resultDescription">
+
+                    Analisamos suas respostas e encontramos
+                    características que podem ajudar você
+                    a explorar diferentes caminhos profissionais.
+
+                </p>
+
+
+                <!-- =================================
+                     PONTUAÇÕES
+                ================================== -->
+
+                <div class="scores-card">
+
+                    <div class="scores-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                SEU MAPA DE INTERESSES
+                            </span>
+
+                            <h2>
+                                Como você se identifica
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="score-list">
+
+
+                        <!-- REALISTA -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    🔧 Realista
+                                </span>
+
+                                <strong id="scoreR">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barR"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INVESTIGATIVO -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    🔬 Investigativo
+                                </span>
+
+                                <strong id="scoreI">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barI"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ARTÍSTICO -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    🎨 Artístico
+                                </span>
+
+                                <strong id="scoreA">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barA"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SOCIAL -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    🤝 Social
+                                </span>
+
+                                <strong id="scoreS">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barS"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMPREENDEDOR -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    🚀 Empreendedor
+                                </span>
+
+                                <strong id="scoreE">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barE"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONVENCIONAL -->
+
+                        <div class="score-item">
+
+                            <div class="score-label">
+
+                                <span>
+                                    📋 Convencional
+                                </span>
+
+                                <strong id="scoreC">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="score-bar">
+
+                                <div id="barC"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     AÇÕES DO RESULTADO
+                ================================== -->
+
+                <div class="result-actions">
+
+
+                    <!-- DASHBOARD -->
+
+                    <button
+                        id="dashboardButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+
+                        ← Voltar ao dashboard
+
+                    </button>
+
+
+                    <!-- POSSIBILIDADES -->
+
+                    <button
+                        id="possibilitiesButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+
+                        Ver possibilidades
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <!-- REFAZER -->
+
+                    <button
+                        id="restartButton"
+                        class="primary-button"
+                        type="button"
+                    >
+
+                        Refazer teste
+
+                        <span>
+                            ↻
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="/js/questionarios.js"></script>
+
+</body>
+
+</html>

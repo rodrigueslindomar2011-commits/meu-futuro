@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Descubra cursos e universidades que combinam com seu perfil no Meu Futuro."
+    >
+
+    <title>Possibilidades | Meu Futuro</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/possibilidades.css"
+    >
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+        <header class="topbar">
+
+            <a
+                href="dashboard.html"
+                class="logo"
+                aria-label="Voltar para o dashboard"
+            >
+                <span class="logo-star">✦</span>
+
+                <span>MEU FUTURO</span>
+            </a>
+
+            <div class="topbar-actions">
+
+                <a
+                    href="questionarios.html"
+                    class="top-link"
+                >
+                    Refazer teste
+                </a>
+
+                <a
+                    href="dashboard.html"
+                    class="top-button"
+                >
+                    Dashboard
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    SEU PRÓXIMO PASSO
+                </span>
+
+                <h1>
+                    Agora que você
+                    <span>se conhece melhor...</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore cursos, áreas de atuação e universidades
+                    que podem combinar com seu perfil.
+                </p>
+
+                <div class="profile-summary">
+
+                    <div
+                        class="profile-summary-icon"
+                        id="profileIcon"
+                    >
+                        🔬
+                    </div>
+
+                    <div class="profile-summary-content">
+
+                        <span>
+                            SEU PERFIL
+                        </span>
+
+                        <strong id="profileName">
+                            Investigativo
+                        </strong>
+
+                        <small id="profileCode">
+                            Código IRA
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="hero-orbit orbit-one"></div>
+
+                <div class="hero-orbit orbit-two"></div>
+
+                <div class="hero-orbit orbit-three"></div>
+
+                <div class="hero-star star-one">
+                    ✦
+                </div>
+
+                <div class="hero-star star-two">
+                    ✦
+                </div>
+
+                <div class="hero-star star-three">
+                    ✦
+                </div>
+
+                <div class="hero-center">
+                    <span id="heroCenterIcon">🔬</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PERFIL
+        ====================================================== -->
+
+        <section class="profile-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ENTENDENDO VOCÊ
+                    </span>
+
+                    <h2>
+                        Seu perfil aponta para
+                        <span id="profileArea">
+                            novas possibilidades
+                        </span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-card-main">
+
+                    <div
+                        class="large-profile-icon"
+                        id="largeProfileIcon"
+                    >
+                        🔬
+                    </div>
+
+                    <div>
+
+                        <span class="profile-card-label">
+                            PERFIL PRINCIPAL
+                        </span>
+
+                        <h3 id="profileTitle">
+                            Investigativo
+                        </h3>
+
+                        <p id="profileDescription">
+                            Você demonstra curiosidade,
+                            gosta de investigar, compreender
+                            problemas, pesquisar informações
+                            e descobrir como as coisas funcionam.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-score-area">
+
+                    <span>
+                        IDENTIFICAÇÃO
+                    </span>
+
+                    <strong id="profileScoreCode">
+                        IRA
+                    </strong>
+
+                    <small>
+                        combinação principal
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CURSOS RECOMENDADOS
+        ====================================================== -->
+
+        <section class="possibilities-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CAMINHOS PARA EXPLORAR
+                    </span>
+
+                    <h2>
+                        Cursos que podem
+                        <span>combinar com você</span>
+                    </h2>
+
+                    <p>
+                        Estas sugestões são baseadas no seu resultado.
+                        Use-as como ponto de partida para conhecer
+                        diferentes possibilidades.
+                    </p>
+
+                </div>
+
+                <div class="result-count">
+
+                    <strong id="courseCount">
+                        0
+                    </strong>
+
+                    <span>
+                        possibilidades
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filters-card">
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="courseSearch"
+                        placeholder="Pesquisar curso..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="universityFilter">
+                        Universidade
+                    </label>
+
+                    <select id="universityFilter">
+
+                        <option value="all">
+                            Todas as universidades
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="areaFilter">
+                        Área
+                    </label>
+
+                    <select id="areaFilter">
+
+                        <option value="all">
+                            Todas as áreas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="clearFilters"
+                    class="clear-filter"
+                >
+                    Limpar filtros
+                </button>
+
+            </div>
+
+
+            <!-- CARDS -->
+
+            <div
+                id="coursesGrid"
+                class="courses-grid"
+            >
+                <!-- preenchido pelo JavaScript -->
+            </div>
+
+
+            <!-- ESTADO VAZIO -->
+
+            <div
+                id="emptyState"
+                class="empty-state hidden"
+            >
+
+                <div class="empty-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Nenhuma possibilidade encontrada
+                </h3>
+
+                <p>
+                    Tente mudar os filtros ou pesquisar
+                    por outro curso.
+                </p>
+
+                <button
+                    type="button"
+                    id="emptyClearButton"
+                    class="primary-button"
+                >
+                    Limpar filtros
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             UNIVERSIDADES
+        ====================================================== -->
+
+        <section class="universities-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ONDE ESTUDAR
+                    </span>
+
+                    <h2>
+                        Universidades
+                        <span>em Goiás</span>
+                    </h2>
+
+                    <p>
+                        Conheça algumas instituições que podem
+                        fazer parte da sua jornada acadêmica.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="universitiesGrid"
+                class="universities-grid"
+            >
+                <!-- preenchido pelo JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="final-cta">
+
+            <div class="cta-decoration">
+                ✦
+            </div>
+
+            <div>
+
+                <span class="eyebrow">
+                    SEU FUTURO NÃO PRECISA SER DECIDIDO HOJE
+                </span>
+
+                <h2>
+                    Comece explorando.
+                    <span>Depois, escolha.</span>
+                </h2>
+
+                <p>
+                    O teste é apenas um ponto de partida.
+                    Conheça os cursos, converse com profissionais,
+                    visite universidades e descubra o que realmente
+                    faz sentido para você.
+                </p>
+
+            </div>
+
+            <div class="cta-actions">
+
+                <a
+                    href="dashboard.html"
+                    class="secondary-button"
+                >
+                    ← Dashboard
+                </a>
+
+                <a
+                    href="questionarios.html"
+                    class="primary-button"
+                >
+                    Refazer teste
+                    <span>↻</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
+        <footer class="footer">
+
+            <div class="footer-logo">
+
+                <span>
+                    ✦
+                </span>
+
+                MEU FUTURO
+
+            </div>
+
+            <p>
+                Descubra possibilidades. Construa seu caminho.
+            </p>
+
+            <span class="footer-copy">
+                © 2026 Meu Futuro
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
+
+    <div
+        id="courseModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div
+            class="modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalTitle"
+        >
+
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+            <div class="modal-image-wrapper">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt=""
+                >
+
+                <span
+                    id="modalUniversity"
+                    class="modal-university"
+                >
+                    Universidade
+                </span>
+
+            </div>
+
+            <div class="modal-body">
+
+                <span
+                    id="modalArea"
+                    class="modal-area"
+                >
+                    Área
+                </span>
+
+                <h2 id="modalTitle">
+                    Curso
+                </h2>
+
+                <p id="modalDescription">
+                    Descrição do curso.
+                </p>
+
+                <div class="modal-info-grid">
+
+                    <div class="modal-info">
+
+                        <span>
+                            INSTITUIÇÃO
+                        </span>
+
+                        <strong id="modalInstitution">
+                            Universidade
+                        </strong>
+
+                    </div>
+
+                    <div class="modal-info">
+
+                        <span>
+                            LOCAL
+                        </span>
+
+                        <strong id="modalLocation">
+                            Goiás
+                        </strong>
+
+                    </div>
+
+                    <div class="modal-info">
+
+                        <span>
+                            MODALIDADE
+                        </span>
+
+                        <strong id="modalModality">
+                            Presencial
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-actions">
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        id="modalOfficialLink"
+                        class="primary-button"
+                    >
+                        Conhecer instituição
+                        <span>↗</span>
+                    </a>
+
+                    <button
+                        type="button"
+                        id="modalCloseButton"
+                        class="secondary-button"
+                    >
+                        Fechar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/possibilidades.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+/* ============================================================
+   MEU FUTURO
+   AUTH.CSS
+
+   Login • Cadastro • Recuperação de senha
+   ============================================================ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #dff7ec,
+            transparent 35%
+        ),
+        #f5f8f7;
+
+    color: #17251f;
+}
+
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.cadastro-container {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.cadastro-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 25px 70px rgba(20, 50, 35, 0.12);
+}
+
+
+/* ============================================================
+   CARD DE LOGIN / RECUPERAÇÃO
+   ============================================================ */
+
+.login-card {
+    max-width: 560px;
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+}
+
+
+.logo-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    background: #173f2a;
+
+    color: white;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.logo strong {
+
+    display: block;
+
+    font-size: 19px;
+}
+
+
+.logo span {
+
+    font-size: 13px;
+
+    color: #718078;
+}
+
+
+/* ============================================================
+   PROGRESSO
+   ============================================================ */
+
+.progress-container {
+    margin-bottom: 35px;
+}
+
+
+.progress-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    color: #718078;
+}
+
+
+.progress {
+
+    height: 7px;
+
+    background: #e7eee9;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+#progressBar {
+
+    height: 100%;
+
+    width: 33.33%;
+
+    background: #27a866;
+
+    transition: width 0.3s ease;
+}
+
+
+/* ============================================================
+   ETAPAS
+   ============================================================ */
+
+.step {
+    display: none;
+}
+
+
+.step.active {
+    display: block;
+}
+
+
+/* ============================================================
+   LABEL
+   ============================================================ */
+
+.step-label {
+
+    color: #27a866;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ============================================================
+   TÍTULO
+   ============================================================ */
+
+h1 {
+
+    font-size: 36px;
+
+    margin: 10px 0;
+}
+
+
+/* ============================================================
+   SUBTÍTULO
+   ============================================================ */
+
+.subtitle {
+
+    color: #718078;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* ============================================================
+   FORMULÁRIO
+   ============================================================ */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.input-group,
+.question {
+    margin-bottom: 25px;
+}
+
+
+.input-group label,
+.question > label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 9px;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    background: #fbfdfc;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #27a866;
+}
+
+
+textarea {
+
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+
+/* ============================================================
+   OPÇÕES
+   ============================================================ */
+
+.options {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.option {
+
+    padding: 17px;
+
+    border: 1px solid #dce5df;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.option:hover {
+
+    border-color: #27a866;
+
+    background: #f0faf4;
+}
+
+
+/* ============================================================
+   CHECKBOX / RADIO
+   ============================================================ */
+
+.option input {
+
+    width: auto;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    accent-color: #27a866;
+}
+
+
+/* ============================================================
+   OPÇÃO SELECIONADA
+   ============================================================ */
+
+.option:has(input:checked) {
+
+    border-color: #27a866;
+
+    background: #f0faf4;
+
+    box-shadow:
+        0 0 0 1px #27a866;
+}
+
+
+/* ============================================================
+   AVISO DE MÚLTIPLAS RESPOSTAS
+   ============================================================ */
+
+.selection-hint {
+
+    color: #718078;
+
+    font-size: 13px;
+
+    margin-top: -3px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 12px;
+
+    padding: 15px 25px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+
+.btn-next,
+.btn-finish {
+
+    background: #173f2a;
+
+    color: white;
+}
+
+
+.btn-next:hover,
+.btn-finish:hover {
+
+    background: #23613f;
+}
+
+
+.btn-back {
+
+    background: #edf2ee;
+
+    color: #304439;
+}
+
+
+.btn-back:hover {
+
+    background: #e1e9e3;
+}
+
+
+/* ============================================================
+   BOTÃO DESABILITADO
+   ============================================================ */
+
+button:disabled {
+
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+
+/* ============================================================
+   LINK DE LOGIN
+   ============================================================ */
+
+.login-link {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #718078;
+}
+
+
+.login-link a {
+
+    color: #16834b;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.login-link a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   RECUPERAÇÃO DE SENHA
+   ============================================================ */
+
+/*
+    Usado pela página:
+
+        esqueci-senha.html
+*/
+
+
+.login-card .subtitle {
+
+    max-width: 500px;
+}
+
+
+/* ============================================================
+   LINK "ESQUECI MINHA SENHA"
+   ============================================================ */
+
+.login-options {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: -10px;
+
+    margin-bottom: 20px;
+}
+
+
+.login-options a {
+
+    color: #16834b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.login-options a:hover {
+
+    color: #23613f;
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   MENSAGEM DA RECUPERAÇÃO
+   ============================================================ */
+
+.mensagem {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 20px;
+
+    background: #f0faf4;
+
+    border: 1px solid #bfe5cc;
+
+    border-radius: 12px;
+
+    color: #23613f;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .cadastro-card {
+
+        padding: 25px;
+    }
+
+
+    h1 {
+
+        font-size: 28px;
+    }
+
+
+    .form-grid,
+    .options {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .login-card {
+
+        max-width: 100%;
+    }
+}
+
+
+/* ============================================================
+   CELULARES PEQUENOS
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .cadastro-container {
+
+        padding: 20px 12px;
+    }
+
+
+    .cadastro-card {
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .logo {
+
+        margin-bottom: 28px;
+    }
+
+
+    .logo-icon {
+
+        width: 46px;
+
+        height: 46px;
+
+        border-radius: 13px;
+    }
+
+
+    .logo strong {
+
+        font-size: 17px;
+    }
+
+
+    h1 {
+
+        font-size: 26px;
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+    }
+
+
+    .login-options {
+
+        justify-content: flex-end;
+    }
+}

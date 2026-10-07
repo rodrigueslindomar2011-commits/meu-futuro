@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus Resultados | Meu Futuro</title>
+
+    <link rel="stylesheet" href="css/resultados.css">
+</head>
+
+<body>
+
+    <!-- FUNDO ANIMADO -->
+    <div class="background-effect"></div>
+
+    <main class="resultados-container">
+
+        <section class="resultados-card">
+
+            <!-- ==================================================
+                 LOGO
+            ================================================== -->
+
+            <div class="logo reveal">
+
+                <div class="logo-icon">
+                    MF
+                </div>
+
+                <div>
+                    <strong>MEU FUTURO</strong>
+
+                    <span>
+                        Projeto de Vida
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 CABEÇALHO
+            ================================================== -->
+
+            <header class="resultado-header reveal">
+
+                <span class="step-label">
+                    SEU RESULTADO
+                </span>
+
+                <h1>
+                    Descobrimos alguns caminhos para você
+                    <span class="titulo-destaque">🚀</span>
+                </h1>
+
+                <p>
+                    Com base nas suas respostas, encontramos áreas
+                    que podem combinar com seus interesses e objetivos.
+                </p>
+
+            </header>
+
+
+            <!-- ==================================================
+                 EVOLUÇÃO
+            ================================================== -->
+
+            <section class="evolucao-card reveal">
+
+                <div class="evolucao-header">
+
+                    <div>
+
+                        <span class="mini-label">
+                            MINHA EVOLUÇÃO
+                        </span>
+
+                        <h2>
+                            Seu desenvolvimento ao longo do tempo
+                        </h2>
+
+                        <p>
+                            Acompanhe como seus resultados estão evoluindo
+                            conforme você responde novos questionários.
+                        </p>
+
+                    </div>
+
+                    <div class="evolucao-percentual">
+
+                        <strong id="percentualEvolucao">
+                            62%
+                        </strong>
+
+                        <span>
+                            evolução atual
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRÁFICO -->
+
+                <div class="grafico-wrapper">
+
+                    <canvas id="graficoEvolucao"></canvas>
+
+                </div>
+
+
+                <!-- ESTATÍSTICAS -->
+
+                <div class="evolucao-stats">
+
+                    <div class="evolucao-stat">
+
+                        <span>
+                            📝
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Questionários
+                            </small>
+
+                            <strong id="totalQuestionarios">
+                                6
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evolucao-stat">
+
+                        <span>
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Melhor resultado
+                            </small>
+
+                            <strong id="melhorResultado">
+                                62%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="evolucao-stat">
+
+                        <span>
+                            🚀
+                        </span>
+
+                        <div>
+
+                            <small>
+                                Área principal
+                            </small>
+
+                            <strong id="areaPrincipal">
+                                Tecnologia
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 PERFIL
+            ================================================== -->
+
+            <section class="perfil-destaque reveal">
+
+                <div class="perfil-icon">
+                    🎯
+                </div>
+
+                <div class="perfil-texto">
+
+                    <span>
+                        SEU PERFIL
+                    </span>
+
+                    <h2 id="perfilNome">
+                        Explorador
+                    </h2>
+
+                    <p id="perfilDescricao">
+                        Você demonstra curiosidade, interesse em aprender
+                        e vontade de descobrir novas possibilidades para
+                        o seu futuro.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 INTERESSES
+            ================================================== -->
+
+            <section class="secao reveal">
+
+                <div class="secao-titulo">
+
+                    <span class="mini-label">
+                        SEUS INTERESSES
+                    </span>
+
+                    <h2>
+                        O que combina com você
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="interesses-grid"
+                    id="interessesContainer"
+                >
+
+                    <div class="interesse-card">
+
+                        <span class="interesse-icon">
+                            💻
+                        </span>
+
+                        <strong>
+                            Tecnologia
+                        </strong>
+
+                        <p>
+                            Interesse em tecnologia,
+                            inovação e desenvolvimento.
+                        </p>
+
+                    </div>
+
+
+                    <div class="interesse-card">
+
+                        <span class="interesse-icon">
+                            🧠
+                        </span>
+
+                        <strong>
+                            Resolver problemas
+                        </strong>
+
+                        <p>
+                            Você gosta de analisar situações
+                            e encontrar soluções.
+                        </p>
+
+                    </div>
+
+
+                    <div class="interesse-card">
+
+                        <span class="interesse-icon">
+                            🚀
+                        </span>
+
+                        <strong>
+                            Criar coisas
+                        </strong>
+
+                        <p>
+                            Você demonstra interesse em criar
+                            e desenvolver novas ideias.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 ÁREAS
+            ================================================== -->
+
+            <section class="secao reveal">
+
+                <div class="secao-titulo">
+
+                    <span class="mini-label">
+                        ÁREAS
+                    </span>
+
+                    <h2>
+                        Possibilidades para explorar
+                    </h2>
+
+                </div>
+
+
+                <div class="areas-list">
+
+
+                    <!-- ÁREA 1 -->
+
+                    <article class="area-card">
+
+                        <div class="area-icon">
+                            💻
+                        </div>
+
+                        <div class="area-info">
+
+                            <h3>
+                                Tecnologia e Computação
+                            </h3>
+
+                            <p>
+                                Desenvolvimento, programação,
+                                inteligência artificial e tecnologia.
+                            </p>
+
+                        </div>
+
+                        <div class="compatibilidade">
+
+                            <strong>
+                                92%
+                            </strong>
+
+                            <span>
+                                compatibilidade
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ÁREA 2 -->
+
+                    <article class="area-card">
+
+                        <div class="area-icon">
+                            🔬
+                        </div>
+
+                        <div class="area-info">
+
+                            <h3>
+                                Ciências
+                            </h3>
+
+                            <p>
+                                Investigação, pesquisa, descobertas
+                                e desenvolvimento científico.
+                            </p>
+
+                        </div>
+
+                        <div class="compatibilidade">
+
+                            <strong>
+                                78%
+                            </strong>
+
+                            <span>
+                                compatibilidade
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ÁREA 3 -->
+
+                    <article class="area-card">
+
+                        <div class="area-icon">
+                            🎨
+                        </div>
+
+                        <div class="area-info">
+
+                            <h3>
+                                Artes e Design
+                            </h3>
+
+                            <p>
+                                Criatividade, comunicação visual,
+                                design e produção artística.
+                            </p>
+
+                        </div>
+
+                        <div class="compatibilidade">
+
+                            <strong>
+                                71%
+                            </strong>
+
+                            <span>
+                                compatibilidade
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 PROFISSÕES
+            ================================================== -->
+
+            <section class="secao profissao-secao reveal">
+
+                <span class="mini-label">
+                    PARA CONHECER
+                </span>
+
+                <h2>
+                    Algumas profissões que podem interessar você
+                </h2>
+
+                <p class="secao-descricao">
+
+                    Isso não significa que você precisa escolher uma
+                    dessas profissões. Elas são apenas possibilidades
+                    para você conhecer melhor.
+
+                </p>
+
+
+                <div class="profissoes-grid">
+
+
+                    <div class="profissao-card">
+
+                        <span>
+                            👨‍💻
+                        </span>
+
+                        <strong>
+                            Desenvolvedor de Software
+                        </strong>
+
+                        <small>
+                            Tecnologia
+                        </small>
+
+                    </div>
+
+
+                    <div class="profissao-card">
+
+                        <span>
+                            🤖
+                        </span>
+
+                        <strong>
+                            Especialista em IA
+                        </strong>
+
+                        <small>
+                            Tecnologia
+                        </small>
+
+                    </div>
+
+
+                    <div class="profissao-card">
+
+                        <span>
+                            🔬
+                        </span>
+
+                        <strong>
+                            Pesquisador
+                        </strong>
+
+                        <small>
+                            Ciências
+                        </small>
+
+                    </div>
+
+
+                    <div class="profissao-card">
+
+                        <span>
+                            🎨
+                        </span>
+
+                        <strong>
+                            Designer
+                        </strong>
+
+                        <small>
+                            Artes e Design
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 OBJETIVO
+            ================================================== -->
+
+            <section class="objetivo-card reveal">
+
+                <div class="objetivo-icon">
+                    🌱
+                </div>
+
+                <div>
+
+                    <span>
+                        SEU PRÓXIMO PASSO
+                    </span>
+
+                    <h2>
+                        Continue explorando
+                    </h2>
+
+                    <p>
+                        Seu resultado é apenas o começo. Conheça
+                        diferentes profissões, responda novos
+                        questionários e descubra possibilidades
+                        para o seu futuro.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 BOTÕES
+            ================================================== -->
+
+            <div class="acoes reveal">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    onclick="voltarDashboard()"
+                >
+                    ← Voltar ao início
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-primary"
+                    onclick="verPossibilidades()"
+                >
+                    Ver possibilidades →
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 RODAPÉ
+            ================================================== -->
+
+            <p class="rodape reveal">
+
+                O Meu Futuro ajuda você a explorar possibilidades.
+                Suas escolhas pertencem a você. 💚
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         CHART.JS
+    ========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- =========================================================
+         RESULTADOS.JS
+    ========================================================= -->
+
+    <script src="js/resultados.js"></script>
+
+</body>
+
+</html>
