@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Futuro | Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">✦</div>
+
+            <div>
+                <strong>MEU FUTURO</strong>
+                <span>Projeto de Vida</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="dashboard.html" class="menu-item active">
+
+                <span>⌂</span>
+
+                <div>
+                    <strong>Início</strong>
+                    <small>Meu painel</small>
+                </div>
+
+            </a>
+
+
+            <a href="perfil.html" class="menu-item">
+
+                <span>◉</span>
+
+                <div>
+                    <strong>Meu perfil</strong>
+                    <small>Quem sou eu</small>
+                </div>
+
+            </a>
+
+
+            <a href="questionarios.html" class="menu-item">
+
+                <span>✎</span>
+
+                <div>
+                    <strong>Questionários</strong>
+                    <small>Descubra seu perfil</small>
+                </div>
+
+            </a>
+
+
+            <a href="resultados.html" class="menu-item">
+
+                <span>◈</span>
+
+                <div>
+                    <strong>Minha evolução</strong>
+                    <small>Resultados</small>
+                </div>
+
+            </a>
+
+
+            <div class="menu-title">
+                MEU FUTURO
+            </div>
+
+
+            <a href="profissoes.html" class="menu-item">
+
+                <span>⌁</span>
+
+                <div>
+                    <strong>Profissões</strong>
+                    <small>Explore carreiras</small>
+                </div>
+
+            </a>
+
+
+            <a href="faculdades.html" class="menu-item">
+
+                <span>▣</span>
+
+                <div>
+                    <strong>Faculdades</strong>
+                    <small>Encontre seu caminho</small>
+                </div>
+
+            </a>
+
+
+            <a href="bolsas.html" class="menu-item">
+
+                <span>◆</span>
+
+                <div>
+                    <strong>Bolsas</strong>
+                    <small>Estude com apoio</small>
+                </div>
+
+            </a>
+
+
+            <a href="moradias.html" class="menu-item">
+
+                <span>⌂</span>
+
+                <div>
+                    <strong>Moradias</strong>
+                    <small>Onde morar</small>
+                </div>
+
+            </a>
+
+
+            <a href="custos.html" class="menu-item">
+
+                <span>R$</span>
+
+                <div>
+                    <strong>Custos</strong>
+                    <small>Planeje seus gastos</small>
+                </div>
+
+            </a>
+
+
+            <div class="menu-title">
+                PLANEJAMENTO
+            </div>
+
+
+            <a href="planejamento.html" class="menu-item">
+
+                <span>◷</span>
+
+                <div>
+                    <strong>Meu planejamento</strong>
+                    <small>Próximos passos</small>
+                </div>
+
+            </a>
+
+
+            <a href="metas.html" class="menu-item">
+
+                <span>◎</span>
+
+                <div>
+                    <strong>Minhas metas</strong>
+                    <small>Objetivos</small>
+                </div>
+
+            </a>
+
+
+            <!-- =====================================
+                 NOVO - MEU CURRÍCULO
+            ====================================== -->
+
+            <a href="curriculo.html" class="menu-item curriculum-menu">
+
+                <span>📄</span>
+
+                <div>
+                    <strong>Meu Currículo</strong>
+                    <small>Crie seu currículo</small>
+                </div>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+
+                <span class="help-icon">?</span>
+
+                <div>
+                    <strong>Precisa de ajuda?</strong>
+                    <small>Fale com seu orientador</small>
+                </div>
+
+            </div>
+
+
+            <button class="logout" onclick="sair()">
+
+                <span>↪</span>
+
+                Sair
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-logo">
+                <strong>MEU FUTURO</strong>
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+
+                    ♧
+
+                    <span></span>
+
+                </button>
+
+
+                <div class="user-mini">
+
+                    <div class="avatar" id="avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong id="nomeUsuario">
+                            Aluno
+                        </strong>
+
+                        <small>
+                            Estudante
+                        </small>
+
+                    </div>
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             CONTEÚDO PRINCIPAL
+        ========================================== -->
+
+        <section class="content">
+
+
+            <!-- HERO -->
+
+            <section class="welcome">
+
+                <div class="welcome-text">
+
+
+                    <div class="tag">
+                        ✦ SEU FUTURO COMEÇA AGORA
+                    </div>
+
+
+                    <h1>
+
+                        Olá,
+                        <span id="nomeHero">
+                            Aluno
+                        </span>!
+
+                        <br>
+
+                        Vamos construir seu futuro?
+
+                    </h1>
+
+
+                    <p>
+
+                        O Meu Futuro acompanha sua jornada desde a escola
+                        até a faculdade, ajudando você a descobrir seus
+                        interesses, possibilidades e próximos passos.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+
+                        <a
+                            href="questionarios.html"
+                            class="primary-btn"
+                        >
+
+                            Descobrir meu perfil
+
+                            <span>→</span>
+
+                        </a>
+
+
+                        <a
+                            href="planejamento.html"
+                            class="secondary-btn"
+                        >
+
+                            Ver meu planejamento
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- =================================
+                         NOVO - CURRÍCULO
+                    ================================== -->
+
+                    <a
+                        href="javascript:prepararCurriculo()"
+                        class="curriculo-dashboard-btn"
+                    >
+
+                        <span class="curriculo-btn-icon">
+                            📄
+                        </span>
+
+                        <span>
+                            <strong>Meu Currículo</strong>
+                            <small>
+                                Crie seu currículo com ajuda da IA
+                            </small>
+                        </span>
+
+                        <span class="curriculo-btn-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="future-orbit">
+
+                    <div class="orbit orbit-1"></div>
+
+                    <div class="orbit orbit-2"></div>
+
+                    <div class="orbit orbit-3"></div>
+
+
+                    <div class="future-core">
+
+                        <span>✦</span>
+
+                        <strong>SEU</strong>
+
+                        <strong>FUTURO</strong>
+
+                        <small>
+                            está em construção
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CARDS DE RESUMO -->
+
+            <section class="stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Perfil descoberto
+                        </small>
+
+                        <strong id="areaInteresse">
+                            Ainda não definido
+                        </strong>
+
+                        <span class="stat-link">
+                            Descobrir →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Progresso da jornada
+                        </small>
+
+                        <strong id="progressoJornada">
+                            0%
+                        </strong>
+
+                        <div class="mini-progress">
+
+                            <span id="barraProgressoJornada" style="width:0%"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ◇
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Etapas concluídas
+                        </small>
+
+                        <strong id="etapasConcluidas">
+                            0 de 4
+                        </strong>
+
+                        <span class="positive" id="progressoEtapas">
+                            Aguardando dados
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <small>
+                            Possíveis carreiras
+                        </small>
+
+                        <strong id="quantidadeCarreiras">
+                            0
+                        </strong>
+
+                        <span class="stat-link">
+                            Explorar →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- GRID PRINCIPAL -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- EVOLUÇÃO -->
+
+                <div class="panel evolution">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                SUA JORNADA
+                            </span>
+
+                            <h2>
+                                Evolução ao longo do tempo
+                            </h2>
+
+                        </div>
+
+
+                        <button class="period">
+                            Últimos meses ⌄
+                        </button>
+
+                    </div>
+
+
+                    <div class="chart-container">
+
+                        <canvas id="evolutionChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRÓXIMO PASSO -->
+
+                <div class="panel next-step">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                PRÓXIMO PASSO
+                            </span>
+
+                            <h2>
+                                Continue sua jornada
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="next-card">
+
+                        <div class="next-number" id="nextNumber">
+                            01
+                        </div>
+
+
+                        <div class="next-content">
+
+                            <span class="next-tag" id="nextTag">
+                                RECOMENDADO
+                            </span>
+
+                            <h3 id="nextTitle">
+                                Carregando seu próximo passo...
+                            </h3>
+
+                            <p id="nextDescription">
+                                Buscando seus dados reais para identificar a próxima etapa da sua jornada.
+                            </p>
+
+                            <a id="nextLink" href="questionarios.html">
+                                Aguarde...
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="steps" id="journeySteps">
+
+
+                        <div class="step active-step" data-step="perfil">
+
+                            <span>1</span>
+
+                            Criar perfil
+
+                        </div>
+
+
+                        <div class="step" data-step="teste">
+
+                            <span>2</span>
+
+                            Descobrir interesses
+
+                        </div>
+
+
+                        <div class="step" data-step="curriculo">
+
+                            <span>3</span>
+
+                            Construir currículo
+
+                        </div>
+
+
+                        <div class="step" data-step="carreiras">
+
+                            <span>4</span>
+
+                            Explorar profissões
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- SEGUNDA LINHA -->
+
+            <section class="dashboard-grid bottom-grid">
+
+
+                <!-- CARREIRAS -->
+
+                <div class="panel careers">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                RECOMENDAÇÕES
+                            </span>
+
+                            <h2>
+                                Carreiras que combinam com você
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="profissoes.html"
+                            class="see-all"
+                        >
+                            Ver todas →
+                        </a>
+
+                    </div>
+
+
+                    <div class="career-list" id="careerList">
+
+                        <div class="data-loading">
+                            Carregando suas recomendações...
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- METAS -->
+
+                <div class="panel goals">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                JORNADA
+                            </span>
+
+                            <h2>
+                                Etapas da jornada
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="planejamento.html"
+                            class="see-all"
+                        >
+                            Ver planejamento →
+                        </a>
+
+                    </div>
+
+
+                    <div id="goalsList">
+
+                        <div class="data-loading">
+                            Carregando etapas...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FRASE -->
+
+            <section class="quote">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <div>
+
+                    <p>
+                        Você não precisa saber exatamente onde quer chegar.
+                        Precisa apenas começar a descobrir os caminhos.
+                    </p>
+
+                    <span>
+                        — Seu futuro começa com uma escolha.
+                    </span>
+
+                </div>
+
+                <div class="quote-star">
+                    ✦
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

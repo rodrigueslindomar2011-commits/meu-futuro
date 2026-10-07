@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planejamento | Meu Futuro</title>
+
+    <link rel="stylesheet" href="css/planejamento.css">
+</head>
+
+<body>
+
+    <main class="planejamento-container">
+
+        <!-- =====================================================
+             CABEÇALHO
+        ====================================================== -->
+
+        <header class="topo">
+
+            <div class="logo-area">
+
+                <div class="logo-icon">
+                    MF
+                </div>
+
+                <div class="logo-text">
+                    <strong>MEU FUTURO</strong>
+                    <span>Projeto de Vida</span>
+                </div>
+
+            </div>
+
+            <button
+                class="btn-voltar"
+                type="button"
+                onclick="voltarDashboard()"
+            >
+                ← Dashboard
+            </button>
+
+        </header>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    ✦ SUA JORNADA
+                </span>
+
+                <h1>
+                    Minha Linha do Futuro
+                </h1>
+
+                <p>
+                    Cada escolha de hoje constrói o seu amanhã.
+                    Organize seus objetivos e visualize o caminho
+                    que você quer percorrer.
+                </p>
+
+            </div>
+
+            <div class="hero-icon">
+                🚀
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESUMO
+        ====================================================== -->
+
+        <section class="resumo">
+
+            <div class="resumo-card">
+
+                <span>🎯</span>
+
+                <div>
+                    <small>OBJETIVOS</small>
+
+                    <strong id="totalObjetivos">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card">
+
+                <span>✅</span>
+
+                <div>
+                    <small>CONCLUÍDOS</small>
+
+                    <strong id="objetivosConcluidos">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card">
+
+                <span>⏳</span>
+
+                <div>
+                    <small>EM ANDAMENTO</small>
+
+                    <strong id="objetivosAndamento">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="resumo-card progresso-card">
+
+                <div class="progresso-info">
+
+                    <small>
+                        PROGRESSO DA JORNADA
+                    </small>
+
+                    <strong id="percentualProgresso">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="progresso-barra">
+
+                    <div
+                        id="barraProgresso"
+                        class="progresso-preenchimento"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LINHA DO FUTURO
+        ====================================================== -->
+
+        <section class="linha-area">
+
+            <div class="linha-header">
+
+                <div>
+
+                    <span class="mini-label">
+                        MEU CAMINHO
+                    </span>
+
+                    <h2>
+                        Construa sua trajetória
+                    </h2>
+
+                    <p>
+                        Adicione os momentos que você deseja
+                        alcançar ao longo da sua vida.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="btn-adicionar"
+                    type="button"
+                    onclick="abrirModal()"
+                >
+                    + Adicionar objetivo
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 LINHA DO TEMPO
+            ================================================== -->
+
+            <div
+                id="linhaDoTempo"
+                class="linha-do-tempo"
+            >
+
+                <!-- OBJETIVO 1 -->
+
+                <article
+                    class="etapa"
+                    data-id="1"
+                >
+
+                    <div class="etapa-ano">
+                        HOJE
+                    </div>
+
+                    <div class="etapa-ponto">
+                        🎯
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria educacao">
+                                🎓 Educação
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(1)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Concluir o Ensino Médio
+                        </h3>
+
+                        <p>
+                            Finalizar essa etapa e me preparar
+                            para o próximo passo da minha jornada.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Em andamento
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 2 -->
+
+                <article
+                    class="etapa"
+                    data-id="2"
+                >
+
+                    <div class="etapa-ano">
+                        2027
+                    </div>
+
+                    <div class="etapa-ponto">
+                        🎓
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria educacao">
+                                🎓 Educação
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(2)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Entrar na Faculdade
+                        </h3>
+
+                        <p>
+                            Encontrar um curso e uma instituição
+                            que estejam alinhados com meus objetivos.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Planejado
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 3 -->
+
+                <article
+                    class="etapa"
+                    data-id="3"
+                >
+
+                    <div class="etapa-ano">
+                        2028
+                    </div>
+
+                    <div class="etapa-ponto">
+                        💼
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria carreira">
+                                💼 Carreira
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(3)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Conseguir meu primeiro estágio
+                        </h3>
+
+                        <p>
+                            Adquirir experiência profissional
+                            enquanto continuo meus estudos.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Planejado
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 4 -->
+
+                <article
+                    class="etapa"
+                    data-id="4"
+                >
+
+                    <div class="etapa-ano">
+                        2030
+                    </div>
+
+                    <div class="etapa-ponto">
+                        🎓
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria educacao">
+                                🎓 Educação
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(4)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Concluir minha graduação
+                        </h3>
+
+                        <p>
+                            Finalizar minha formação e estar
+                            preparado para o mercado de trabalho.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Planejado
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 5 -->
+
+                <article
+                    class="etapa"
+                    data-id="5"
+                >
+
+                    <div class="etapa-ano">
+                        2031
+                    </div>
+
+                    <div class="etapa-ponto">
+                        💼
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria carreira">
+                                💼 Carreira
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(5)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Conseguir meu primeiro emprego
+                        </h3>
+
+                        <p>
+                            Começar minha carreira profissional
+                            na área que escolhi.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Planejado
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 6 -->
+
+                <article
+                    class="etapa"
+                    data-id="6"
+                >
+
+                    <div class="etapa-ano">
+                        2033
+                    </div>
+
+                    <div class="etapa-ponto">
+                        🏠
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria moradia">
+                                🏠 Moradia
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(6)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Morar sozinho
+                        </h3>
+
+                        <p>
+                            Conquistar minha independência e
+                            ter meu próprio espaço.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Planejado
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- OBJETIVO 7 -->
+
+                <article
+                    class="etapa"
+                    data-id="7"
+                >
+
+                    <div class="etapa-ano">
+                        2035
+                    </div>
+
+                    <div class="etapa-ponto">
+                        🏆
+                    </div>
+
+                    <div class="etapa-conteudo">
+
+                        <div class="etapa-topo">
+
+                            <span class="categoria financeiro">
+                                💰 Finanças
+                            </span>
+
+                            <button
+                                class="menu-etapa"
+                                type="button"
+                                onclick="removerObjetivo(7)"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Alcançar minha independência financeira
+                        </h3>
+
+                        <p>
+                            Ter estabilidade financeira e liberdade
+                            para construir novos sonhos.
+                        </p>
+
+                        <div class="etapa-status andamento">
+                            ◐ Meta futura
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FINAL -->
+
+                <div class="fim-linha">
+
+                    <div class="fim-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Seu futuro começa agora.
+                    </h3>
+
+                    <p>
+                        Continue adicionando novos objetivos
+                        e construa a história que você quer viver.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             VISÃO DO FUTURO
+        ====================================================== -->
+
+        <section class="visao-futuro">
+
+            <div class="visao-icon">
+                🔭
+            </div>
+
+            <div class="visao-content">
+
+                <span>
+                    OLHE PARA FRENTE
+                </span>
+
+                <h2>
+                    Onde você quer estar daqui a 10 anos?
+                </h2>
+
+                <p>
+                    Seu futuro não precisa estar totalmente definido.
+                    O importante é começar a construir o caminho.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BOTÕES FINAIS
+        ====================================================== -->
+
+        <section class="acoes">
+
+            <button
+                class="btn-secondary"
+                type="button"
+                onclick="voltarDashboard()"
+            >
+                ← Voltar ao Dashboard
+            </button>
+
+            <button
+                class="btn-primary"
+                type="button"
+                onclick="abrirModal()"
+            >
+                + Adicionar novo objetivo
+            </button>
+
+        </section>
+
+
+        <!-- =====================================================
+             RODAPÉ
+        ====================================================== -->
+
+        <footer class="rodape">
+
+            <p>
+                O Meu Futuro ajuda você a transformar sonhos
+                em planos. Suas escolhas pertencem a você. 💚
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         MODAL — NOVO OBJETIVO
+    ========================================================== -->
+
+    <div
+        id="modalObjetivo"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-overlay"
+            onclick="fecharModal()"
+        ></div>
+
+
+        <div
+            class="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="tituloModal"
+        >
+
+            <button
+                class="modal-fechar"
+                type="button"
+                onclick="fecharModal()"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-header">
+
+                <span>
+                    ✦ NOVA ETAPA
+                </span>
+
+                <h2 id="tituloModal">
+                    Adicione um objetivo
+                </h2>
+
+                <p>
+                    Qual é o próximo passo da sua jornada?
+                </p>
+
+            </div>
+
+
+            <form id="formObjetivo">
+
+                <div class="campo">
+
+                    <label for="tituloObjetivo">
+                        Nome do objetivo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tituloObjetivo"
+                        placeholder="Ex: Fazer minha primeira viagem"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campos-duplos">
+
+                    <div class="campo">
+
+                        <label for="anoObjetivo">
+                            Ano
+                        </label>
+
+                        <input
+                            type="number"
+                            id="anoObjetivo"
+                            min="2026"
+                            max="2100"
+                            placeholder="2028"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="categoriaObjetivo">
+                            Categoria
+                        </label>
+
+                        <select id="categoriaObjetivo">
+
+                            <option value="educacao">
+                                🎓 Educação
+                            </option>
+
+                            <option value="carreira">
+                                💼 Carreira
+                            </option>
+
+                            <option value="financeiro">
+                                💰 Finanças
+                            </option>
+
+                            <option value="moradia">
+                                🏠 Moradia
+                            </option>
+
+                            <option value="pessoal">
+                                ❤️ Vida pessoal
+                            </option>
+
+                            <option value="viagem">
+                                ✈️ Viagens
+                            </option>
+
+                            <option value="sonho">
+                                🚀 Sonhos
+                            </option>
+
+                            <option value="outros">
+                                ⭐ Outros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="descricaoObjetivo">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricaoObjetivo"
+                        rows="4"
+                        placeholder="Conte um pouco sobre esse objetivo..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="btn-cancelar"
+                        onclick="fecharModal()"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn-salvar"
+                    >
+                        Criar objetivo 🚀
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MENSAGEM DO SISTEMA
+    ========================================================== -->
+
+    <div
+        id="mensagemSistema"
+        class="mensagem-sistema"
+        role="status"
+    ></div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="js/planejamento.js"></script>
+
+</body>
+
+</html>

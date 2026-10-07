@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nova senha | Meu Futuro</title>
+
+    <link
+        rel="stylesheet"
+        href="css/auth.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <section class="cadastro-card login-card">
+
+            <!-- =========================================
+                 LOGO
+            ========================================== -->
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    MF
+                </div>
+
+                <div>
+
+                    <strong>
+                        MEU FUTURO
+                    </strong>
+
+                    <span>
+                        Projeto de Vida
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 TÍTULO
+            ========================================== -->
+
+            <span class="step-label">
+                NOVA SENHA
+            </span>
+
+            <h1>
+                Crie uma nova senha 🔐
+            </h1>
+
+            <p class="subtitle">
+                Crie uma nova senha para recuperar
+                o acesso à sua conta.
+            </p>
+
+
+            <!-- =========================================
+                 E-MAIL
+            ========================================== -->
+
+            <div class="input-group">
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="seuemail@email.com"
+                    autocomplete="email"
+                >
+
+            </div>
+
+
+            <!-- =========================================
+                 NOVA SENHA
+            ========================================== -->
+
+            <div class="input-group">
+
+                <label for="novaSenha">
+                    Nova senha
+                </label>
+
+                <input
+                    type="password"
+                    id="novaSenha"
+                    placeholder="Digite sua nova senha"
+                    autocomplete="new-password"
+                >
+
+            </div>
+
+
+            <!-- =========================================
+                 CONFIRMAR SENHA
+            ========================================== -->
+
+            <div class="input-group">
+
+                <label for="confirmarSenha">
+                    Confirmar nova senha
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Digite a senha novamente"
+                    autocomplete="new-password"
+                >
+
+            </div>
+
+
+            <!-- =========================================
+                 MENSAGEM
+            ========================================== -->
+
+            <div
+                id="mensagem"
+                class="mensagem"
+                style="display: none;"
+            ></div>
+
+
+            <!-- =========================================
+                 BOTÃO
+            ========================================== -->
+
+            <button
+                type="button"
+                id="btnAlterar"
+                class="btn-finish"
+                style="width: 100%;"
+                onclick="alterarSenha()"
+            >
+                Alterar senha
+            </button>
+
+
+            <!-- =========================================
+                 VOLTAR PARA LOGIN
+            ========================================== -->
+
+            <p class="login-link">
+
+                Lembrou sua senha?
+
+                <a href="login.html">
+                    Voltar para o login
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        // =============================================
+        // CARREGAR E-MAIL SALVO
+        // =============================================
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                const emailSalvo =
+                    sessionStorage.getItem(
+                        "emailRecuperacao"
+                    );
+
+                const emailInput =
+                    document.getElementById("email");
+
+
+                // -----------------------------------------
+                // SE NÃO EXISTIR E-MAIL SALVO
+                // -----------------------------------------
+
+                if (!emailSalvo) {
+
+                    mostrarMensagem(
+                        "Informe primeiro o e-mail para recuperar sua senha."
+                    );
+
+                    return;
+                }
+
+
+                // -----------------------------------------
+                // PREENCHER E-MAIL
+                // -----------------------------------------
+
+                emailInput.value =
+                    emailSalvo;
+
+            }
+        );
+
+
+        // =============================================
+        // ALTERAR SENHA
+        // =============================================
+
+        async function alterarSenha() {
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+
+            const novaSenha =
+                document
+                    .getElementById("novaSenha")
+                    .value;
+
+
+            const confirmarSenha =
+                document
+                    .getElementById("confirmarSenha")
+                    .value;
+
+
+            const mensagem =
+                document
+                    .getElementById("mensagem");
+
+
+            const botao =
+                document
+                    .getElementById("btnAlterar");
+
+
+            // -----------------------------------------
+            // LIMPAR MENSAGEM
+            // -----------------------------------------
+
+            mensagem.style.display = "none";
+            mensagem.textContent = "";
+
+
+            // -----------------------------------------
+            // VALIDAR E-MAIL
+            // -----------------------------------------
+
+            if (!email) {
+
+                mostrarMensagem(
+                    "Digite seu e-mail."
+                );
+
+                return;
+            }
+
+
+            if (!email.includes("@")) {
+
+                mostrarMensagem(
+                    "Digite um e-mail válido."
+                );
+
+                return;
+            }
+
+
+            // -----------------------------------------
+            // VALIDAR NOVA SENHA
+            // -----------------------------------------
+
+            if (!novaSenha) {
+
+                mostrarMensagem(
+                    "Digite uma nova senha."
+                );
+
+                document
+                    .getElementById("novaSenha")
+                    .focus();
+
+                return;
+            }
+
+
+            // -----------------------------------------
+            // TAMANHO DA SENHA
+            // -----------------------------------------
+
+            if (novaSenha.length < 6) {
+
+                mostrarMensagem(
+                    "A nova senha deve ter pelo menos 6 caracteres."
+                );
+
+                document
+                    .getElementById("novaSenha")
+                    .focus();
+
+                return;
+            }
+
+
+            // -----------------------------------------
+            // CONFIRMAR SENHA
+            // -----------------------------------------
+
+            if (!confirmarSenha) {
+
+                mostrarMensagem(
+                    "Confirme sua nova senha."
+                );
+
+                document
+                    .getElementById("confirmarSenha")
+                    .focus();
+
+                return;
+            }
+
+
+            if (novaSenha !== confirmarSenha) {
+
+                mostrarMensagem(
+                    "As senhas não são iguais."
+                );
+
+                document
+                    .getElementById("confirmarSenha")
+                    .focus();
+
+                return;
+            }
+
+
+            // -----------------------------------------
+            // DESABILITAR BOTÃO
+            // -----------------------------------------
+
+            botao.disabled = true;
+            botao.textContent = "Alterando...";
+
+
+            try {
+
+                // -----------------------------------------
+                // ENVIAR PARA O SERVIDOR
+                // -----------------------------------------
+
+                const resposta =
+                    await fetch(
+                        "/api/alterar-senha",
+                        {
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body: JSON.stringify({
+
+                                email: email,
+
+                                novaSenha: novaSenha
+
+                            })
+
+                        }
+                    );
+
+
+                const dados =
+                    await resposta.json();
+
+
+                // -----------------------------------------
+                // ERRO
+                // -----------------------------------------
+
+                if (!resposta.ok) {
+
+                    mostrarMensagem(
+                        dados.erro ||
+                        "Não foi possível alterar a senha."
+                    );
+
+                    botao.disabled = false;
+                    botao.textContent =
+                        "Alterar senha";
+
+                    return;
+                }
+
+
+                // -----------------------------------------
+                // SUCESSO
+                // -----------------------------------------
+
+                mostrarMensagem(
+                    dados.mensagem ||
+                    "Senha alterada com sucesso."
+                );
+
+
+                // -----------------------------------------
+                // LIMPAR CAMPOS
+                // -----------------------------------------
+
+                document
+                    .getElementById("novaSenha")
+                    .value = "";
+
+                document
+                    .getElementById("confirmarSenha")
+                    .value = "";
+
+
+                // -----------------------------------------
+                // REMOVER E-MAIL TEMPORÁRIO
+                // -----------------------------------------
+
+                sessionStorage.removeItem(
+                    "emailRecuperacao"
+                );
+
+
+                // -----------------------------------------
+                // DESABILITAR BOTÃO
+                // -----------------------------------------
+
+                botao.disabled = true;
+                botao.textContent =
+                    "Senha alterada";
+
+
+                // -----------------------------------------
+                // VOLTAR PARA LOGIN
+                // -----------------------------------------
+
+                setTimeout(
+                    function() {
+
+                        window.location.href =
+                            "login.html";
+
+                    },
+                    2000
+                );
+
+
+            } catch (erro) {
+
+                console.error(
+                    "Erro ao alterar senha:",
+                    erro
+                );
+
+                mostrarMensagem(
+                    "Não foi possível conectar ao servidor. Tente novamente."
+                );
+
+                botao.disabled = false;
+                botao.textContent =
+                    "Alterar senha";
+
+            }
+
+        }
+
+
+        // =============================================
+        // MOSTRAR MENSAGEM
+        // =============================================
+
+        function mostrarMensagem(texto) {
+
+            const mensagem =
+                document.getElementById("mensagem");
+
+            mensagem.textContent = texto;
+            mensagem.style.display = "block";
+
+        }
+
+
+        // =============================================
+        // ENTER NOS CAMPOS
+        // =============================================
+
+        document
+            .getElementById("novaSenha")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+
+                        alterarSenha();
+
+                    }
+
+                }
+            );
+
+
+        document
+            .getElementById("confirmarSenha")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+
+                        alterarSenha();
+
+                    }
+
+                }
+            );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Futuro — Currículo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../css/curriculo.css">
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- =====================================================
+         TOPO
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">MF</div>
+
+            <div>
+                <strong>Meu Futuro</strong>
+                <span>Construa seu próximo passo</span>
+            </div>
+
+        </div>
+
+        <div class="page-title">
+
+            <span>MEU FUTURO</span>
+
+            <h1>Meu currículo</h1>
+
+            <p>
+                Crie um currículo bonito, organizado e pronto para novas oportunidades.
+            </p>
+
+        </div>
+
+        <div class="top-actions">
+
+            <button
+                id="themeButton"
+                class="icon-button"
+                type="button"
+            >
+                ☼
+            </button>
+
+            <button
+                id="saveButton"
+                class="save-button"
+                type="button"
+            >
+                ✓ Salvar currículo
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         STATUS
+    ====================================================== -->
+
+    <div class="status-bar">
+
+        <div>
+
+            <span class="status-dot"></span>
+
+            <span id="saveStatus">
+                Pronto para editar
+            </span>
+
+            <span class="separator">•</span>
+
+            <span id="progressText">
+                0% preenchido
+            </span>
+
+        </div>
+
+        <span>
+            Seus dados ficam neste dispositivo.
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODELOS
+    ====================================================== -->
+
+    <section class="models-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-kicker">
+                    PERSONALIZE
+                </span>
+
+                <h2>
+                    Escolha um modelo
+                </h2>
+
+                <p>
+                    Escolha o estilo que combina com seu objetivo.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="models-grid">
+
+            <button
+                class="model active"
+                data-model="estudante"
+                type="button"
+            >
+
+                <div class="model-preview estudante">
+                    <b></b>
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                </div>
+
+                <strong>Estudante</strong>
+
+                <span>
+                    Simples e organizado
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="moderno"
+                type="button"
+            >
+
+                <div class="model-preview moderno">
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                    <em></em>
+                </div>
+
+                <strong>Moderno</strong>
+
+                <span>
+                    Visual atual
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="profissional"
+                type="button"
+            >
+
+                <div class="model-preview profissional">
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                    <em></em>
+                </div>
+
+                <strong>Profissional</strong>
+
+                <span>
+                    Corporativo
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="criativo"
+                type="button"
+            >
+
+                <div class="model-preview criativo">
+                    <b></b>
+                    <i></i>
+                    <em></em>
+                    <i></i>
+                </div>
+
+                <strong>Criativo</strong>
+
+                <span>
+                    Mais personalidade
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="minimalista"
+                type="button"
+            >
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <em></em>
+
+                <strong>Minimalista</strong>
+
+                <span>
+                    Limpo e direto
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="tecnologia"
+                type="button"
+            >
+
+                <div class="model-preview tecnologia">
+                    <i></i>
+                    <em></em>
+                    <i></i>
+                    <em></em>
+                </div>
+
+                <strong>Tecnologia</strong>
+
+                <span>
+                    Para tecnologia
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="executivo"
+                type="button"
+            >
+
+                <div class="model-preview executivo">
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                    <em></em>
+                </div>
+
+                <strong>Executivo</strong>
+
+                <span>
+                    Elegante e forte
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="elegante"
+                type="button"
+            >
+
+                <div class="model-preview elegante">
+                    <b></b>
+                    <i></i>
+                    <em></em>
+                    <i></i>
+                </div>
+
+                <strong>Elegante</strong>
+
+                <span>
+                    Sofisticado
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="academico"
+                type="button"
+            >
+
+                <div class="model-preview academico">
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                    <em></em>
+                </div>
+
+                <strong>Acadêmico</strong>
+
+                <span>
+                    Foco em formação
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="primeiro-emprego"
+                type="button"
+            >
+
+                <div class="model-preview primeiro">
+                    <b></b>
+                    <i></i>
+                    <i></i>
+                    <em></em>
+                </div>
+
+                <strong>Primeiro emprego</strong>
+
+                <span>
+                    Para começar
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="objetivo"
+                type="button"
+            >
+
+                <div class="model-preview objetivo">
+                    <i></i>
+                    <em></em>
+                    <i></i>
+                    <em></em>
+                </div>
+
+                <strong>Objetivo</strong>
+
+                <span>
+                    Foco no resultado
+                </span>
+
+            </button>
+
+
+            <button
+                class="model"
+                data-model="premium"
+                type="button"
+            >
+
+                <div class="model-preview premium">
+                    <b></b>
+                    <i></i>
+                    <em></em>
+                    <em></em>
+                </div>
+
+                <strong>Premium</strong>
+
+                <span>
+                    Visual diferenciado
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="workspace">
+
+        <!-- EDITOR -->
+
+        <section class="editor-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        EDITOR
+                    </span>
+
+                    <h2>
+                        Informações do currículo
+                    </h2>
+
+                </div>
+
+                <div
+                    id="editorCounter"
+                    class="editor-counter"
+                >
+                    0%
+                </div>
+
+            </div>
+
+
+            <!-- ABAS -->
+
+            <div class="tabs">
+
+                <button
+                    class="tab active"
+                    data-tab="dados"
+                    type="button"
+                >
+                    Dados
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="objetivo"
+                    type="button"
+                >
+                    Objetivo
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="formacao"
+                    type="button"
+                >
+                    Formação
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="experiencia"
+                    type="button"
+                >
+                    Experiência
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="cursos"
+                    type="button"
+                >
+                    Cursos
+                </button>
+
+                <button
+                    class="tab"
+                    data-tab="extras"
+                    type="button"
+                >
+                    Extras
+                </button>
+
+            </div>
+
+
+            <div class="editor-content">
+
+                <!-- DADOS -->
+
+                <div
+                    class="tab-content active"
+                    id="tab-dados"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>01</span>
+
+                        <div>
+
+                            <h3>
+                                Dados pessoais
+                            </h3>
+
+                            <p>
+                                Essas informações aparecerão no topo do currículo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FOTO -->
+
+                    <div class="photo-upload">
+
+                        <div class="photo-preview">
+
+                            <span id="photoPlaceholder">
+                                ♙
+                            </span>
+
+                            <img
+                                id="photoPreview"
+                                alt="Foto"
+                            >
+
+                        </div>
+
+
+                        <div class="photo-info">
+
+                            <strong>
+                                Foto profissional
+                            </strong>
+
+                            <p>
+                                Use uma foto clara e adequada para oportunidades.
+                            </p>
+
+                            <div class="photo-actions">
+
+                                <label class="upload-button">
+
+                                    Escolher foto
+
+                                    <input
+                                        type="file"
+                                        id="photoInput"
+                                        accept="image/*"
+                                        hidden
+                                    >
+
+                                </label>
+
+                                <button
+                                    class="text-button"
+                                    id="removePhoto"
+                                    type="button"
+                                >
+                                    Remover
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DADOS PESSOAIS -->
+
+                    <div class="form-grid">
+
+                        <div class="field field-full">
+
+                            <label for="nome">
+                                Nome completo
+                            </label>
+
+                            <input
+                                id="nome"
+                                type="text"
+                                placeholder="Ex.: João da Silva"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="titulo">
+                                Título profissional
+                            </label>
+
+                            <input
+                                id="titulo"
+                                type="text"
+                                placeholder="Ex.: Estudante de tecnologia"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="seuemail@email.com"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="telefone">
+                                Telefone
+                            </label>
+
+                            <input
+                                id="telefone"
+                                type="text"
+                                placeholder="(00) 00000-0000"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="cidade">
+                                Cidade
+                            </label>
+
+                            <input
+                                id="cidade"
+                                type="text"
+                                placeholder="Sua cidade"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field field-full">
+
+                        <label for="site">
+                            Portfólio / LinkedIn
+                        </label>
+
+                        <input
+                            id="site"
+                            type="text"
+                            placeholder="linkedin.com/in/seunome"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- OBJETIVO -->
+
+                <div
+                    class="tab-content"
+                    id="tab-objetivo"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>02</span>
+
+                        <div>
+
+                            <h3>
+                                Objetivo e apresentação
+                            </h3>
+
+                            <p>
+                                Mostre quem você é e onde deseja chegar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field field-full">
+
+                        <label for="objetivo">
+                            Objetivo profissional
+                        </label>
+
+                        <textarea
+                            id="objetivo"
+                            placeholder="Ex.: Busco minha primeira oportunidade para desenvolver minhas habilidades e aprender na prática."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="field field-full">
+
+                        <label for="sobre">
+                            Sobre mim
+                        </label>
+
+                        <textarea
+                            id="sobre"
+                            placeholder="Conte brevemente sobre você, seus interesses e seus pontos fortes."
+                        ></textarea>
+
+                        <small>
+                            Evite informações que não sejam relevantes para a oportunidade.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMAÇÃO -->
+
+                <div
+                    class="tab-content"
+                    id="tab-formacao"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>03</span>
+
+                        <div>
+
+                            <h3>
+                                Formação acadêmica
+                            </h3>
+
+                            <p>
+                                Adicione escola, curso técnico ou faculdade.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="formacoesList"
+                        class="dynamic-list"
+                    ></div>
+
+
+                    <button
+                        class="add-button"
+                        id="addFormacao"
+                        type="button"
+                    >
+
+                        <span>+</span>
+
+                        Adicionar formação
+
+                    </button>
+
+                </div>
+
+
+                <!-- EXPERIÊNCIA -->
+
+                <div
+                    class="tab-content"
+                    id="tab-experiencia"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>04</span>
+
+                        <div>
+
+                            <h3>
+                                Experiências
+                            </h3>
+
+                            <p>
+                                Inclua empregos, estágio, jovem aprendiz ou experiências relevantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="experienciasList"
+                        class="dynamic-list"
+                    ></div>
+
+
+                    <button
+                        class="add-button"
+                        id="addExperiencia"
+                        type="button"
+                    >
+
+                        <span>+</span>
+
+                        Adicionar experiência
+
+                    </button>
+
+                </div>
+
+
+                <!-- CURSOS -->
+
+                <div
+                    class="tab-content"
+                    id="tab-cursos"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>05</span>
+
+                        <div>
+
+                            <h3>
+                                Cursos e habilidades
+                            </h3>
+
+                            <p>
+                                Mostre conhecimentos e cursos que você realmente possui.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="extra-block">
+
+                        <div class="extra-heading">
+
+                            <h3>
+                                Habilidades
+                            </h3>
+
+                            <p>
+                                Separe as habilidades por vírgulas.
+                            </p>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <input
+                                id="habilidades"
+                                type="text"
+                                placeholder="Ex.: Comunicação, Excel, HTML, CSS"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="extra-block">
+
+                        <div class="extra-heading">
+
+                            <h3>
+                                Cursos
+                            </h3>
+
+                            <p>
+                                Adicione cursos concluídos ou em andamento.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="cursosList"
+                            class="dynamic-list"
+                        ></div>
+
+
+                        <button
+                            class="add-button"
+                            id="addCurso"
+                            type="button"
+                        >
+
+                            <span>+</span>
+
+                            Adicionar curso
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXTRAS -->
+
+                <div
+                    class="tab-content"
+                    id="tab-extras"
+                >
+
+                    <div class="form-section-title">
+
+                        <span>06</span>
+
+                        <div>
+
+                            <h3>
+                                Informações extras
+                            </h3>
+
+                            <p>
+                                Idiomas e projetos podem fortalecer seu currículo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="extra-block">
+
+                        <div class="extra-heading">
+
+                            <h3>
+                                Idiomas
+                            </h3>
+
+                            <p>
+                                Informe apenas conhecimentos reais.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="idiomasList"
+                            class="dynamic-list"
+                        ></div>
+
+
+                        <button
+                            class="add-button"
+                            id="addIdioma"
+                            type="button"
+                        >
+
+                            <span>+</span>
+
+                            Adicionar idioma
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="extra-block">
+
+                        <div class="extra-heading">
+
+                            <h3>
+                                Projetos
+                            </h3>
+
+                            <p>
+                                Adicione projetos escolares, pessoais ou profissionais.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="projetosList"
+                            class="dynamic-list"
+                        ></div>
+
+
+                        <button
+                            class="add-button"
+                            id="addProjeto"
+                            type="button"
+                        >
+
+                            <span>+</span>
+
+                            Adicionar projeto
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VISUALIZAÇÃO
+        ================================================== -->
+
+        <section class="preview-panel">
+
+            <div class="preview-toolbar">
+
+                <div>
+
+                    <span class="panel-kicker">
+                        VISUALIZAÇÃO
+                    </span>
+
+                    <h2>
+                        Seu currículo
+                    </h2>
+
+                </div>
+
+
+                <div class="preview-actions">
+
+                    <button
+                        class="zoom-button"
+                        id="zoomOut"
+                        type="button"
+                    >
+                        −
+                    </button>
+
+                    <span id="zoomValue">
+                        100%
+                    </span>
+
+                    <button
+                        class="zoom-button"
+                        id="zoomIn"
+                        type="button"
+                    >
+                        +
+                    </button>
+
+                    <button
+                        class="print-button"
+                        id="printButton"
+                        type="button"
+                    >
+                        Imprimir
+                    </button>
+
+                    <button
+                        class="print-button pdf-button"
+                        id="pdfButton"
+                        type="button"
+                    >
+                        Salvar em PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="preview-area">
+
+                <div
+                    id="resume"
+                    class="resume template-estudante"
+                >
+
+                    <header class="resume-header">
+
+                        <div class="resume-photo">
+
+                            <span id="resumePhotoPlaceholder">
+                                ♙
+                            </span>
+
+                            <img
+                                id="resumePhoto"
+                                alt="Foto"
+                            >
+
+                        </div>
+
+
+                        <div class="resume-identity">
+
+                            <h1 id="previewNome">
+                                Seu Nome
+                            </h1>
+
+                            <h2 id="previewTitulo">
+                                Estudante
+                            </h2>
+
+
+                            <div class="resume-contact">
+
+                                <span id="previewEmail">
+                                    seuemail@email.com
+                                </span>
+
+                                <span id="previewTelefone">
+                                    (00) 00000-0000
+                                </span>
+
+                                <span id="previewCidade">
+                                    Sua cidade
+                                </span>
+
+                                <span id="previewSite">
+                                    Seu portfólio
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </header>
+
+
+                    <div class="resume-body">
+
+                        <section
+                            class="resume-section"
+                            id="previewObjetivoSection"
+                        >
+
+                            <h3>
+                                Objetivo
+                            </h3>
+
+                            <p id="previewObjetivo">
+                                Seu objetivo profissional aparecerá aqui.
+                            </p>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewSobreSection"
+                        >
+
+                            <h3>
+                                Sobre mim
+                            </h3>
+
+                            <p id="previewSobre">
+                                Apresente brevemente quem você é.
+                            </p>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewHabilidadesSection"
+                        >
+
+                            <h3>
+                                Habilidades
+                            </h3>
+
+                            <div
+                                class="skills-container"
+                                id="previewHabilidades"
+                            >
+
+                                <span class="skill-placeholder">
+                                    Suas habilidades aparecerão aqui.
+                                </span>
+
+                            </div>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewFormacoesSection"
+                        >
+
+                            <h3>
+                                Formação acadêmica
+                            </h3>
+
+                            <div id="previewFormacoes"></div>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewExperienciasSection"
+                        >
+
+                            <h3>
+                                Experiência
+                            </h3>
+
+                            <div id="previewExperiencias"></div>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewCursosSection"
+                        >
+
+                            <h3>
+                                Cursos
+                            </h3>
+
+                            <div id="previewCursos"></div>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewIdiomasSection"
+                        >
+
+                            <h3>
+                                Idiomas
+                            </h3>
+
+                            <div id="previewIdiomas"></div>
+
+                        </section>
+
+
+                        <section
+                            class="resume-section"
+                            id="previewProjetosSection"
+                        >
+
+                            <h3>
+                                Projetos
+                            </h3>
+
+                            <div id="previewProjetos"></div>
+
+                        </section>
+
+                    </div>
+
+
+                    <footer class="resume-footer">
+
+                        <span>
+                            Meu Futuro
+                        </span>
+
+                        <span>
+                            Currículo
+                        </span>
+
+                    </footer>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         IA — ÚNICA PARTE ALTERADA
+    ====================================================== -->
+
+    <section
+        class="ai-section"
+        id="aiSection"
+    >
+
+        <div class="ai-header">
+
+            <div class="ai-title-area">
+
+                <div class="ai-avatar">
+                    ✦
+                </div>
+
+                <div>
+
+                    <div class="ai-eyebrow">
+                        ASSISTENTE INTELIGENTE
+                    </div>
+
+                    <h2>
+                        Meu Futuro IA
+                    </h2>
+
+                    <p>
+                        Seu assistente para currículo, profissão, estudos e carreira.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="ai-status"
+                id="aiStatusContainer"
+            >
+
+                <span class="ai-status-dot"></span>
+
+                <span id="aiStatus">
+                    Online
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-content">
+
+
+            <!-- PAINEL DE APRESENTAÇÃO -->
+
+            <div class="ai-welcome">
+
+                <div class="ai-welcome-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <strong>
+                        Como posso ajudar?
+                    </strong>
+
+                    <p>
+                        Escolha um assunto ou escreva sua dúvida abaixo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENSAGENS -->
+
+            <div
+                class="ai-messages"
+                id="aiMessages"
+            >
+
+                <div class="ai-message assistant message-visible">
+
+                    <div class="message-avatar">
+                        ✦
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Meu Futuro IA
+                        </div>
+
+                        <div class="message-bubble">
+
+                            <p>
+                                Posso ajudar você a melhorar seu currículo,
+                                explorar profissões, organizar seus estudos,
+                                preparar-se para entrevistas e planejar seus
+                                próximos passos.
+                            </p>
+
+                            <p>
+                                O que você gostaria de fazer agora?
+                            </p>
+
+                        </div>
+
+                        <div class="message-time">
+                            Agora
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUGESTÕES -->
+
+            <div class="ai-suggestions-title">
+                <span>ACESSO RÁPIDO</span>
+            </div>
+
+
+            <div class="ai-suggestions">
+
+                <button
+                    class="ai-suggestion"
+                    type="button"
+                    data-ai-message="Quero melhorar meu currículo."
+                >
+
+                    <span class="suggestion-icon">
+                        📄
+                    </span>
+
+                    <span>
+                        Meu currículo
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="ai-suggestion"
+                    type="button"
+                    data-ai-message="Não sei qual profissão escolher."
+                >
+
+                    <span class="suggestion-icon">
+                        🎯
+                    </span>
+
+                    <span>
+                        Escolher profissão
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="ai-suggestion"
+                    type="button"
+                    data-ai-message="Quero encontrar meu primeiro emprego."
+                >
+
+                    <span class="suggestion-icon">
+                        💼
+                    </span>
+
+                    <span>
+                        Primeiro emprego
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="ai-suggestion"
+                    type="button"
+                    data-ai-message="Quero organizar meus estudos."
+                >
+
+                    <span class="suggestion-icon">
+                        📚
+                    </span>
+
+                    <span>
+                        Organizar estudos
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="ai-suggestion"
+                    type="button"
+                    data-ai-message="Quero treinar uma entrevista de emprego."
+                >
+
+                    <span class="suggestion-icon">
+                        🎤
+                    </span>
+
+                    <span>
+                        Treinar entrevista
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="ai-input-wrapper">
+
+                <div class="ai-input-label">
+                    <span class="ai-input-status"></span>
+                    Converse com a IA
+                </div>
+
+
+                <div class="ai-input-area">
+
+                    <textarea
+                        id="aiInput"
+                        rows="2"
+                        maxlength="1200"
+                        placeholder="Escreva sua dúvida, objetivo ou ideia..."
+                    ></textarea>
+
+
+                    <button
+                        class="ai-send"
+                        id="aiSend"
+                        type="button"
+                        aria-label="Enviar mensagem"
+                    >
+
+                        <span class="ai-send-text">
+                            Enviar
+                        </span>
+
+                        <span class="ai-send-icon">
+                            ➜
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-disclaimer">
+
+                <span>🔒</span>
+
+                A IA ajuda a organizar ideias e explorar possibilidades.
+                Ela não deve inventar informações sobre você.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="page-footer">
+
+        <span>
+            Meu Futuro © 2026
+        </span>
+
+        <span>
+            Seu futuro começa com um próximo passo.
+        </span>
+
+    </footer>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span>
+        ✓
+    </span>
+
+    <span id="toastMessage">
+        Salvo com sucesso.
+    </span>
+
+</div>
+
+
+<script src="../js/curriculo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Futuro | Meu Perfil</title>
+
+    <link rel="stylesheet" href="../css/perfil.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✦
+            </div>
+
+            <div>
+                <strong>MEU FUTURO</strong>
+                <span>Projeto de Vida</span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                <span>⌂</span>
+
+                <div>
+                    <strong>Início</strong>
+                    <small>Meu painel</small>
+                </div>
+            </a>
+
+
+            <a href="perfil.html" class="menu-item active">
+                <span>◉</span>
+
+                <div>
+                    <strong>Meu perfil</strong>
+                    <small>Quem sou eu</small>
+                </div>
+            </a>
+
+
+            <a href="questionarios.html" class="menu-item">
+                <span>✎</span>
+
+                <div>
+                    <strong>Questionários</strong>
+                    <small>Descubra seu perfil</small>
+                </div>
+            </a>
+
+
+            <a href="resultados.html" class="menu-item">
+                <span>◈</span>
+
+                <div>
+                    <strong>Minha evolução</strong>
+                    <small>Resultados</small>
+                </div>
+            </a>
+
+
+            <div class="menu-title">
+                MEU FUTURO
+            </div>
+
+
+            <a href="profissões.html" class="menu-item">
+                <span>⌁</span>
+
+                <div>
+                    <strong>Profissões</strong>
+                    <small>Explore carreiras</small>
+                </div>
+            </a>
+
+
+            <a href="faculdades.html" class="menu-item">
+                <span>▣</span>
+
+                <div>
+                    <strong>Faculdades</strong>
+                    <small>Encontre seu caminho</small>
+                </div>
+            </a>
+
+
+            <a href="bolsas.html" class="menu-item">
+                <span>◆</span>
+
+                <div>
+                    <strong>Bolsas</strong>
+                    <small>Estude com apoio</small>
+                </div>
+            </a>
+
+
+            <a href="moradias.html" class="menu-item">
+                <span>⌂</span>
+
+                <div>
+                    <strong>Moradias</strong>
+                    <small>Onde morar</small>
+                </div>
+            </a>
+
+
+            <a href="custos.html" class="menu-item">
+                <span>R$</span>
+
+                <div>
+                    <strong>Custos</strong>
+                    <small>Planeje seus gastos</small>
+                </div>
+            </a>
+
+
+            <div class="menu-title">
+                PLANEJAMENTO
+            </div>
+
+
+            <a href="planejamento.html" class="menu-item">
+                <span>◷</span>
+
+                <div>
+                    <strong>Meu planejamento</strong>
+                    <small>Próximos passos</small>
+                </div>
+            </a>
+
+
+            <a href="metas.html" class="menu-item">
+                <span>◎</span>
+
+                <div>
+                    <strong>Minhas metas</strong>
+                    <small>Objetivos</small>
+                </div>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="help-box">
+
+                <span class="help-icon">
+                    ?
+                </span>
+
+                <div>
+                    <strong>Precisa de ajuda?</strong>
+                    <small>Fale com seu orientador</small>
+                </div>
+
+            </div>
+
+
+            <button class="logout" onclick="sair()">
+
+                <span>↪</span>
+
+                Sair
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-logo">
+                <strong>MEU FUTURO</strong>
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button class="notification">
+                    ♧
+                    <span></span>
+                </button>
+
+
+                <div class="user-mini">
+
+                    <div class="avatar" id="avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong id="nomeUsuario">
+                            Aluno
+                        </strong>
+
+                        <small>
+                            Estudante
+                        </small>
+
+                    </div>
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTEÚDO
+        ================================================== -->
+
+        <section class="content">
+
+
+            <!-- CABEÇALHO -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MEU PERFIL
+                    </span>
+
+                    <h1>
+                        Quem sou eu?
+                    </h1>
+
+                    <p>
+                        Conheça suas informações, interesses
+                        e o perfil que você está construindo
+                        para o seu futuro.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PERFIL PRINCIPAL
+            ================================================== -->
+
+            <section class="profile-grid">
+
+
+                <!-- CARTÃO DO USUÁRIO -->
+
+                <div class="panel profile-card">
+
+                    <div class="profile-cover"></div>
+
+
+                    <div class="profile-main">
+
+                        <div class="big-avatar" id="avatarGrande">
+                            A
+                        </div>
+
+
+                        <div class="profile-name">
+
+                            <h2 id="nomePerfil">
+                                Aluno
+                            </h2>
+
+                            <p id="emailPerfil">
+                                aluno@email.com
+                            </p>
+
+                            <span class="student-badge">
+                                ● Estudante
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-divider"></div>
+
+
+                    <div class="profile-info">
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                ✉
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    E-mail
+                                </small>
+
+                                <strong id="emailInfo">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <span class="info-icon">
+                                ◷
+                            </span>
+
+                            <div>
+
+                                <small>
+                                    Membro desde
+                                </small>
+
+                                <strong id="dataCadastro">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERFIL VOCACIONAL -->
+
+                <div class="panel vocation-card">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                SEU PERFIL
+                            </span>
+
+                            <h2>
+                                Perfil vocacional
+                            </h2>
+
+                        </div>
+
+
+                        <span
+                            class="profile-status"
+                            id="statusPerfil"
+                        >
+                            Ainda não descoberto
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="vocation-content"
+                        id="vocationContent"
+                    >
+
+                        <div class="vocation-empty">
+
+                            <div class="empty-icon">
+                                ◈
+                            </div>
+
+                            <h3>
+                                Descubra seu perfil
+                            </h3>
+
+                            <p>
+                                Responda ao questionário vocacional
+                                para descobrir quais áreas combinam
+                                mais com você.
+                            </p>
+
+                            <a
+                                href="questionarios.html"
+                                class="primary-btn"
+                            >
+                                Fazer questionário
+                                <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ÁREAS DO PERFIL
+            ================================================== -->
+
+            <section class="panel interests-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            SEUS INTERESSES
+                        </span>
+
+                        <h2>
+                            Áreas que combinam com você
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        class="result-code"
+                        id="codigoPerfil"
+                    >
+                        —
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="interest-grid"
+                    id="interestGrid"
+                >
+
+
+                    <!-- REALISTA -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            R
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Realista
+                            </strong>
+
+                            <p>
+                                Prática e tecnologia
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <!-- INVESTIGATIVO -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            I
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Investigativo
+                            </strong>
+
+                            <p>
+                                Ciência e pesquisa
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <!-- ARTÍSTICO -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Artístico
+                            </strong>
+
+                            <p>
+                                Criatividade e expressão
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <!-- SOCIAL -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            S
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Social
+                            </strong>
+
+                            <p>
+                                Pessoas e educação
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <!-- EMPREENDEDOR -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            E
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Empreendedor
+                            </strong>
+
+                            <p>
+                                Liderança e negócios
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <!-- CONVENCIONAL -->
+
+                    <div class="interest-card">
+
+                        <div class="interest-letter">
+                            C
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Convencional
+                            </strong>
+
+                            <p>
+                                Organização e planejamento
+                            </p>
+
+                        </div>
+
+                        <span class="interest-score">
+                            —
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PRÓXIMOS PASSOS
+            ================================================== -->
+
+            <section class="bottom-grid">
+
+
+                <!-- SOBRE -->
+
+                <div class="panel about-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                SUA JORNADA
+                            </span>
+
+                            <h2>
+                                Sobre seu perfil
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <div class="about-icon">
+                            ✦
+                        </div>
+
+                        <div>
+
+                            <h3 id="aboutTitle">
+                                Seu perfil ainda está sendo construído
+                            </h3>
+
+                            <p id="aboutText">
+                                Conforme você responde aos questionários
+                                e explora as possibilidades, o Meu Futuro
+                                vai ajudar você a entender melhor seus
+                                interesses e caminhos profissionais.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="panel actions-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="eyebrow">
+                                PRÓXIMOS PASSOS
+                            </span>
+
+                            <h2>
+                                Continue sua jornada
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="action-list">
+
+
+                        <a
+                            href="questionarios.html"
+                            class="action-item"
+                        >
+
+                            <div class="action-icon purple">
+                                ✎
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Refazer questionário
+                                </strong>
+
+                                <small>
+                                    Atualize seu perfil vocacional
+                                </small>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="profissões.html"
+                            class="action-item"
+                        >
+
+                            <div class="action-icon blue">
+                                ⌁
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Explorar profissões
+                                </strong>
+
+                                <small>
+                                    Veja carreiras relacionadas
+                                </small>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="planejamento.html"
+                            class="action-item"
+                        >
+
+                            <div class="action-icon green">
+                                ◷
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Meu planejamento
+                                </strong>
+
+                                <small>
+                                    Organize seus próximos passos
+                                </small>
+
+                            </div>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FRASE
+            ================================================== -->
+
+            <section class="quote">
+
+                <div class="quote-mark">
+                    “
+                </div>
+
+                <div>
+
+                    <p>
+                        Conhecer a si mesmo é o primeiro passo
+                        para construir um futuro que tenha a
+                        sua cara.
+                    </p>
+
+                    <span>
+                        — Seu futuro começa por você.
+                    </span>
+
+                </div>
+
+                <div class="quote-star">
+                    ✦
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT DO PERFIL -->
+
+<script src="../js/perfil.js"></script>
+
+</body>
+</html>

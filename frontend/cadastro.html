@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Meu Futuro</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <main class="cadastro-container">
+
+        <section class="cadastro-card">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <div class="logo-icon">MF</div>
+
+                <div>
+                    <strong>MEU FUTURO</strong>
+                    <span>Projeto de Vida</span>
+                </div>
+            </div>
+
+            <!-- PROGRESSO -->
+            <div class="progress-container">
+
+                <div class="progress-info">
+                    <span>Seu cadastro</span>
+                    <strong id="progressText">1 de 3</strong>
+                </div>
+
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 ETAPA 1
+                 ===================================================== -->
+
+            <section class="step active" id="step1">
+
+                <span class="step-label">COMEÇANDO</span>
+
+                <h1>Vamos conhecer você 👋</h1>
+
+                <p class="subtitle">
+                    Essas informações ajudam o Meu Futuro a criar
+                    uma experiência personalizada para você.
+                </p>
+
+
+                <div class="form-grid">
+
+                    <!-- NOME -->
+                    <div class="input-group">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <!-- DATA -->
+                    <div class="input-group">
+
+                        <label for="dataNascimento">
+                            Data de nascimento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dataNascimento"
+                            required>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="input-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seuemail@email.com"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
+                            required>
+
+                    </div>
+
+
+                    <!-- ANO ESCOLAR -->
+                    <div class="input-group">
+
+                        <label for="anoEscolar">
+                            Ano escolar
+                        </label>
+
+                        <select id="anoEscolar" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option value="6">
+                                6º ano
+                            </option>
+
+                            <option value="7">
+                                7º ano
+                            </option>
+
+                            <option value="8">
+                                8º ano
+                            </option>
+
+                            <option value="9">
+                                9º ano
+                            </option>
+
+                            <option value="1EM">
+                                1º ano do Ensino Médio
+                            </option>
+
+                            <option value="2EM">
+                                2º ano do Ensino Médio
+                            </option>
+
+                            <option value="3EM">
+                                3º ano do Ensino Médio
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn-next"
+                    onclick="nextStep(2)">
+
+                    Continuar →
+
+                </button>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 ETAPA 2
+                 ===================================================== -->
+
+            <section class="step" id="step2">
+
+                <span class="step-label">SEU PERFIL</span>
+
+                <h1>O que você gosta de fazer?</h1>
+
+                <p class="subtitle">
+                    Não existem respostas certas ou erradas.
+                    Você pode escolher mais de uma opção.
+                </p>
+
+
+                <!-- MATÉRIA -->
+                <div class="question">
+
+                    <label>
+                        Qual matéria você gosta?
+                    </label>
+
+                    <div class="selection-hint">
+                        Você pode marcar mais de uma opção.
+                    </div>
+
+
+                    <div class="options">
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="tecnologia">
+
+                            <span>💻</span>
+
+                            Tecnologia
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="matematica">
+
+                            <span>📐</span>
+
+                            Matemática
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="biologia">
+
+                            <span>🧬</span>
+
+                            Biologia
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="humanas">
+
+                            <span>🌎</span>
+
+                            História / Geografia
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="linguagens">
+
+                            <span>📚</span>
+
+                            Português / Línguas
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="materia"
+                                value="artes">
+
+                            <span>🎨</span>
+
+                            Artes
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ATIVIDADE -->
+                <div class="question">
+
+                    <label>
+                        Qual atividade mais combina com você?
+                    </label>
+
+                    <div class="selection-hint">
+                        Você pode marcar mais de uma opção.
+                    </div>
+
+
+                    <div class="options">
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="criar">
+
+                            <span>💡</span>
+
+                            Criar coisas
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="ajudar">
+
+                            <span>❤️</span>
+
+                            Ajudar pessoas
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="resolver">
+
+                            <span>🧠</span>
+
+                            Resolver problemas
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="liderar">
+
+                            <span>🚀</span>
+
+                            Liderar projetos
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="pesquisar">
+
+                            <span>🔬</span>
+
+                            Pesquisar
+
+                        </label>
+
+
+                        <label class="option">
+
+                            <input
+                                type="checkbox"
+                                name="atividade"
+                                value="comunicar">
+
+                            <span>🎤</span>
+
+                            Comunicar
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <button
+                        type="button"
+                        class="btn-back"
+                        onclick="nextStep(1)">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-next"
+                        onclick="nextStep(3)">
+
+                        Continuar →
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 ETAPA 3
+                 ===================================================== -->
+
+            <section class="step" id="step3">
+
+                <span class="step-label">SEU FUTURO</span>
+
+                <h1>Como você imagina seu futuro?</h1>
+
+                <p class="subtitle">
+                    Essas respostas ajudarão a criar suas primeiras
+                    recomendações.
+                </p>
+
+
+                <!-- ÁREA DE INTERESSE -->
+                <div class="question">
+
+                    <label for="areaInteresse">
+                        Qual dessas áreas mais chama sua atenção?
+                    </label>
+
+                    <select id="areaInteresse">
+
+                        <option value="">
+                            Ainda não sei
+                        </option>
+
+                        <option value="tecnologia">
+                            Tecnologia e Computação
+                        </option>
+
+                        <option value="engenharia">
+                            Engenharia
+                        </option>
+
+                        <option value="saude">
+                            Saúde
+                        </option>
+
+                        <option value="educacao">
+                            Educação
+                        </option>
+
+                        <option value="negocios">
+                            Negócios e Administração
+                        </option>
+
+                        <option value="direito">
+                            Direito
+                        </option>
+
+                        <option value="artes">
+                            Artes e Design
+                        </option>
+
+                        <option value="ciencias">
+                            Ciências
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PROFISSÃO -->
+                <div class="question">
+
+                    <label for="profissao">
+                        Você já sabe qual profissão gostaria de seguir?
+                    </label>
+
+                    <textarea
+                        id="profissao"
+                        placeholder="Pode escrever uma profissão ou dizer que ainda não sabe..."></textarea>
+
+                </div>
+
+
+                <!-- OBJETIVO -->
+                <div class="question">
+
+                    <label for="objetivo">
+                        Qual é seu maior objetivo neste momento?
+                    </label>
+
+                    <textarea
+                        id="objetivo"
+                        placeholder="Ex.: entrar em uma universidade, conseguir uma bolsa..."></textarea>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <button
+                        type="button"
+                        class="btn-back"
+                        onclick="nextStep(2)">
+
+                        ← Voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn-finish"
+                        id="btnFinalizar"
+                        onclick="finalizarCadastro()">
+
+                        Criar meu perfil 🚀
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOGIN -->
+            <p class="login-link">
+
+                Já possui uma conta?
+
+                <a href="login.html">
+                    Entrar
+                </a>
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/cadastro.js"></script>
+
+</body>
+
+</html>

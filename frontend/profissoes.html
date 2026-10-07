@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profissões | Meu Futuro</title>
+
+    <!-- IMPORTANTE:
+         profissões.html está dentro de /aluno/
+         CSS está em /css/
+    -->
+    <link
+        rel="stylesheet"
+        href="../css/profissoes.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         FUNDO
+    ========================================================== -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- =========================================================
+         CONTAINER PRINCIPAL
+    ========================================================== -->
+
+    <main class="profissoes-container">
+
+        <section class="profissoes-card">
+
+
+            <!-- =================================================
+                 TOPO
+            ================================================== -->
+
+            <header class="topo">
+
+                <a
+                    href="dashboard.html"
+                    class="logo"
+                >
+
+                    <div class="logo-icon">
+                        MF
+                    </div>
+
+                    <div class="logo-texto">
+
+                        <strong>
+                            MEU FUTURO
+                        </strong>
+
+                        <span>
+                            Projeto de Vida
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="btn-voltar"
+                    onclick="voltarDashboard()"
+                >
+                    ← Início
+                </button>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <section class="hero-profissoes">
+
+                <div class="hero-texto">
+
+                    <span class="mini-label">
+                        EXPLORANDO O FUTURO
+                    </span>
+
+                    <h1>
+                        Descubra profissões
+                        <br>
+                        que combinam com você.
+                    </h1>
+
+                    <p>
+                        Explore diferentes caminhos profissionais
+                        com base no seu perfil, seus interesses e
+                        nas possibilidades de desenvolvimento.
+                    </p>
+
+
+                    <div class="hero-aluno">
+
+                        <div
+                            class="avatar"
+                            id="avatar"
+                        >
+                            A
+                        </div>
+
+                        <div class="hero-aluno-info">
+
+                            <div>
+
+                                <span>
+                                    Olá,
+                                </span>
+
+                                <strong id="nomeAluno">
+                                    Aluno
+                                </strong>
+
+                            </div>
+
+                            <small>
+                                Vamos descobrir seu próximo caminho?
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     VISUAL DO HERO
+                ================================================== -->
+
+                <div class="hero-visual">
+
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="hero-center">
+
+                        <span class="hero-rocket">
+                            🚀
+                        </span>
+
+                        <strong>
+                            SEU FUTURO
+                        </strong>
+
+                        <small>
+                            começa com uma escolha
+                        </small>
+
+                    </div>
+
+
+                    <div class="floating-profissao profissao-a">
+                        💻
+                    </div>
+
+                    <div class="floating-profissao profissao-b">
+                        🤖
+                    </div>
+
+                    <div class="floating-profissao profissao-c">
+                        🎨
+                    </div>
+
+                    <div class="floating-profissao profissao-d">
+                        🔬
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PERFIL VOCACIONAL
+            ================================================== -->
+
+            <section class="perfil-bar">
+
+                <div class="perfil-bar-icon">
+                    🎯
+                </div>
+
+
+                <div class="perfil-bar-info">
+
+                    <span>
+                        SEU PERFIL VOCACIONAL
+                    </span>
+
+                    <strong id="perfilVocacional">
+                        Carregando...
+                    </strong>
+
+                </div>
+
+
+                <div class="perfil-bar-description">
+
+                    <p>
+                        As recomendações abaixo levam em conta
+                        características do seu perfil e seus
+                        interesses.
+                    </p>
+
+                </div>
+
+
+                <div class="perfil-score">
+
+                    <strong id="compatibilidadeGeral">
+                        —
+                    </strong>
+
+                    <span>
+                        compatibilidade
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EXPLORAR
+            ================================================== -->
+
+            <section class="explorar">
+
+                <div class="secao-heading">
+
+                    <div>
+
+                        <span class="mini-label">
+                            ENCONTRE SEU CAMINHO
+                        </span>
+
+                        <h2>
+                            Explore profissões
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        class="resultado-count"
+                        id="contadorProfissoes"
+                    >
+                        Carregando...
+                    </span>
+
+                </div>
+
+
+
+                <!-- FILTROS -->
+
+                <div class="filtros">
+
+
+                    <div class="campo-pesquisa">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="pesquisaProfissao"
+                            placeholder="Pesquisar profissão..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <select id="filtroArea">
+
+                        <option value="todas">
+                            Todas as áreas
+                        </option>
+
+                    </select>
+
+
+                    <select id="filtroCompatibilidade">
+
+                        <option value="todas">
+                            Compatibilidade
+                        </option>
+
+                        <option value="alta">
+                            Alta — 80%+
+                        </option>
+
+                        <option value="media">
+                            Média — 60% a 79%
+                        </option>
+
+                        <option value="baixa">
+                            Baixa — abaixo de 60%
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFISSÕES
+            ================================================== -->
+
+            <section class="recomendadas">
+
+                <div class="secao-heading">
+
+                    <div>
+
+                        <span class="mini-label">
+                            FEITAS PARA VOCÊ
+                        </span>
+
+                        <h2>
+                            Profissões recomendadas
+                        </h2>
+
+                    </div>
+
+                    <span class="heading-info">
+                        Baseado no seu perfil
+                    </span>
+
+                </div>
+
+
+
+                <!--
+                    IMPORTANTE:
+
+                    O JavaScript vai preencher este espaço
+                    automaticamente usando o resultado real
+                    do teste vocacional.
+                -->
+
+                <div
+                    class="profissoes-grid"
+                    id="profissoesContainer"
+                >
+                </div>
+
+
+
+                <!-- SEM RESULTADOS -->
+
+                <div
+                    class="sem-resultados"
+                    id="semResultados"
+                    style="display: none;"
+                >
+
+                    <div class="sem-resultados-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Nenhuma profissão encontrada
+                    </h3>
+
+                    <p>
+                        Tente pesquisar outro termo ou
+                        alterar os filtros.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MAPA DE CAMINHOS
+            ================================================== -->
+
+            <section class="linha-caminhos">
+
+                <div class="secao-heading">
+
+                    <div>
+
+                        <span class="mini-label">
+                            SEU MAPA DE POSSIBILIDADES
+                        </span>
+
+                        <h2>
+                            Uma profissão pode levar a muitos caminhos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <p class="linha-intro">
+                    O futuro não é uma estrada única. Explore
+                    diferentes possibilidades e descubra onde
+                    cada caminho pode levar.
+                </p>
+
+
+                <div class="timeline">
+
+                    <div class="linha"></div>
+
+
+                    <div class="timeline-item ativo">
+
+                        <div class="timeline-ponto">
+                            🎯
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                AGORA
+                            </span>
+
+                            <strong>
+                                Seu perfil
+                            </strong>
+
+                            <p>
+                                Conheça seus interesses,
+                                habilidades e características.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-ponto">
+                            💻
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                CAMINHO 01
+                            </span>
+
+                            <strong>
+                                Tecnologia
+                            </strong>
+
+                            <p>
+                                Programação, dados, IA,
+                                sistemas e inovação.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-ponto">
+                            🎨
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                CAMINHO 02
+                            </span>
+
+                            <strong>
+                                Criatividade
+                            </strong>
+
+                            <p>
+                                Design, comunicação e
+                                experiências digitais.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-ponto">
+                            🚀
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                CAMINHO 03
+                            </span>
+
+                            <strong>
+                                Especialização
+                            </strong>
+
+                            <p>
+                                Desenvolva conhecimentos
+                                e encontre seu diferencial.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-ponto">
+                            🌟
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span>
+                                DESTINO
+                            </span>
+
+                            <strong>
+                                Seu futuro
+                            </strong>
+
+                            <p>
+                                Você escolhe o caminho que
+                                faz sentido para sua história.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MERCADO
+            ================================================== -->
+
+            <section class="mercado">
+
+                <div class="mercado-heading">
+
+                    <div>
+
+                        <span class="mini-label">
+                            OLHE ALÉM DA PROFISSÃO
+                        </span>
+
+                        <h2>
+                            Entenda o mercado
+                        </h2>
+
+                        <p>
+                            Uma boa escolha profissional também
+                            considera formação, habilidades e
+                            oportunidades.
+                        </p>
+
+                    </div>
+
+
+                    <div class="mercado-badge">
+
+                        <span>
+                            📊
+                        </span>
+
+                        <span>
+                            Dados do mercado
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mercado-grid">
+
+
+                    <div class="mercado-item">
+
+                        <div class="mercado-icon">
+                            📈
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Tendências
+                            </strong>
+
+                            <p>
+                                Descubra áreas que estão
+                                ganhando espaço.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mercado-item">
+
+                        <div class="mercado-icon">
+                            🎓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Formação
+                            </strong>
+
+                            <p>
+                                Conheça caminhos para
+                                desenvolver sua carreira.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mercado-item">
+
+                        <div class="mercado-icon">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Habilidades
+                            </strong>
+
+                            <p>
+                                Veja quais competências
+                                são importantes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mercado-item">
+
+                        <div class="mercado-icon">
+                            🌎
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Possibilidades
+                            </strong>
+
+                            <p>
+                                Explore diferentes formas
+                                de construir seu futuro.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fonte-dados">
+
+                    <span>
+                        ⓘ
+                    </span>
+
+                    <p>
+                        Os dados de mercado desta seção serão
+                        conectados posteriormente às fontes
+                        oficiais de ocupações e mercado de trabalho.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CTA
+            ================================================== -->
+
+            <section class="cta-futuro">
+
+                <div class="cta-icon">
+                    🌱
+                </div>
+
+                <div class="cta-texto">
+
+                    <span>
+                        NÃO TENHA PRESSA PARA ESCOLHER
+                    </span>
+
+                    <h2>
+                        Seu futuro não precisa ser decidido hoje.
+                    </h2>
+
+                    <p>
+                        Explore, experimente, aprenda e descubra
+                        aos poucos aquilo que faz sentido para você.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    onclick="verResultados()"
+                >
+                    Ver meu resultado →
+                </button>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RODAPÉ
+            ================================================== -->
+
+            <footer class="rodape">
+
+                <strong>
+                    MEU FUTURO
+                </strong>
+
+                <p>
+                    Explore possibilidades. Construa seu caminho.
+                </p>
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         IMPORTANTE:
+         Como estamos dentro de /aluno/, usamos ../js/
+    ========================================================== -->
+
+    <script
+        src="../js/profissoes.js"
+    ></script>
+
+</body>
+
+</html>
