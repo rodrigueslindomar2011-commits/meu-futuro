@@ -28,18 +28,15 @@
          SIDEBAR
     ========================================== -->
 
-    <aside class="sidebar">
+    
+<aside class="sidebar" id="sidebar">
 
-        <div class="logo">
-
-            <div class="logo-icon">✦</div>
-
-            <div>
-                <strong>MEU FUTURO</strong>
-                <span>Projeto de Vida</span>
-            </div>
-
-        </div>
+    <button
+        class="sidebar-close"
+        id="sidebarClose"
+        type="button"
+        aria-label="Fechar menu"
+    >×</button>
 
 
         <nav class="menu">
@@ -230,6 +227,8 @@
 
     </aside>
 
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
 
 
     <!-- =========================================
@@ -241,11 +240,25 @@
 
         <!-- TOPBAR -->
 
-        <header class="topbar">
+    
+<header class="topbar">
 
-            <div class="mobile-logo">
-                <strong>MEU FUTURO</strong>
-            </div>
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="sidebar"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="mobile-logo">
+        <strong>MEU FUTURO</strong>
+    </div>
 
 
             <div class="topbar-right">

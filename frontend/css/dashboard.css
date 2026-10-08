@@ -1276,3 +1276,101 @@ button {
     background: var(--primary-light);
     color: var(--primary);
 }
+
+/* MENU MOBILE */
+.menu-toggle,
+.sidebar-close,
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        flex-shrink: 0;
+        border: 1px solid #e4e6ef;
+        border-radius: 9px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 17px;
+        height: 2px;
+        border-radius: 2px;
+        background: #25283a;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: min(290px, 85vw);
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
+        z-index: 1001;
+        transform: translateX(-105%);
+        visibility: hidden;
+        transition: transform 0.25s ease, visibility 0.25s ease;
+    }
+
+    body.menu-open .sidebar {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 18px;
+        right: 14px;
+        z-index: 2;
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 8px;
+        background: #eeeeF5;
+        color: #25283a;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(9, 12, 25, 0.55);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    body.menu-open .sidebar-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .topbar {
+        gap: 10px;
+    }
+
+    .mobile-logo {
+        flex: 1;
+    }
+}

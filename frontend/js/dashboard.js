@@ -2617,6 +2617,58 @@ function escaparHTML(
 }
 
 
+
+/* MENU LATERAL PARA CELULAR */
+document.addEventListener("DOMContentLoaded", () => {
+    const botaoAbrir = document.getElementById("menuToggle");
+    const botaoFechar = document.getElementById("sidebarClose");
+    const overlay = document.getElementById("sidebarOverlay");
+    const sidebar = document.getElementById("sidebar");
+
+    if (!botaoAbrir || !botaoFechar || !overlay || !sidebar) {
+        return;
+    }
+
+    function abrirMenu() {
+        document.body.classList.add("menu-open");
+        botaoAbrir.setAttribute("aria-expanded", "true");
+        botaoAbrir.setAttribute("aria-label", "Fechar menu");
+    }
+
+    function fecharMenu() {
+        document.body.classList.remove("menu-open");
+        botaoAbrir.setAttribute("aria-expanded", "false");
+        botaoAbrir.setAttribute("aria-label", "Abrir menu");
+    }
+
+    botaoAbrir.addEventListener("click", () => {
+        if (document.body.classList.contains("menu-open")) {
+            fecharMenu();
+        } else {
+            abrirMenu();
+        }
+    });
+
+    botaoFechar.addEventListener("click", fecharMenu);
+    overlay.addEventListener("click", fecharMenu);
+
+    sidebar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", fecharMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            fecharMenu();
+        }
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 700) {
+            fecharMenu();
+        }
+    });
+});
+
 // ============================================================
 // DEBUG
 // ============================================================
